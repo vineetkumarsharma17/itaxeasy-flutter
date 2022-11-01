@@ -71,7 +71,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -706,10 +706,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
 
-
-
                 // Section 2
-
 
                 const Padding(
                   padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
@@ -823,7 +820,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -835,9 +833,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
@@ -864,7 +860,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -876,9 +873,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
@@ -907,7 +902,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1006,7 +1001,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1018,9 +1014,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
@@ -1047,7 +1041,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1059,9 +1054,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
@@ -1090,7 +1083,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1135,7 +1128,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -1166,7 +1159,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -1189,7 +1182,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1201,14 +1195,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1230,7 +1222,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1242,14 +1235,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1273,7 +1264,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1318,7 +1309,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -1349,7 +1340,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -1372,7 +1363,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1384,14 +1376,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1413,7 +1403,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1425,14 +1416,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1456,7 +1445,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1501,7 +1490,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -1532,7 +1521,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -1555,7 +1544,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1567,14 +1557,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1596,7 +1584,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1608,14 +1597,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1639,7 +1626,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1684,7 +1671,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -1715,7 +1702,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -1738,7 +1725,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1750,14 +1738,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1779,7 +1765,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1791,14 +1778,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1822,7 +1807,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -1867,7 +1852,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -1898,7 +1883,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -1921,7 +1906,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1933,14 +1919,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -1962,7 +1946,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -1974,14 +1959,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2005,7 +1988,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -2050,7 +2033,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -2081,7 +2064,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -2104,7 +2087,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2116,14 +2100,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2145,7 +2127,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2157,14 +2140,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2188,7 +2169,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -2233,7 +2214,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -2264,7 +2245,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -2287,7 +2268,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2299,14 +2281,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2328,7 +2308,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2340,14 +2321,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2369,10 +2348,9 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                       ],
                     ),
                   ),
-
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -2417,7 +2395,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -2448,7 +2426,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -2471,7 +2449,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2483,14 +2462,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2512,7 +2489,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2524,14 +2502,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2555,7 +2531,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                   ),
                 ),
                 const SizedBox(
-                  height:10,
+                  height: 10,
                 ),
                 Card(
                   child: Padding(
@@ -2600,7 +2576,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -2620,15 +2596,14 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: TextFormField(
-                              inputFormatters: [
-                              FilteringTextInputFormatter.allow(RegExp('[0-9]')),
+                            inputFormatters: [
+                              FilteringTextInputFormatter.allow(
+                                  RegExp('[0-9]')),
                             ],
-                            onChanged:(String value){
-                            setState(() {
-                              percent=28;
-
-
-                            });
+                            onChanged: (String value) {
+                              setState(() {
+                                percent = 28;
+                              });
                             },
                             decoration: InputDecoration(
                               hintText: 'Taxable value',
@@ -2641,7 +2616,7 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                         ),
                         const Padding(
                           padding:
-                          EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -2664,7 +2639,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2676,14 +2652,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2705,7 +2679,8 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             ),
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 10, top: 10),
+                                padding:
+                                    const EdgeInsets.only(bottom: 10, top: 10),
                                 child: Column(
                                   children: [
                                     const Text(
@@ -2717,14 +2692,12 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                                         fontSize: 17.5,
                                       ),
                                     ),
-                                    const SizedBox(
-                                        height:10
-                                    ),
+                                    const SizedBox(height: 10),
                                     Container(
                                       decoration: BoxDecoration(
                                         color: textWhiteGrey,
                                         borderRadius:
-                                        BorderRadius.circular(14.0),
+                                            BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -2756,15 +2729,11 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                       borderRadius: BorderRadius.circular(14.0),
                     ),
                     child: GFButton(
-                        color:Colors.purple,
-                        onPressed: () {
-
-
-                        },
+                        color: Colors.blue.shade900,
+                        onPressed: () {},
                         text: "Save"),
                   ),
                 ),
-
               ],
             ),
           ),

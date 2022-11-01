@@ -68,7 +68,7 @@ class _Challan287State extends State<Challan287> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.purple,
+                        color: Colors.blue.shade900,
                         width: 99,
                         height: 4,
                       ),
@@ -119,7 +119,7 @@ class _Challan287State extends State<Challan287> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
                               value: 0,
                               groupValue: groupValue,
                               onChanged: (value) {
@@ -128,7 +128,7 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.purple,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -190,7 +190,7 @@ class _Challan287State extends State<Challan287> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
                               value: 0,
                               groupValue: onChanged,
                               onChanged: (value) {
@@ -199,7 +199,7 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.purple,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -240,7 +240,7 @@ class _Challan287State extends State<Challan287> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
                               value: 1,
                               groupValue: onChanged,
                               onChanged: (value) {
@@ -249,7 +249,7 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.purple,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -490,7 +490,7 @@ class _Challan287State extends State<Challan287> {
                                 "Name as per Income Tax Department database (Masked) will be displayed on confirmation screen",
                                 style: TextStyle(
                                   fontFamily: "OpenSans",
-                                  color: Colors.purple,
+                                  color: Colors.blue,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.5,
                                   fontSize: 17.5,
@@ -546,7 +546,7 @@ class _Challan287State extends State<Challan287> {
                                 children: [
                                   GFRadio(
                                     size: 20,
-                                    activeBorderColor: Colors.purple,
+                                    activeBorderColor: Colors.blue.shade900,
                                     value: 0,
                                     groupValue: groupValue2,
                                     onChanged: (value) {
@@ -555,7 +555,7 @@ class _Challan287State extends State<Challan287> {
                                       });
                                     },
                                     inactiveIcon: null,
-                                    radioColor: Colors.purple,
+                                    radioColor: Colors.blue.shade900,
                                   ),
                                   const SizedBox(
                                     width: 10,
@@ -586,8 +586,8 @@ class _Challan287State extends State<Challan287> {
                                       });
                                     },
                                     inactiveIcon: null,
-                                    activeBorderColor: Colors.purple,
-                                    radioColor: Colors.purple,
+                                    activeBorderColor: Colors.blue.shade900,
+                                    radioColor: Colors.blue.shade900,
                                   ),
                                   const SizedBox(
                                     width: 10,
@@ -991,7 +991,7 @@ class _Challan287State extends State<Challan287> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
                               value: 0,
                               groupValue: groupValue1,
                               onChanged: (value) {
@@ -1000,7 +1000,7 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.purple,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -1064,7 +1064,7 @@ class _Challan287State extends State<Challan287> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
                               value: 0,
                               groupValue: groupValue3,
                               onChanged: (value) {
@@ -1073,7 +1073,7 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.purple,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -1140,8 +1140,8 @@ class _Challan287State extends State<Challan287> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.purple,
-                              radioColor: Colors.purple,
+                              activeBorderColor: Colors.blue.shade900,
+                              radioColor: Colors.blue.shade900,
                             ),
                             const SizedBox(
                               width: 10,
@@ -1207,7 +1207,7 @@ class _Challan287State extends State<Challan287> {
                   borderRadius: BorderRadius.circular(14.0),
                 ),
                 child: GFButton(
-                  color:Colors.purple,
+                    color: Colors.blue.shade900,
                     onPressed: () {
                       // Navigator.push(
                       //     context,

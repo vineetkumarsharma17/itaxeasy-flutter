@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
     return isLoading
         ? const Center(child: CircularProgressIndicator())
         : SafeArea(
-          child: Scaffold(
+            child: Scaffold(
               resizeToAvoidBottomInset: false,
               // backgroundColor: ,
               body: SingleChildScrollView(
@@ -58,17 +58,15 @@ class _LoginPageState extends State<LoginPage> {
                             children: [
                               Text(
                                 'Login',
-                                style:  GoogleFonts.dmSans(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold
-                                ),
+                                style: GoogleFonts.dmSans(
+                                    fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(
                                 height: 20,
                               ),
                               Image.asset(
                                 'assets/images/accent.png',
-                                color: Colors.purple,
+                                color: Colors.blue.shade900,
                                 width: 99,
                                 height: 4,
                               ),
@@ -96,15 +94,16 @@ class _LoginPageState extends State<LoginPage> {
                                           ),
                                           child: TextFormField(
                                             inputFormatters: [
-                                              FilteringTextInputFormatter.deny(RegExp('[ ]')),
+                                              FilteringTextInputFormatter.deny(
+                                                  RegExp('[ ]')),
                                             ],
                                             controller: emailCont,
                                             decoration: InputDecoration(
-                                              hintText: 'Username/Email/Phone Number',
+                                              hintText:
+                                                  'Username/Email/Phone Number',
                                               hintStyle: heading6.copyWith(
                                                   color: textGrey),
-                                              border:
-                                                  const OutlineInputBorder(
+                                              border: const OutlineInputBorder(
                                                 borderSide: BorderSide.none,
                                               ),
                                             ),
@@ -130,14 +129,12 @@ class _LoginPageState extends State<LoginPage> {
                                                 color: textGrey,
                                                 splashRadius: 1,
                                                 icon: Icon(passwordVisible
-                                                    ? Icons
-                                                        .visibility_outlined
+                                                    ? Icons.visibility_outlined
                                                     : Icons
                                                         .visibility_off_outlined),
                                                 onPressed: togglePassword,
                                               ),
-                                              border:
-                                                  const OutlineInputBorder(
+                                              border: const OutlineInputBorder(
                                                 borderSide: BorderSide.none,
                                               ),
                                             ),
@@ -160,8 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                                         const SizedBox(
                                           width: 12,
                                         ),
-                                        Text('Remember me',
-                                            style: regular16pt),
+                                        Text('Remember me', style: regular16pt),
                                       ],
                                     ),
                                     Column(
@@ -203,13 +199,10 @@ class _LoginPageState extends State<LoginPage> {
                                             child: InkWell(
                                               onTap: () async {
                                                 FocusScope.of(context)
-                                                    .requestFocus(
-                                                        FocusNode());
+                                                    .requestFocus(FocusNode());
                                                 if (emailCont.text.isEmpty ||
-                                                    passwordCont
-                                                        .text.isEmpty) {
-                                                  ScaffoldMessenger.of(
-                                                          context)
+                                                    passwordCont.text.isEmpty) {
+                                                  ScaffoldMessenger.of(context)
                                                       .showSnackBar(
                                                           const SnackBar(
                                                     content: Text(
@@ -218,10 +211,8 @@ class _LoginPageState extends State<LoginPage> {
                                                 }
                                                 if (!RegExp(
                                                         "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
-                                                    .hasMatch(
-                                                        emailCont.text)) {
-                                                  ScaffoldMessenger.of(
-                                                          context)
+                                                    .hasMatch(emailCont.text)) {
+                                                  ScaffoldMessenger.of(context)
                                                       .showSnackBar(
                                                           const SnackBar(
                                                     content: Text(
@@ -258,8 +249,7 @@ class _LoginPageState extends State<LoginPage> {
                                                       401) {
                                                     AwesomeDialog(
                                                       context: context,
-                                                      animType:
-                                                          AnimType.SCALE,
+                                                      animType: AnimType.SCALE,
                                                       dialogType:
                                                           DialogType.ERROR,
                                                       body: Column(
@@ -286,8 +276,7 @@ class _LoginPageState extends State<LoginPage> {
                                                   } else {
                                                     AwesomeDialog(
                                                       context: context,
-                                                      animType:
-                                                          AnimType.SCALE,
+                                                      animType: AnimType.SCALE,
                                                       dialogType:
                                                           DialogType.ERROR,
                                                       body: Column(
@@ -327,7 +316,6 @@ class _LoginPageState extends State<LoginPage> {
                                           ),
                                         ),
                                       ),
-
                                     ),
                                   ),
                                 ),
@@ -342,8 +330,7 @@ class _LoginPageState extends State<LoginPage> {
                                     },
                                     child: Text(
                                       'OR',
-                                      style:
-                                          heading6.copyWith(color: textGrey),
+                                      style: heading6.copyWith(color: textGrey),
                                     ),
                                   ),
                                 ),
@@ -355,11 +342,12 @@ class _LoginPageState extends State<LoginPage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     GestureDetector(
-                                      onTap:()async{
+                                      onTap: () async {
                                         setState(() {
                                           isLoading = true;
                                         });
-                                        final result = await apiServices.googleLogin();
+                                        final result =
+                                            await apiServices.googleLogin();
                                         setState(() {
                                           isLoading = false;
                                         });
@@ -369,7 +357,7 @@ class _LoginPageState extends State<LoginPage> {
                                       },
                                       child: CircleAvatar(
                                         backgroundColor: Colors.white,
-                                         radius: 20,
+                                        radius: 20,
                                         child: Image.asset(
                                             "assets/images/gmail.jpeg",
                                             width: 50,
@@ -382,8 +370,6 @@ class _LoginPageState extends State<LoginPage> {
                                         icon: Icon(Icons.facebook),
                                       ),
                                     ),
-
-
                                   ],
                                 ),
                                 const SizedBox(
@@ -394,8 +380,8 @@ class _LoginPageState extends State<LoginPage> {
                                   children: [
                                     Text(
                                       "Don't have an account? ",
-                                      style: regular16pt.copyWith(
-                                          color: textGrey),
+                                      style:
+                                          regular16pt.copyWith(color: textGrey),
                                     ),
                                     GestureDetector(
                                       onTap: () {
@@ -408,7 +394,7 @@ class _LoginPageState extends State<LoginPage> {
                                       child: Text(
                                         'Register',
                                         style: regular16pt.copyWith(
-                                            color: Colors.purple),
+                                            color: Colors.blue.shade900),
                                       ),
                                     ),
                                   ],
@@ -436,6 +422,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-        );
+          );
   }
 }

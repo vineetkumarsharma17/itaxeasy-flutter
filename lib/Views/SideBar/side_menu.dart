@@ -121,7 +121,7 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.purple,
+                iconColor: Colors.blue.shade900,
                 title: DrawerListTile(
                   title: "Easy GSTIN Search",
                   svgSrc: "assets/icons/taxxx.svg",
@@ -184,7 +184,7 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.purple,
+                iconColor: Colors.blue.shade900,
                 title: DrawerListTile(
                   title: "Easy ITR Links",
                   svgSrc: "assets/icons/tax2.svg",
@@ -545,7 +545,7 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.purple,
+                iconColor: Colors.blue.shade900,
                 title: DrawerListTile(
                   title: "Easy Bank Links",
                   svgSrc: "assets/icons/bank.svg",
@@ -627,7 +627,7 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.purple,
+                iconColor: Colors.blue.shade900,
                 title: DrawerListTile(
                   title: "Easy Aadhaar Links",
                   svgSrc: "assets/icons/easyadhaar.svg",
@@ -1201,7 +1201,7 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.purple,
+                iconColor: Colors.blue.shade900,
                 title: DrawerListTile(
                   title: "Easy Convertors",
                   svgSrc: "assets/icons/qrcode.svg",
@@ -1398,7 +1398,7 @@ class DrawerListTile extends StatelessWidget {
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
-        color: Colors.purple,
+        color: Colors.blue.shade900,
         height: 25,
       ),
       title: Text(
