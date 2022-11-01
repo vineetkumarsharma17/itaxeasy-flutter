@@ -2,10 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-
 import 'Theme/colors.dart';
-
 
 class OtherSections extends StatefulWidget {
   const OtherSections({Key key}) : super(key: key);
@@ -14,7 +11,8 @@ class OtherSections extends StatefulWidget {
   State<OtherSections> createState() => _OtherSectionsState();
 }
 
-class _OtherSectionsState extends State<OtherSections>     with TickerProviderStateMixin  {
+class _OtherSectionsState extends State<OtherSections>
+    with TickerProviderStateMixin {
   double _scale;
   double _scale1;
   double _scale2;
@@ -32,11 +30,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
   AnimationController _controller6;
   AnimationController _controller7;
 
-
-
   @override
   void initState() {
-
     _controller = AnimationController(
       vsync: this,
       duration: Duration(
@@ -45,8 +40,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     _controller1 = AnimationController(
       vsync: this,
@@ -56,8 +51,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     _controller2 = AnimationController(
       vsync: this,
@@ -67,9 +62,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
+        setState(() {});
+      });
 
     _controller3 = AnimationController(
       vsync: this,
@@ -79,9 +73,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
+        setState(() {});
+      });
 
     _controller4 = AnimationController(
       vsync: this,
@@ -91,8 +84,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     _controller5 = AnimationController(
       vsync: this,
@@ -102,9 +95,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
+        setState(() {});
+      });
 
     _controller6 = AnimationController(
       vsync: this,
@@ -114,9 +106,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
+        setState(() {});
+      });
 
     _controller7 = AnimationController(
       vsync: this,
@@ -126,10 +117,8 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
-
+        setState(() {});
+      });
 
     super.initState();
   }
@@ -145,29 +134,20 @@ class _OtherSectionsState extends State<OtherSections>     with TickerProviderSt
     _controller5.dispose();
     _controller6.dispose();
     _controller7.dispose();
-
   }
-MediaQueryData size;
+
+  MediaQueryData size;
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body:  Column(
+        body: Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF655B96),
-                      Color(0xFFA644B7),
-                    ],
-                  )
-              ),
+              decoration: BoxDecoration(),
               child: Column(
-                crossAxisAlignment:  CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -180,14 +160,14 @@ MediaQueryData size;
                           child: Container(
                             height: 45,
                             width: 45,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
+                            decoration: BoxDecoration(
+                              color: Colors.blue.shade900,
                               borderRadius:
-                              BorderRadius.all(Radius.circular(20)),
+                                  BorderRadius.all(Radius.circular(20)),
                             ),
                             child: const Icon(
                               Icons.chevron_left_rounded,
-                              color: KColors.icon,
+                              color: Colors.white,
                               size: 35,
                             ),
                           ),
@@ -201,13 +181,12 @@ MediaQueryData size;
                             fontSize: 25,
                             letterSpacing: 3,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: Colors.blue.shade900,
                           ),
                         ),
                       ),
                     ],
                   ),
-
                   SizedBox(
                     height: 10,
                   ),
@@ -220,7 +199,7 @@ MediaQueryData size;
                       autoPlay: true,
                       autoPlayInterval: const Duration(seconds: 3),
                       autoPlayAnimationDuration:
-                      const Duration(milliseconds: 800),
+                          const Duration(milliseconds: 800),
                       autoPlayCurve: Curves.fastOutSlowIn,
                       // scrollDirection: Axis.horizontal,
                     ),
@@ -237,14 +216,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade700
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -256,8 +238,7 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -275,14 +256,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -294,8 +278,7 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -313,14 +296,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -332,8 +318,7 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -351,14 +336,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -370,8 +358,7 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -389,14 +376,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -408,8 +398,7 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -427,14 +416,17 @@ MediaQueryData size;
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -446,14 +438,12 @@ MediaQueryData size;
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ],
@@ -469,9 +459,8 @@ MediaQueryData size;
     );
   }
 
-
   Widget importantLinks(BuildContext context) {
-    size = MediaQuery.of(context) ;
+    size = MediaQuery.of(context);
     _scale = 1 - _controller.value;
     _scale1 = 1 - _controller1.value;
     _scale2 = 1 - _controller2.value;
@@ -484,7 +473,7 @@ MediaQueryData size;
       child: SizedBox(
         height: size.size.height,
         child: Padding(
-          padding: const EdgeInsets.only(left: 20,right: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: GridView(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
@@ -498,17 +487,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown,
                 onTapUp: _tapUp,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>Vouchers()));
                 },
                 child: Transform.scale(
@@ -556,17 +542,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown1,
                 onTapUp: _tapUp1,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=> SaleUi() ));
                 },
                 child: Transform.scale(
@@ -614,17 +597,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown2,
                 onTapUp: _tapUp2,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>Purchases()));
                 },
                 child: Transform.scale(
@@ -672,17 +652,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown3,
                 onTapUp: _tapUp3,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
                 },
                 child: Transform.scale(
@@ -730,17 +707,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown4,
                 onTapUp: _tapUp4,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>CashAndBank()));
                 },
                 child: Transform.scale(
@@ -788,17 +762,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown5,
                 onTapUp: _tapUp5,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
                 },
                 child: Transform.scale(
@@ -847,17 +818,14 @@ MediaQueryData size;
               GestureDetector(
                 onTapDown: _tapDown6,
                 onTapUp: _tapUp6,
-                onTap:  (){
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                      const SnackBar(
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        content: Text(
-                            "Contact our Organization"),
-                      ));
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
                 },
                 child: Transform.scale(
@@ -902,7 +870,6 @@ MediaQueryData size;
                   ),
                 ),
               ),
-
             ],
           ),
         ),
@@ -913,24 +880,31 @@ MediaQueryData size;
   void _tapDown(TapDownDetails details) {
     _controller.forward();
   }
+
   void _tapUp(TapUpDetails details) {
     _controller.reverse();
   }
+
   void _tapDown1(TapDownDetails details) {
     _controller1.forward();
   }
+
   void _tapUp1(TapUpDetails details) {
     _controller1.reverse();
   }
+
   void _tapDown2(TapDownDetails details) {
     _controller2.forward();
   }
+
   void _tapUp2(TapUpDetails details) {
     _controller2.reverse();
   }
+
   void _tapDown3(TapDownDetails details) {
     _controller3.forward();
   }
+
   void _tapUp3(TapUpDetails details) {
     _controller3.reverse();
   }
@@ -938,12 +912,15 @@ MediaQueryData size;
   void _tapDown4(TapDownDetails details) {
     _controller4.forward();
   }
+
   void _tapUp4(TapUpDetails details) {
     _controller4.reverse();
   }
+
   void _tapDown5(TapDownDetails details) {
     _controller5.forward();
   }
+
   void _tapUp5(TapUpDetails details) {
     _controller5.reverse();
   }
@@ -951,6 +928,7 @@ MediaQueryData size;
   void _tapDown6(TapDownDetails details) {
     _controller6.forward();
   }
+
   void _tapUp6(TapUpDetails details) {
     _controller6.reverse();
   }
@@ -958,8 +936,8 @@ MediaQueryData size;
   void _tapDown7(TapDownDetails details) {
     _controller7.forward();
   }
+
   void _tapUp7(TapUpDetails details) {
     _controller7.reverse();
   }
-
 }

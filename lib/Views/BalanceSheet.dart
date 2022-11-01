@@ -18,7 +18,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
             child: Column(
               children: [
                 Row(
@@ -47,7 +47,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -85,30 +85,32 @@ class _BalanceSheetState extends State<BalanceSheet> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-
                 ScrollableWidget(
                   child: Card(
-                    child:
-                    Column(
+                    child: Column(
                       children: [
                         DataTable(
                           columns: [
-                            DataColumn(label: Text(
-                                'Particular',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                            )),
-                            DataColumn(label: Text(
-                                'Amount',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                            )),
-                            DataColumn(label: Text(
-                                'Particular',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                            )),
-                            DataColumn(label: Text(
-                                'Amount',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                            )),
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
                           ],
                           rows: [
                             DataRow(cells: [
@@ -123,12 +125,8 @@ class _BalanceSheetState extends State<BalanceSheet> {
                               DataCell(Text('')),
                               DataCell(Text('')),
                             ]),
-
-
                           ],
                         ),
-
-
                       ],
                     ),
                   ),

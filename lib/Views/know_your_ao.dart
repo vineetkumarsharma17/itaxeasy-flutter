@@ -55,7 +55,7 @@ class _KnowYourAoState extends State<KnowYourAo> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color:Colors.purple,
+                        color: Colors.blue.shade900,
                         width: 99,
                         height: 4,
                       ),
@@ -66,11 +66,11 @@ class _KnowYourAoState extends State<KnowYourAo> {
               Expanded(
                 child: Theme(
                   data: ThemeData(
-                    accentColor: Colors.purple,
-                    primarySwatch: Colors.purple,
-                    colorScheme: ColorScheme.light(
-                        primary: Colors.purple
-                    ),),
+                    accentColor: Colors.blue.shade900,
+                    primarySwatch: Colors.blue,
+                    colorScheme:
+                        ColorScheme.light(primary: Colors.blue.shade900),
+                  ),
                   child: Stepper(
                     type: stepperType,
                     physics: const ScrollPhysics(),
@@ -88,10 +88,13 @@ class _KnowYourAoState extends State<KnowYourAo> {
                             children: <Widget>[
                               const Padding(
                                 padding: EdgeInsets.only(
-                                    left: 10, bottom: 10, ),
+                                  left: 10,
+                                  bottom: 10,
+                                ),
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child:  Text("PAN",
+                                  child: Text(
+                                    "PAN",
                                     style: TextStyle(
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w500,
@@ -101,7 +104,7 @@ class _KnowYourAoState extends State<KnowYourAo> {
                                   ),
                                 ),
                               ),
-                               Container(
+                              Container(
                                 decoration: BoxDecoration(
                                   color: textWhiteGrey,
                                   borderRadius: BorderRadius.circular(14.0),
@@ -110,7 +113,8 @@ class _KnowYourAoState extends State<KnowYourAo> {
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'PAN',
-                                    hintStyle: heading6.copyWith(color: textGrey),
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),
@@ -142,7 +146,8 @@ class _KnowYourAoState extends State<KnowYourAo> {
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'Mobile Number',
-                                    hintStyle: heading6.copyWith(color: textGrey),
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),

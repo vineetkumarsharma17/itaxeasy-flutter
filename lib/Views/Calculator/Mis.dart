@@ -15,7 +15,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 import '../Theme/colors.dart';
 
-
 class MisUi extends StatefulWidget {
   const MisUi({Key key}) : super(key: key);
 
@@ -40,9 +39,8 @@ class _MisUiState extends State<MisUi> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-      floatingActionButton: buildSpeedDial(),
-
-      resizeToAvoidBottomInset: false,
+            floatingActionButton: buildSpeedDial(),
+            resizeToAvoidBottomInset: false,
             backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: SafeArea(
@@ -194,7 +192,7 @@ class _MisUiState extends State<MisUi> {
                                 } else {
                                   setState(() {
                                     isLoading = true;
-                                    isVisible= false;
+                                    isVisible = false;
                                   });
                                   final insert = MisCal(
                                     interestRate:
@@ -240,7 +238,8 @@ class _MisUiState extends State<MisUi> {
                                 return Card(
                                   elevation: 5,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(left: 15,top: 10,bottom: 10),
+                                    padding: const EdgeInsets.only(
+                                        left: 15, top: 10, bottom: 10),
                                     child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -269,71 +268,69 @@ class _MisUiState extends State<MisUi> {
             ),
           );
   }
+
   Future<File> generatePDF() async {
     final pdf = pw.Document();
 
     pdf.addPage(pw.Page(
         pageFormat: PdfPageFormat.a4,
         build: (pw.Context context) {
-          return  pw.Center(
-            child:pw.Column(
+          return pw.Center(
+            child: pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.center,
-                children:[
-                  pw. Text("Monthly Income",
+                children: [
+                  pw.Text(
+                    "Monthly Income",
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
                       letterSpacing: 1.5,
                       fontSize: 17.5,
-                    ),),
-                  pw. Text(_apiResponse.data.monthlyIncome.toString()),
-                  pw. SizedBox(
+                    ),
+                  ),
+                  pw.Text(_apiResponse.data.monthlyIncome.toString()),
+                  pw.SizedBox(
                     height: 5,
                   ),
-
-
-
-                ]
-            ),
+                ]),
           );
-
-
         })); //
     // image = (await rootBundle.load("assets/images/itax.png")).buffer.asUint8List();
 
     return PdfApi.saveDocument(name: 'MonthlyIncome.pdf', pdf: pdf);
   }
+
   Widget buildSpeedDial() => SpeedDial(
-    overlayColor: Colors.purple.shade100,
-    backgroundColor: Colors.deepPurple,
-    spacing: 12,
-    // childrenButtonSize: 60,
-    spaceBetweenChildren: 8,
-    // animatedIcon: AnimatedIcons.menu_close,
-    icon: Icons.share,
-    children: [
-      SpeedDialChild(
-        onTap: () async {
-          // const phoneNumber = "8770877270";
-          // const url = 'tel:$phoneNumber';
-          //
-          // if (await canLaunch(url)) {
-          //   await launch(url);
-          // }
-        },
-        child: const Icon(FontAwesomeIcons.print,
-            size: 30, color: KColors.primary),
-      ),
-      SpeedDialChild(
-        onTap: ()async {
-          final pdfFile = await generatePDF();
-          PdfApi.openFile(pdfFile);
-        },
-        child: const Icon(
-          FontAwesomeIcons.filePdf,
-          size: 30,
-          color: Colors.red,
-        ),
-      ),
-    ],
-  );
+        overlayColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue.shade900,
+        spacing: 12,
+        // childrenButtonSize: 60,
+        spaceBetweenChildren: 8,
+        // animatedIcon: AnimatedIcons.menu_close,
+        icon: Icons.share,
+        children: [
+          SpeedDialChild(
+            onTap: () async {
+              // const phoneNumber = "8770877270";
+              // const url = 'tel:$phoneNumber';
+              //
+              // if (await canLaunch(url)) {
+              //   await launch(url);
+              // }
+            },
+            child: const Icon(FontAwesomeIcons.print,
+                size: 30, color: KColors.primary),
+          ),
+          SpeedDialChild(
+            onTap: () async {
+              final pdfFile = await generatePDF();
+              PdfApi.openFile(pdfFile);
+            },
+            child: const Icon(
+              FontAwesomeIcons.filePdf,
+              size: 30,
+              color: Colors.red,
+            ),
+          ),
+        ],
+      );
 }

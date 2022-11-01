@@ -18,7 +18,7 @@ class _TradingAccountState extends State<TradingAccount> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 20,left: 15,right: 15),
+            padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
             child: Column(
               children: [
                 Row(
@@ -47,7 +47,7 @@ class _TradingAccountState extends State<TradingAccount> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -85,99 +85,108 @@ class _TradingAccountState extends State<TradingAccount> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-
                 ScrollableWidget(
                   child: Card(
-                    child:
-      Column(
-        children: [
-            DataTable(
-              columns: [
-                DataColumn(label: Text(
-                      'Particular',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                      'Amount',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                      'Particular',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                      'Amount',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-              ],
-              rows: [
-                DataRow(cells: [
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                ]),
-
-
-
-              ],
-            ),
-         SizedBox(height: 20,),
-            Text("Profit and Loss Account",     style: GoogleFonts.recursive(
-              color: Colors.black,
-              fontSize: 25.0,
-              fontWeight: FontWeight.w700,
-            ),),
-            Text("(as on 31 march 2022)",     style: GoogleFonts.recursive(
-              color: Colors.black,
-              fontSize: 25.0,
-              fontWeight: FontWeight.w700,
-            ),),
-            DataTable(
-              columns: [
-                DataColumn(label: Text(
-                    'Particular',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'Amount',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'Particular',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-                DataColumn(label: Text(
-                    'Amount',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)
-                )),
-              ],
-              rows: [
-                DataRow(cells: [
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                ]),
-                DataRow(cells: [
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                  DataCell(Text('')),
-                ]),
-
-
-              ],
-            ),
-        ],
-      ),
-    ),
+                    child: Column(
+                      children: [
+                        DataTable(
+                          columns: [
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                          ],
+                          rows: [
+                            DataRow(cells: [
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                            ]),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Profit and Loss Account",
+                          style: GoogleFonts.recursive(
+                            color: Colors.black,
+                            fontSize: 25.0,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        Text(
+                          "(as on 31 march 2022)",
+                          style: GoogleFonts.recursive(
+                            color: Colors.black,
+                            fontSize: 25.0,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        DataTable(
+                          columns: [
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Particular',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                            DataColumn(
+                                label: Text('Amount',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold))),
+                          ],
+                          rows: [
+                            DataRow(cells: [
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                              DataCell(Text('')),
+                            ]),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 20,

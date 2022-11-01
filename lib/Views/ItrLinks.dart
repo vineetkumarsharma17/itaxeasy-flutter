@@ -18,46 +18,46 @@ class ItrLinksUi extends StatefulWidget {
 class _ItrLinksUiState extends State<ItrLinksUi> {
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body:  Column(
+        body: Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF655B96),
-                      Color(0xFFA644B7),
-                    ],
-                  )
-              ),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.blue.shade900, Colors.blue.shade800],
+              )),
               child: Column(
-                crossAxisAlignment:  CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20,top: 20),
+                    padding: const EdgeInsets.only(left: 20, top: 20),
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pop(context);
                       },
                       child: Container(
                         height: 45,
                         width: 45,
-                        decoration:  const BoxDecoration(
-                          color: Colors.white ,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
-                        child:  const Icon(Icons.chevron_left_rounded,color: KColors.icon,size: 35,),
+                        child: const Icon(
+                          Icons.chevron_left_rounded,
+                          color: KColors.icon,
+                          size: 35,
+                        ),
                       ),
                     ),
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 70,left: 20),
+                      padding: const EdgeInsets.only(top: 70, left: 20),
                       child: Text(
                         "Easy ITR Search",
                         overflow: TextOverflow.ellipsis,
@@ -65,7 +65,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                           fontSize: 40,
                           letterSpacing: 3,
                           fontWeight: FontWeight.w500,
-                          color:  Colors.white,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -83,7 +83,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
     );
   }
 
-  Widget sectionCard(BuildContext context){
+  Widget sectionCard(BuildContext context) {
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -91,8 +91,9 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
           child: Column(
             children: [
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ItrStatus()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ItrStatus()));
                 },
                 child: Row(
                   children: [
@@ -101,10 +102,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -161,10 +159,13 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>VerifyReturn()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => VerifyReturn()));
                 },
                 child: Row(
                   children: [
@@ -173,10 +174,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -233,10 +231,13 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>EPayTax()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EPayTax()));
                 },
                 child: Row(
                   children: [
@@ -245,10 +246,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -305,10 +303,13 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>KnowYourTan()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => KnowYourTan()));
                 },
                 child: Row(
                   children: [
@@ -317,10 +318,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -377,11 +375,13 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                   ],
                 ),
               ),
-
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>KnowYourAo()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => KnowYourAo()));
                 },
                 child: Row(
                   children: [
@@ -390,10 +390,7 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -450,8 +447,6 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                   ],
                 ),
               ),
-
-
             ],
           ),
         ),

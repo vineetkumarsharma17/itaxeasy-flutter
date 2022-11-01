@@ -5,7 +5,6 @@ import 'package:getwidget/getwidget.dart';
 
 import 'Calculator/ifsc_calcii/theme.dart';
 
-
 class PanDetailsUI extends StatefulWidget {
   const PanDetailsUI({Key key}) : super(key: key);
 
@@ -14,8 +13,6 @@ class PanDetailsUI extends StatefulWidget {
 }
 
 class _PanDetailsUIState extends State<PanDetailsUI> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +54,7 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color:Colors.purple,
+                            color: Colors.blue.shade900,
                             width: 99,
                             height: 4,
                           ),
@@ -75,15 +72,19 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(left: 10,bottom: 10,top: 10),
-                            child: Align(alignment: Alignment.centerLeft,
-                              child: Text("Mobile Number",
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Mobile Number",
                                 style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.5,
                                   fontSize: 17.5,
-                                ),),
+                                ),
+                              ),
                             ),
                           ),
                           Container(
@@ -103,15 +104,19 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsets.only(left: 10,bottom: 10,top: 10),
-                            child: Align(alignment: Alignment.centerLeft,
-                              child: Text("Adhar Number",
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Adhar Number",
                                 style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.5,
                                   fontSize: 17.5,
-                                ),),
+                                ),
+                              ),
                             ),
                           ),
                           Container(
@@ -131,15 +136,19 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsets.only(left: 10,bottom: 10,top: 10),
-                            child: Align(alignment: Alignment.centerLeft,
-                              child: Text("Account Number",
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Account Number",
                                 style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 1.5,
                                   fontSize: 17.5,
-                                ),),
+                                ),
+                              ),
                             ),
                           ),
                           Container(
@@ -174,14 +183,13 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       child: GFButton(
-                        color: Colors.purple,
+                          color: Colors.blue.shade900,
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
                           text: "Find Now"),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -189,6 +197,5 @@ class _PanDetailsUIState extends State<PanDetailsUI> {
         ),
       ),
     );
-
   }
 }

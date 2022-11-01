@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
-
 class FlipCardUi extends StatefulWidget {
-  const FlipCardUi({Key key, }) : super(key: key);
+  const FlipCardUi({
+    Key key,
+  }) : super(key: key);
 
   @override
   State<FlipCardUi> createState() => _FlipCardUiState();
@@ -42,11 +43,6 @@ class _FlipCardUiState extends State<FlipCardUi> {
   }
 }
 
-
-
-
-
-
 Widget heightSpacer(double myHeight) {
   return SizedBox(
     height: myHeight,
@@ -61,15 +57,18 @@ Widget buildCardList(BuildContext context) {
     child: ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        buildPaymentCardWidget(context, const Color(0xF25FFFFF), const Color(0xFF2508FF)),
+        buildPaymentCardWidget(
+            context, const Color(0xF25FFFFF), const Color(0xFF2508FF)),
         const SizedBox(
           width: 10,
         ),
-        buildPaymentCardWidget(context, const Color(0xFFFF9800), const Color(0xFF9C2700)),
+        buildPaymentCardWidget(
+            context, const Color(0xFFFF9800), const Color(0xFF9C2700)),
         const SizedBox(
           width: 10,
         ),
-        buildPaymentCardWidget(context, const Color(0xFF76FF03), const Color(0xFF9C27B0)),
+        buildPaymentCardWidget(
+            context, const Color(0xFF76FF03), const Color(0xFF9C27B0)),
         const SizedBox(
           width: 10,
         ),
@@ -98,7 +97,7 @@ Widget buildFrontFace(BuildContext context, Color color1, Color color2) {
               begin: Alignment.topRight,
               end: Alignment.bottomCenter,
               colors: <Color>[color1, color2]),
-          borderRadius:  BorderRadius.circular(15)),
+          borderRadius: BorderRadius.circular(15)),
       width: (MediaQuery.of(context).size.width) - 50,
       height: 200,
       child: Stack(
@@ -296,16 +295,20 @@ Widget buildTotal() {
         borderRadius: BorderRadius.circular(5),
         color: Colors.blue[50],
       ),
-      child: const ListTile(
+      child: ListTile(
         title: Text(
           "TOTAL",
           style: TextStyle(
-              fontSize: 22.5, fontWeight: FontWeight.w500, color: Colors.blue),
+              fontSize: 22.5,
+              fontWeight: FontWeight.w500,
+              color: Colors.blue.shade900),
         ),
         trailing: Text(
           "2650 \$",
           style: TextStyle(
-              fontSize: 22.5, fontWeight: FontWeight.w600, color: Colors.blue),
+              fontSize: 22.5,
+              fontWeight: FontWeight.w600,
+              color: Colors.blue.shade900),
         ),
       ),
     ),
@@ -322,8 +325,8 @@ Widget buildPayBtn() {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             gradient: LinearGradient(colors: [
-              Colors.blue[700],
-              Colors.blue[400],
+              Colors.blue[900],
+              Colors.blue[800],
             ], begin: Alignment.topLeft, end: Alignment.bottomRight),
           ),
           height: 45,

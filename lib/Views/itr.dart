@@ -25,12 +25,6 @@ class ITR extends StatefulWidget {
 }
 
 class _ITRState extends State<ITR> {
-
-
-
-
-
-
   File file;
   ImagePicker image = ImagePicker();
 
@@ -65,14 +59,15 @@ class _ITRState extends State<ITR> {
   @override
   Widget build(BuildContext context) {
     final popUp = PopupMenuButton<int>(
-      icon:const Icon( Icons.more_vert,color:Colors.purple),
+      icon: Icon(Icons.more_vert, color: Colors.blue.shade900),
       color: Colors.white,
       itemBuilder: (context) => [
-         const PopupMenuItem<int>(value: 0, child: Text("Upload Photo"),),
         const PopupMenuItem<int>(
-            value: 1, child: Text("Click Photo")),
-        const PopupMenuItem<int>(
-            value: 1, child: Text("Upload PDF")),
+          value: 0,
+          child: Text("Upload Photo"),
+        ),
+        const PopupMenuItem<int>(value: 1, child: Text("Click Photo")),
+        const PopupMenuItem<int>(value: 1, child: Text("Upload PDF")),
         // PopupMenuDivider(),
         // PopupMenuItem<int>(
         //     value: 2,
@@ -103,7 +98,7 @@ class _ITRState extends State<ITR> {
               children: [
                 FadeInDown(
                   delay: const Duration(milliseconds: 500),
-                  duration: const  Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
                   child: Row(
                     children: [
                       IconButton(
@@ -142,7 +137,7 @@ class _ITRState extends State<ITR> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color:Colors.purple,
+                            color: Colors.blue.shade900,
                             width: 99,
                             height: 4,
                           ),
@@ -250,13 +245,13 @@ class _ITRState extends State<ITR> {
                 //                   padding: const EdgeInsets.all(8),
                 //                   decoration: BoxDecoration(
                 //                     color:
-                //                         const Colors.purple.withOpacity(0.1),
+                //                         const Colors.blue.shade900.withOpacity(0.1),
                 //                     borderRadius: const BorderRadius.all(
                 //                         Radius.circular(10)),
                 //                   ),
                 //                   child: SvgPicture.asset(
                 //                     "assets/icons/Documents.svg",
-                //                     color: const Colors.purple,
+                //                     color: const Colors.blue.shade900,
                 //                   ),
                 //                 ),
                 //                 const Text(
@@ -270,7 +265,7 @@ class _ITRState extends State<ITR> {
                 //                   overflow: TextOverflow.ellipsis,
                 //                 ),
                 //                 const Icon(Icons.more_vert,
-                //                     color: Colors.purple)
+                //                     color: Colors.blue.shade900)
                 //               ],
                 //             ),
                 //           ],
@@ -283,8 +278,11 @@ class _ITRState extends State<ITR> {
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FileUpload()));
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FileUpload()));
                     },
                     child: Card(
                       elevation: 5,
@@ -292,7 +290,9 @@ class _ITRState extends State<ITR> {
                         padding: const EdgeInsets.all(defaultPadding),
                         decoration: const BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10),),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -304,12 +304,14 @@ class _ITRState extends State<ITR> {
                                 Container(
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                    color:  Colors.purple.withOpacity(0.1),
-                                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
                                   ),
                                   child: SvgPicture.asset(
                                     "assets/icons/Documents.svg",
-                                    color:  Colors.purple,
+                                    color: Colors.blue.shade900,
                                   ),
                                 ),
                                 const Text(
@@ -322,16 +324,14 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                   popUp,
-                   // Stack(
-                   //   children: [
-                   //     const Icon(
-                   //              Icons.more_vert,
-                   //              color: Colors.purple),
-                   //   ],
-                   // ),
-
-
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
                               ],
                             ),
                           ],
@@ -398,8 +398,11 @@ class _ITRState extends State<ITR> {
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FileUpload()));
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FileUpload()));
                     },
                     child: Card(
                       elevation: 5,
@@ -407,7 +410,9 @@ class _ITRState extends State<ITR> {
                         padding: const EdgeInsets.all(defaultPadding),
                         decoration: const BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10),),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -419,12 +424,14 @@ class _ITRState extends State<ITR> {
                                 Container(
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                    color:  Colors.purple.withOpacity(0.1),
-                                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
                                   ),
                                   child: SvgPicture.asset(
                                     "assets/icons/Documents.svg",
-                                    color:  Colors.purple,
+                                    color: Colors.blue.shade900,
                                   ),
                                 ),
                                 const Text(
@@ -437,8 +444,8 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                const Icon(Icons.more_vert,
-                                    color: Colors.purple)
+                                Icon(Icons.more_vert,
+                                    color: Colors.blue.shade900)
                               ],
                             ),
                           ],
@@ -452,8 +459,11 @@ class _ITRState extends State<ITR> {
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FileUpload()));
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FileUpload()));
                     },
                     child: Card(
                       elevation: 5,
@@ -461,7 +471,9 @@ class _ITRState extends State<ITR> {
                         padding: const EdgeInsets.all(defaultPadding),
                         decoration: const BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10),),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -473,12 +485,14 @@ class _ITRState extends State<ITR> {
                                 Container(
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                    color:  Colors.purple.withOpacity(0.1),
-                                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
                                   ),
                                   child: SvgPicture.asset(
                                     "assets/icons/Documents.svg",
-                                    color:  Colors.purple,
+                                    color: Colors.blue.shade900,
                                   ),
                                 ),
                                 const Text(
@@ -491,8 +505,8 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                const Icon(Icons.more_vert,
-                                    color: Colors.purple)
+                                Icon(Icons.more_vert,
+                                    color: Colors.blue.shade900)
                               ],
                             ),
                           ],
@@ -506,8 +520,11 @@ class _ITRState extends State<ITR> {
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FileUpload()));
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FileUpload()));
                     },
                     child: Card(
                       elevation: 5,
@@ -515,7 +532,9 @@ class _ITRState extends State<ITR> {
                         padding: const EdgeInsets.all(defaultPadding),
                         decoration: const BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10),),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -527,12 +546,14 @@ class _ITRState extends State<ITR> {
                                 Container(
                                   padding: const EdgeInsets.all(8),
                                   decoration: BoxDecoration(
-                                    color:  Colors.purple.withOpacity(0.1),
-                                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
                                   ),
                                   child: SvgPicture.asset(
                                     "assets/icons/Documents.svg",
-                                    color:  Colors.purple,
+                                    color: Colors.blue.shade900,
                                   ),
                                 ),
                                 const Text(
@@ -545,8 +566,8 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                const Icon(Icons.more_vert,
-                                    color: Colors.purple)
+                                Icon(Icons.more_vert,
+                                    color: Colors.blue.shade900)
                               ],
                             ),
                           ],
@@ -604,4 +625,3 @@ void SelectedItem(BuildContext context, item) {
       break;
   }
 }
-

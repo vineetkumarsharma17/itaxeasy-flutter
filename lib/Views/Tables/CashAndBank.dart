@@ -11,19 +11,19 @@ class CashAndBank extends StatefulWidget {
 
 class _CashAndBankState extends State<CashAndBank> {
   @override
-  Widget build(BuildContext context) =>TabBarWidget(
-    title: "DATA TABLE",
-    tabs: [
-
-      Tab(icon: Icon(Icons.account_balance), text: 'BANK'),
-      Tab(icon: Icon(Icons.attach_money), text: 'CASH'),
-      // Tab(icon: Icon(Icons.edit), text: 'Editable'),
-    ],
-    children: [
-      SortablePage(),
-      SortablePage(),
-
-
-    ],
-  );
+  Widget build(BuildContext context) => TabBarWidget(
+        title: "DATA TABLE",
+        tabs: [
+          Tab(
+            icon: Icon(Icons.account_balance),
+            text: 'BANK',
+          ),
+          Tab(icon: Icon(Icons.attach_money), text: 'CASH'),
+          // Tab(icon: Icon(Icons.edit), text: 'Editable'),
+        ],
+        children: [
+          SortablePage(),
+          SortablePage(),
+        ],
+      );
 }

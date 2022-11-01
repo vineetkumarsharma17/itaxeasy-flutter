@@ -18,7 +18,8 @@ class _DebitNoteState extends State<DebitNote> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20,bottom: 20),
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
             child: Column(
               children: [
                 Row(
@@ -59,7 +60,7 @@ class _DebitNoteState extends State<DebitNote> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -70,14 +71,14 @@ class _DebitNoteState extends State<DebitNote> {
                 const SizedBox(
                   height: 30,
                 ),
-
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 10,left: 10,bottom: 10),
+                    padding:
+                        const EdgeInsets.only(right: 10, left: 10, bottom: 10),
                     child: Column(
                       children: [
                         Row(
@@ -111,7 +112,8 @@ class _DebitNoteState extends State<DebitNote> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Date:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -121,9 +123,7 @@ class _DebitNoteState extends State<DebitNote> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -153,7 +153,8 @@ class _DebitNoteState extends State<DebitNote> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Gstin no:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -166,8 +167,8 @@ class _DebitNoteState extends State<DebitNote> {
                           ],
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -200,8 +201,8 @@ class _DebitNoteState extends State<DebitNote> {
                         ),
 
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -233,8 +234,8 @@ class _DebitNoteState extends State<DebitNote> {
                           ),
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -297,7 +298,8 @@ class _DebitNoteState extends State<DebitNote> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'IGST:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -307,9 +309,7 @@ class _DebitNoteState extends State<DebitNote> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -339,7 +339,8 @@ class _DebitNoteState extends State<DebitNote> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'CGST:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -349,9 +350,7 @@ class _DebitNoteState extends State<DebitNote> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -381,7 +380,8 @@ class _DebitNoteState extends State<DebitNote> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'SGST:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -444,8 +444,8 @@ class _DebitNoteState extends State<DebitNote> {
                         //   ],
                         // ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -478,8 +478,8 @@ class _DebitNoteState extends State<DebitNote> {
                         ),
 
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -514,7 +514,6 @@ class _DebitNoteState extends State<DebitNote> {
                     ),
                   ),
                 ),
-
               ],
             ),
           ),

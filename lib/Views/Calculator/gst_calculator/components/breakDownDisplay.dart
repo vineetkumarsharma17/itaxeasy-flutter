@@ -18,7 +18,7 @@ class BreakDownDisplay extends StatelessWidget {
           children: <Widget>[
             ImageIcon(
               AssetImage(icon),
-              color: Colors.blue,
+              color: Colors.blue.shade900,
               size: 26.0,
               semanticLabel: iconLabel,
             ),
@@ -27,8 +27,8 @@ class BreakDownDisplay extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 title,
-                style: const TextStyle(
-                    color: Colors.blue, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    color: Colors.blue.shade900, fontWeight: FontWeight.w600),
               ),
             ),
           ],

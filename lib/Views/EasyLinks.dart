@@ -26,15 +26,7 @@ class _EasyLinksState extends State<EasyLinks> {
             Container(
               height: 230,
               width: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFF655B96),
-                  Color(0xFFA644B7),
-                ],
-              )),
+              decoration: BoxDecoration(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -49,14 +41,14 @@ class _EasyLinksState extends State<EasyLinks> {
                           child: Container(
                             height: 45,
                             width: 45,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
+                            decoration: BoxDecoration(
+                              color: Colors.blue.shade900,
                               borderRadius:
-                              BorderRadius.all(Radius.circular(20)),
+                                  BorderRadius.all(Radius.circular(20)),
                             ),
                             child: const Icon(
                               Icons.chevron_left_rounded,
-                              color: KColors.icon,
+                              color: Colors.white,
                               size: 35,
                             ),
                           ),
@@ -70,13 +62,12 @@ class _EasyLinksState extends State<EasyLinks> {
                             fontSize: 25,
                             letterSpacing: 3,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: Colors.blue.shade900,
                           ),
                         ),
                       ),
                     ],
                   ),
-
                   SizedBox(
                     height: 10,
                   ),
@@ -89,7 +80,7 @@ class _EasyLinksState extends State<EasyLinks> {
                       autoPlay: true,
                       autoPlayInterval: const Duration(seconds: 3),
                       autoPlayAnimationDuration:
-                      const Duration(milliseconds: 800),
+                          const Duration(milliseconds: 800),
                       autoPlayCurve: Curves.fastOutSlowIn,
                       // scrollDirection: Axis.horizontal,
                     ),
@@ -106,14 +97,17 @@ class _EasyLinksState extends State<EasyLinks> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -125,8 +119,7 @@ class _EasyLinksState extends State<EasyLinks> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -144,14 +137,17 @@ class _EasyLinksState extends State<EasyLinks> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -163,8 +159,7 @@ class _EasyLinksState extends State<EasyLinks> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -182,14 +177,17 @@ class _EasyLinksState extends State<EasyLinks> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -201,8 +199,7 @@ class _EasyLinksState extends State<EasyLinks> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -220,14 +217,17 @@ class _EasyLinksState extends State<EasyLinks> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -239,8 +239,7 @@ class _EasyLinksState extends State<EasyLinks> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -258,14 +257,17 @@ class _EasyLinksState extends State<EasyLinks> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -277,14 +279,12 @@ class _EasyLinksState extends State<EasyLinks> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white
-                                ),
+                                    color: Colors.white),
                               ),
                             ],
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ],
