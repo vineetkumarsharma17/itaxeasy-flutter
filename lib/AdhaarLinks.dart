@@ -5,6 +5,7 @@ import 'Views/Theme/colors.dart';
 import 'Views/link_aadhaar.dart';
 import 'Views/link_aadhaar_status.dart';
 
+
 class AdhaarLinksUi extends StatefulWidget {
   const AdhaarLinksUi({Key key}) : super(key: key);
 
@@ -15,46 +16,46 @@ class AdhaarLinksUi extends StatefulWidget {
 class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: Column(
+        body:  Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.blue.shade800, Colors.blue.shade900],
-              )),
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF655B96),
+                      Color(0xFFA644B7),
+                    ],
+                  )
+              ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:  CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 20),
+                    padding: const EdgeInsets.only(left: 20,top: 20),
                     child: GestureDetector(
-                      onTap: () {
+                      onTap: (){
                         Navigator.pop(context);
                       },
                       child: Container(
                         height: 45,
                         width: 45,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
+                        decoration:  const BoxDecoration(
+                          color: Colors.white ,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
-                        child: const Icon(
-                          Icons.chevron_left_rounded,
-                          color: KColors.icon,
-                          size: 35,
-                        ),
+                        child:  const Icon(Icons.chevron_left_rounded,color: KColors.icon,size: 35,),
                       ),
                     ),
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 70, left: 20),
+                      padding: const EdgeInsets.only(top: 70,left: 20),
                       child: Text(
                         "Easy Aadhaar Links",
                         overflow: TextOverflow.ellipsis,
@@ -62,7 +63,7 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
                           fontSize: 40,
                           letterSpacing: 3,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                          color:  Colors.white,
                         ),
                       ),
                     ),
@@ -80,7 +81,7 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
     );
   }
 
-  Widget sectionCard(BuildContext context) {
+  Widget sectionCard(BuildContext context){
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -88,11 +89,8 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
           child: Column(
             children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LinkAadhaarStatus()));
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const LinkAadhaarStatus()));
                 },
                 child: Row(
                   children: [
@@ -101,7 +99,10 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -158,13 +159,10 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LinkAadhaar()));
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LinkAadhaar()));
                 },
                 child: Row(
                   children: [
@@ -173,7 +171,10 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -230,6 +231,9 @@ class _AdhaarLinksUiState extends State<AdhaarLinksUi> {
                   ],
                 ),
               ),
+
+
+
             ],
           ),
         ),

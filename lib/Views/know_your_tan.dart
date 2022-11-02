@@ -56,7 +56,7 @@ class _KnowYourTanState extends State<KnowYourTan> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.blue.shade900,
+                        color:Colors.purple,
                         width: 99,
                         height: 4,
                       ),
@@ -67,11 +67,11 @@ class _KnowYourTanState extends State<KnowYourTan> {
               Expanded(
                 child: Theme(
                   data: ThemeData(
-                    accentColor: Colors.blue.shade900,
-                    primarySwatch: Colors.blue,
-                    colorScheme:
-                        ColorScheme.light(primary: Colors.blue.shade900),
-                  ),
+                    accentColor: Colors.purple,
+                    primarySwatch: Colors.purple,
+                    colorScheme: ColorScheme.light(
+                        primary: Colors.purple
+                    ),),
                   child: Stepper(
                     type: stepperType,
                     physics: const ScrollPhysics(),
@@ -112,7 +112,7 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                     children: [
                                       GFRadio(
                                         size: 20,
-                                        activeBorderColor: Colors.blue.shade900,
+                                        activeBorderColor:  Colors.purple,
                                         value: 0,
                                         groupValue: groupValue,
                                         onChanged: (value) {
@@ -121,7 +121,7 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                           });
                                         },
                                         inactiveIcon: null,
-                                        radioColor: Colors.blue.shade900,
+                                        radioColor: Colors.purple,
                                       ),
                                       const SizedBox(
                                         width: 10,
@@ -141,18 +141,18 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   Row(
                                     children: [
                                       GFRadio(
-                                          size: 20,
-                                          value: 1,
-                                          groupValue: groupValue,
-                                          onChanged: (value) {
-                                            setState(() {
-                                              groupValue = value;
-                                            });
-                                          },
-                                          inactiveIcon: null,
-                                          activeBorderColor:
-                                              Colors.blue.shade900,
-                                          radioColor: Colors.blue.shade900),
+                                        size: 20,
+                                        value: 1,
+                                        groupValue: groupValue,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            groupValue = value;
+                                          });
+                                        },
+                                        inactiveIcon: null,
+                                        activeBorderColor: Colors.purple,
+                                        radioColor:  Colors.purple
+                                      ),
                                       const SizedBox(
                                         width: 10,
                                       ),
@@ -188,14 +188,13 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   color: textWhiteGrey,
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
-                                child: DropdownButtonFormField(
+                                child:DropdownButtonFormField(
                                   decoration: InputDecoration(
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),
                                     hintText: 'Category of Deductor',
-                                    hintStyle:
-                                        heading6.copyWith(color: textGrey),
+                                    hintStyle: heading6.copyWith(color: textGrey),
                                   ),
                                   value: dropDownValue,
                                   onChanged: (String Value) {
@@ -205,20 +204,16 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   },
                                   items: cityList
                                       .map((cityTitle) => DropdownMenuItem(
-                                          value: cityTitle,
-                                          child: Text(cityTitle)))
+                                      value: cityTitle, child: Text(cityTitle)))
                                       .toList(),
                                 ),
                               ),
-                              Padding(
+                               Padding(
                                 padding: const EdgeInsets.only(
                                     left: 10, bottom: 10, top: 20),
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    groupValue == 0
-                                        ? "Name of Deductor"
-                                        : "TAN of Deductor",
+                                  child:  Text(groupValue == 0 ? "Name of Deductor": "TAN of Deductor",
                                     style: const TextStyle(
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w500,
@@ -228,43 +223,37 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   ),
                                 ),
                               ),
-                              groupValue == 0
-                                  ? Container(
-                                      decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
-                                      child: TextFormField(
-                                        keyboardType: TextInputType.phone,
-                                        decoration: InputDecoration(
-                                          hintText: 'Name of Deductor',
-                                          hintStyle: heading6.copyWith(
-                                              color: textGrey),
-                                          border: const OutlineInputBorder(
-                                            borderSide: BorderSide.none,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  : Container(
-                                      decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
-                                      child: TextFormField(
-                                        keyboardType: TextInputType.phone,
-                                        decoration: InputDecoration(
-                                          hintText: 'TAN of Deductor',
-                                          hintStyle: heading6.copyWith(
-                                              color: textGrey),
-                                          border: const OutlineInputBorder(
-                                            borderSide: BorderSide.none,
-                                          ),
-                                        ),
-                                      ),
+                             groupValue == 0 ? Container(
+                                decoration: BoxDecoration(
+                                  color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  keyboardType: TextInputType.phone,
+                                  decoration: InputDecoration(
+                                    hintText: 'Name of Deductor',
+                                    hintStyle: heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
                                     ),
+                                  ),
+                                ),
+                              ):                 Container(
+                               decoration: BoxDecoration(
+                                 color: textWhiteGrey,
+                                 borderRadius: BorderRadius.circular(14.0),
+                               ),
+                               child: TextFormField(
+                                 keyboardType: TextInputType.phone,
+                                 decoration: InputDecoration(
+                                   hintText: 'TAN of Deductor',
+                                   hintStyle: heading6.copyWith(color: textGrey),
+                                   border: const OutlineInputBorder(
+                                     borderSide: BorderSide.none,
+                                   ),
+                                 ),
+                               ),
+                             ),
                               const Padding(
                                 padding: EdgeInsets.only(
                                     left: 10, bottom: 10, top: 20),
@@ -286,14 +275,13 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   color: textWhiteGrey,
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
-                                child: DropdownButtonFormField(
+                                child:DropdownButtonFormField(
                                   decoration: InputDecoration(
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),
                                     hintText: 'State',
-                                    hintStyle:
-                                        heading6.copyWith(color: textGrey),
+                                    hintStyle: heading6.copyWith(color: textGrey),
                                   ),
                                   value: dropDownValue,
                                   onChanged: (String Value) {
@@ -303,8 +291,7 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   },
                                   items: cityList
                                       .map((cityTitle) => DropdownMenuItem(
-                                          value: cityTitle,
-                                          child: Text(cityTitle)))
+                                      value: cityTitle, child: Text(cityTitle)))
                                       .toList(),
                                 ),
                               ),
@@ -333,8 +320,7 @@ class _KnowYourTanState extends State<KnowYourTan> {
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'Mobile Number',
-                                    hintStyle:
-                                        heading6.copyWith(color: textGrey),
+                                    hintStyle: heading6.copyWith(color: textGrey),
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),

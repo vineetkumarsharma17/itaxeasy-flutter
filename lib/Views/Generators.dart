@@ -12,6 +12,7 @@ import 'package:permission_handler/permission_handler.dart';
 
 import 'Theme/colors.dart';
 
+
 class Generators extends StatefulWidget {
   const Generators({Key key}) : super(key: key);
 
@@ -29,12 +30,11 @@ class _GeneratorsState extends State<Generators> {
     super.initState();
     clear();
   }
-
   @override
 //   Widget build(BuildContext context) {
 //     return  SafeArea(
 //       child: Scaffold(
-//         backgroundColor: Colors.deepblue.shade900.shade200,
+//         backgroundColor: Colors.deepPurple.shade200,
 //           body: Column(children: [
 //             Padding(
 //               padding: const EdgeInsets.only(right: 20, left: 20, top: 20),
@@ -44,7 +44,7 @@ class _GeneratorsState extends State<Generators> {
 //                   shape: RoundedRectangleBorder(
 //                     borderRadius: BorderRadius.circular(20),
 //                   ),
-//                   color:  Colors.deepblue.shade900,
+//                   color:  Colors.deepPurple,
 //                   elevation: 5,
 //                   child: Row(
 //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,7 +56,7 @@ class _GeneratorsState extends State<Generators> {
 //                             Navigator.of(context).pop();
 //                           },
 //                           child: const CircleAvatar(
-//                             backgroundColor: Colors.blue.shade900,
+//                             backgroundColor: Colors.purple,
 //                             radius: 30,
 //                             child: Icon(
 //                               Icons.arrow_back,
@@ -74,7 +74,7 @@ class _GeneratorsState extends State<Generators> {
 //                       const Padding(
 //                         padding: EdgeInsets.only(top:10, right: 10,bottom:10),
 //                         child: CircleAvatar(
-//                           backgroundColor: Colors.blue.shade900,
+//                           backgroundColor: Colors.purple,
 //                           radius: 30,
 //                           child: Icon(
 //                             Icons.more_vert,
@@ -100,7 +100,7 @@ class _GeneratorsState extends State<Generators> {
 //                height: 70,
 //                width: 300,
 //                child: Card(
-//                  color: Colors.blue.shade900,
+//                  color: Colors.purple,
 //                  elevation: 5,
 //                   shape: RoundedRectangleBorder(
 //                     borderRadius: BorderRadius.circular(20),
@@ -129,7 +129,7 @@ class _GeneratorsState extends State<Generators> {
 //                   height: 70,
 //                   width: 300,
 //                   child: Card(
-//                     color: Colors.blue.shade900,
+//                     color: Colors.purple,
 //                     elevation: 5,
 //                     shape: RoundedRectangleBorder(
 //                       borderRadius: BorderRadius.circular(20),
@@ -177,7 +177,7 @@ class _GeneratorsState extends State<Generators> {
 //                   height: 70,
 //                   width: 300,
 //                   child: Card(
-//                     color: Colors.blue.shade900,
+//                     color: Colors.purple,
 //                     elevation: 5,
 //                     shape: RoundedRectangleBorder(
 //                       borderRadius: BorderRadius.circular(20),
@@ -204,7 +204,7 @@ class _GeneratorsState extends State<Generators> {
 //                   height: 70,
 //                   width: 300,
 //                   child: Card(
-//                     color: Colors.blue.shade900,
+//                     color: Colors.purple,
 //                     elevation: 5,
 //                     shape: RoundedRectangleBorder(
 //                       borderRadius: BorderRadius.circular(20),
@@ -231,7 +231,7 @@ class _GeneratorsState extends State<Generators> {
 //                   height: 70,
 //                   width: 300,
 //                   child: Card(
-//                     color: Colors.blue.shade900,
+//                     color: Colors.purple,
 //                     elevation: 5,
 //                     shape: RoundedRectangleBorder(
 //                       borderRadius: BorderRadius.circular(20),
@@ -258,7 +258,7 @@ class _GeneratorsState extends State<Generators> {
 //                   height: 70,
 //                   width: 300,
 //                   child: Card(
-//                     color: Colors.blue.shade900,
+//                     color: Colors.purple,
 //                     elevation: 5,
 //                     shape: RoundedRectangleBorder(
 //                       borderRadius: BorderRadius.circular(20),
@@ -279,50 +279,48 @@ class _GeneratorsState extends State<Generators> {
 //     );
 //   }
 
+
   Widget build(BuildContext context) {
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: Column(
+        body:  Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFF655B96),
-                  Color(0xFFA644B7),
-                ],
-              )),
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF655B96),
+                      Color(0xFFA644B7),
+                    ],
+                  )
+              ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:  CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 20),
+                    padding: const EdgeInsets.only(left: 20,top: 20),
                     child: GestureDetector(
-                      onTap: () {
+                      onTap: (){
                         Navigator.pop(context);
                       },
                       child: Container(
                         height: 45,
                         width: 45,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
+                        decoration:  const BoxDecoration(
+                          color: Colors.white ,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
-                        child: const Icon(
-                          Icons.chevron_left_rounded,
-                          color: KColors.icon,
-                          size: 35,
-                        ),
+                        child:  const Icon(Icons.chevron_left_rounded,color: KColors.icon,size: 35,),
                       ),
                     ),
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 70, left: 20),
+                      padding: const EdgeInsets.only(top: 70,left: 20),
                       child: Text(
                         "Generators",
                         overflow: TextOverflow.ellipsis,
@@ -330,7 +328,7 @@ class _GeneratorsState extends State<Generators> {
                           fontSize: 50,
                           letterSpacing: 3,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                          color:  Colors.white,
                         ),
                       ),
                     ),
@@ -348,7 +346,7 @@ class _GeneratorsState extends State<Generators> {
     );
   }
 
-  Widget sectionCard(BuildContext context) {
+  Widget sectionCard(BuildContext context){
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -356,7 +354,7 @@ class _GeneratorsState extends State<Generators> {
           child: Column(
             children: [
               GestureDetector(
-                onTap: () {
+                onTap: (){
                   multipleFilePicker();
                 },
                 child: Row(
@@ -366,7 +364,10 @@ class _GeneratorsState extends State<Generators> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -422,11 +423,9 @@ class _GeneratorsState extends State<Generators> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
+                onTap: (){
                   callMethod(1);
                 },
                 child: Row(
@@ -436,7 +435,10 @@ class _GeneratorsState extends State<Generators> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -493,11 +495,9 @@ class _GeneratorsState extends State<Generators> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
+                onTap: (){
                   singleFilePicker(1);
                 },
                 child: Row(
@@ -507,7 +507,10 @@ class _GeneratorsState extends State<Generators> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -560,11 +563,9 @@ class _GeneratorsState extends State<Generators> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
+                onTap: (){
                   singleFilePicker(2);
                 },
                 child: Row(
@@ -574,7 +575,10 @@ class _GeneratorsState extends State<Generators> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -627,11 +631,9 @@ class _GeneratorsState extends State<Generators> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
+                onTap: (){
                   clear();
                 },
                 child: Row(
@@ -641,7 +643,10 @@ class _GeneratorsState extends State<Generators> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -694,6 +699,7 @@ class _GeneratorsState extends State<Generators> {
                   ],
                 ),
               ),
+
             ],
           ),
         ),
@@ -701,11 +707,22 @@ class _GeneratorsState extends State<Generators> {
     );
   }
 
+
+
+
+
+
+
+
+
+
   clear() {
     files = [];
     filesPath = [];
     singleFile = "";
   }
+
+
 
   multipleFilePicker() async {
     bool isGranted = await checkPermission();
@@ -713,7 +730,7 @@ class _GeneratorsState extends State<Generators> {
     if (isGranted) {
       try {
         FilePickerResult result =
-            await FilePicker.platform.pickFiles(allowMultiple: true);
+        await FilePicker.platform.pickFiles(allowMultiple: true);
 
         if (result != null) {
           files.addAll(result.files);
@@ -738,7 +755,7 @@ class _GeneratorsState extends State<Generators> {
     if (isGranted) {
       try {
         FilePickerResult result =
-            await FilePicker.platform.pickFiles(allowMultiple: false);
+        await FilePicker.platform.pickFiles(allowMultiple: false);
         if (result != null) {
           singleFile = result.files[0].path;
 
@@ -807,8 +824,8 @@ class _GeneratorsState extends State<Generators> {
     try {
       /// Get response either success or error
       CreatePDFFromMultipleImageResponse response =
-          await PdfMerger.createPDFFromMultipleImage(
-              paths: filesPath, outputDirPath: outputDirPath);
+      await PdfMerger.createPDFFromMultipleImage(
+          paths: filesPath, outputDirPath: outputDirPath);
 
       Get.snackbar("Info", response.message);
 
@@ -846,7 +863,7 @@ class _GeneratorsState extends State<Generators> {
     try {
       /// Get response either success or error
       SizeFormPathResponse response =
-          await PdfMerger.sizeFormPath(path: singleFile);
+      await PdfMerger.sizeFormPath(path: singleFile);
 
       if (response.status == "success") {
         Get.snackbar("Info", response.response);

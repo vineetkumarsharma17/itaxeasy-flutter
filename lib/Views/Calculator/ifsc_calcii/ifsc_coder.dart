@@ -83,7 +83,7 @@ class _IfscFinderState extends State<IfscFinder> {
                                 ),
                                 Image.asset(
                                   'assets/images/accent.png',
-                                  color: Colors.blue.shade900,
+                                  color: Colors.purple,
                                   width: 99,
                                   height: 4,
                                 ),
@@ -103,13 +103,13 @@ class _IfscFinderState extends State<IfscFinder> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: TextFormField(
-                            onTap: () {
+                            onTap: (){
                               cityName.clear();
                               bankName.clear();
                             },
-                            onChanged: (input) {
+                            onChanged: (input){
                               cityName.clear();
-                              if (input.isEmpty) {
+                              if(input.isEmpty){
                                 bankName.clear();
                               }
                             },
@@ -158,12 +158,11 @@ class _IfscFinderState extends State<IfscFinder> {
                           child: TextFormField(
                             textCapitalization: TextCapitalization.characters,
                             onTap: () {
-                              if (pinCount.text.isEmpty &&
-                                  cityName.text.isEmpty) {
+                              if (pinCount.text.isEmpty && cityName.text.isEmpty ) {
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
-                                  content: Text(
-                                      "Please enter the PIN Code Or City Name"),
+                                  content:
+                                      Text("Please enter the PIN Code Or City Name"),
                                 ));
                                 FocusScope.of(context)
                                     .requestFocus(FocusNode());
@@ -179,6 +178,7 @@ class _IfscFinderState extends State<IfscFinder> {
                             ),
                           ),
                         ),
+
                         const SizedBox(
                           height: 20,
                         ),
@@ -188,30 +188,24 @@ class _IfscFinderState extends State<IfscFinder> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.blue.shade900,
+                              color: Colors.purple,
                               onPressed: () async {
-                                if (pinCount.text.isEmpty &&
-                                    bankName.text.isEmpty &&
-                                    cityName.text.isEmpty) {
+                                if(pinCount.text.isEmpty && bankName.text.isEmpty && cityName.text.isEmpty){
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(const SnackBar(
-                                    content:
-                                        Text("Please fill the given field"),
+                                    content: Text("Please fill the given field"),
                                   ));
-                                } else {
+                                }else{
                                   setState(() {
                                     isLoading = true;
                                   });
-                                  if (bankName.text.isEmpty &&
-                                      cityName.text.isEmpty) {
-                                    final result = await apiServices
-                                        .searchBankByPin(pinCount.text);
+                                  if (bankName.text.isEmpty && cityName.text.isEmpty) {
+                                    final result = await apiServices.searchBankByPin(pinCount.text);
                                     if (result.data.noOfBanks != 0) {
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
-                                              builder: (context) => ListOfBank(
-                                                    apiResponseByPin: result,
-                                                  )));
+                                          builder: (context) => ListOfBank(apiResponseByPin: result,
+                                          )));
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(
@@ -219,17 +213,12 @@ class _IfscFinderState extends State<IfscFinder> {
                                       ));
                                     }
                                   }
-                                  if (bankName.text.isNotEmpty &&
-                                      pinCount.text.isNotEmpty) {
-                                    final result =
-                                        await apiServices.searchBankByName(
-                                            pinCount.text, bankName.text);
+                                  if(bankName.text.isNotEmpty && pinCount.text.isNotEmpty) {
+                                    final result = await apiServices.searchBankByName(pinCount.text,bankName.text);
                                     if (result.data.bank.isNotEmpty) {
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
-                                              builder: (context) => ListOfBank(
-                                                    apiResponseByName: result,
-                                                  )));
+                                          builder: (context) => ListOfBank(apiResponseByName: result,)));
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(
@@ -237,16 +226,12 @@ class _IfscFinderState extends State<IfscFinder> {
                                       ));
                                     }
                                   }
-                                  if (cityName.text.isNotEmpty &&
-                                      bankName.text.isEmpty) {
-                                    final result = await apiServices
-                                        .searchBankByCity(cityName.text);
+                                  if(cityName.text.isNotEmpty && bankName.text.isEmpty) {
+                                    final result = await apiServices.searchBankByCity(cityName.text);
                                     if (result.data.bank.isNotEmpty) {
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
-                                              builder: (context) => ListOfBank(
-                                                    apiResponseByName: result,
-                                                  )));
+                                          builder: (context) => ListOfBank(apiResponseByName: result,)));
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(
@@ -254,17 +239,12 @@ class _IfscFinderState extends State<IfscFinder> {
                                       ));
                                     }
                                   }
-                                  if (cityName.text.isNotEmpty &&
-                                      bankName.text.isNotEmpty) {
-                                    final result = await apiServices
-                                        .searchBankByCityAndBankName(
-                                            cityName.text, bankName.text);
+                                  if(cityName.text.isNotEmpty && bankName.text.isNotEmpty) {
+                                    final result = await apiServices.searchBankByCityAndBankName(cityName.text,bankName.text);
                                     if (result.data.bank.isNotEmpty) {
                                       Navigator.of(context)
                                           .push(MaterialPageRoute(
-                                              builder: (context) => ListOfBank(
-                                                    apiResponseByName: result,
-                                                  )));
+                                          builder: (context) => ListOfBank(apiResponseByName: result,)));
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(
@@ -276,9 +256,11 @@ class _IfscFinderState extends State<IfscFinder> {
                                     isLoading = false;
                                   });
                                 }
+
                               },
                               text: "Find Now"),
                         ),
+
                         const SizedBox(
                           height: 20,
                         ),
@@ -316,7 +298,7 @@ class _IfscFinderState extends State<IfscFinder> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.blue.shade900,
+                              color: Colors.purple,
                               onPressed: () async {
                                 setState(() {
                                   isLoading = true;

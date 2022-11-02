@@ -100,6 +100,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+      
         body: Padding(
           padding: const EdgeInsets.all(16),
           child: SingleChildScrollView(
@@ -123,7 +124,7 @@ class _HomeState extends State<Home> {
                       'assets/images/accent.png',
                       width: 99,
                       height: 4,
-                      color: Colors.blue.shade900,
+                      color: Colors.blue,
                     ),
                   ],
                 ),

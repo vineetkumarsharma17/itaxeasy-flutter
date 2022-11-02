@@ -69,7 +69,7 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color: Colors.blue.shade900,
+                            color: Colors.purple,
                             width: 99,
                             height: 4,
                           ),
@@ -87,8 +87,7 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding:
-                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -118,8 +117,7 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                             ),
                           ),
                           const Padding(
-                            padding:
-                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -150,8 +148,7 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                             ),
                           ),
                           const Padding(
-                            padding:
-                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -182,8 +179,7 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                             ),
                           ),
                           const Padding(
-                            padding:
-                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -232,15 +228,12 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                               const SizedBox(
                                 width: 20,
                               ),
-                              Expanded(
-                                child: const Text(
-                                    "I have only year of birth in Aadhaar card",
-                                    style: TextStyle(
-                                      fontFamily: "OpenSans",
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 1.5,
-                                      fontSize: 13.5,
-                                    )),
+                              const Text("I have only year of birth in Aadhaar card",style:TextStyle(
+                                fontFamily: "OpenSans",
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 1.5,
+                                fontSize: 13.5,
+                              )
                               ),
                             ],
                           ),
@@ -264,15 +257,12 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                               const SizedBox(
                                 width: 20,
                               ),
-                              Expanded(
-                                child: const Text(
-                                    "I agree to validate my Aadhaar details",
-                                    style: TextStyle(
-                                      fontFamily: "OpenSans",
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 1.5,
-                                      fontSize: 13.5,
-                                    )),
+                              const Text("I agree to validate my Aadhaar details",style:TextStyle(
+                                fontFamily: "OpenSans",
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 1.5,
+                                fontSize: 13.5,
+                              )
                               ),
                             ],
                           ),
@@ -292,13 +282,9 @@ class _LinkAadhaarState extends State<LinkAadhaar> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       child: GFButton(
-                          color: Colors.blue.shade900,
+                        color: Colors.purple,
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const Otp_Validation()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Otp_Validation()));
                           },
                           text: "Link Aadhaar"),
                     ),

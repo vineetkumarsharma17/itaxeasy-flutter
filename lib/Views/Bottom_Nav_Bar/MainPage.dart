@@ -35,7 +35,7 @@ class DetailsScreen extends StatefulWidget {
 }
 
 class _DetailsScreenState extends State<DetailsScreen>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin  {
   double _scale;
   double _scale1;
   double _scale2;
@@ -103,8 +103,8 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
 
     _controller1 = AnimationController(
       vsync: this,
@@ -114,8 +114,8 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
 
     _controller2 = AnimationController(
       vsync: this,
@@ -125,8 +125,9 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
+
 
     _controller3 = AnimationController(
       vsync: this,
@@ -136,8 +137,8 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
 
     _controller4 = AnimationController(
       vsync: this,
@@ -147,8 +148,8 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
 
     _controller5 = AnimationController(
       vsync: this,
@@ -158,8 +159,9 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
+
 
     _controller6 = AnimationController(
       vsync: this,
@@ -169,8 +171,9 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
+
 
     _controller7 = AnimationController(
       vsync: this,
@@ -180,10 +183,11 @@ class _DetailsScreenState extends State<DetailsScreen>
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-        setState(() {});
-      });
+      setState(() {});
+    });
     super.initState();
   }
+
 
   void dispose() {
     super.dispose();
@@ -191,6 +195,7 @@ class _DetailsScreenState extends State<DetailsScreen>
     _controller1.dispose();
     _controller2.dispose();
     _controller3.dispose();
+
   }
 
   // TooltipBehavior _tooltipBehavior;
@@ -222,15 +227,15 @@ class _DetailsScreenState extends State<DetailsScreen>
                   children: [
                     GestureDetector(
                       onTap: _openDrawer,
-                      child: Icon(
+                      child: const Icon(
                         Icons.sort_rounded,
-                        color: Colors.blue.shade900,
+                        color: Color(0xff8E05C2),
                         size: 35,
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.notifications_none_rounded,
-                      color: Colors.blue.shade900,
+                      color: const Color(0xff8E05C2),
                       size: 35,
                     ),
                   ],
@@ -251,16 +256,17 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "Welcome Back",
                           style: GoogleFonts.dmSans(
-                              fontSize: 16,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.blue.shade900),
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: const Color(0xff57435C),
+                          ),
                         ),
                         Text(
-                          name.capitalize ?? "",
+                          name.capitalize ??"",
                           style: GoogleFonts.dmSans(
                             fontSize: 25,
                             fontWeight: FontWeight.w500,
-                            color: const Color(0xFF000000),
+                            color: const Color(0xff57435C),
                           ),
                         ),
                       ],
@@ -270,181 +276,65 @@ class _DetailsScreenState extends State<DetailsScreen>
                 const SizedBox(
                   height: 10,
                 ),
+
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 35, right: 35),
-                      height: 190,
-                      width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.blue.shade900,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Current Balance",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Container(
-                                    height: 30,
-                                    child:
-                                        Image.asset("assets/icons/mcard.png"))
-                              ],
-                            ),
-                            const Text(
-                              "₹5,750,20",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 25),
-                            ),
-                            const SizedBox(
-                              height: 80,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: const [
-                                Text(
-                                  "5282 3456 7890 1289",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Text(
-                                  "09/25",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                    Center(child: Image.asset("assets/images/CardAtm.png")),
                     const SizedBox(
                       height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Gstr4a()));
-                          },
-                          child: Text(
-                            "Important Links",
+                       GestureDetector(
+                         onTap: (){
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Gstr4a()));
+                         },
+                         child: Text("Important Links",
                             style: GoogleFonts.dmSans(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
-                              color: const Color(0xFF000000),
+                              color: const Color(0xff57435C),
                             ),
                           ),
-                        ),
+                       ),
                         GestureDetector(
-                          onTap: () {
+                          onTap: (){
                             setState(() {
                               visible = !visible;
                             });
                           },
-                          child: visible
-                              ? Container(
-                                  padding: const EdgeInsets.only(
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                        color: Colors.grey,
-                                      )),
-                                  child: Text(
-                                    "Switch to Main",
-                                    style: GoogleFonts.dmSans(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color(0xFF000000),
-                                    ),
-                                  ),
+                          child:visible? Container(
+                            padding: const EdgeInsets.only(left: 8,right: 8,),
+                            decoration:  BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  color:Colors.grey,
                                 )
-                              : Container(
-                                  padding: EdgeInsets.only(
-                                    left: 8,
-                                    right: 8,
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                        color: Colors.grey,
-                                      )),
-                                  child: Text(
-                                    "Show more",
-                                    style: GoogleFonts.dmSans(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                      color: const Color(0xFF000000),
-                                    ),
-                                  ),
-                                ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    visible ? tallyDashboard(context) : importantLinks(context),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "Transactions",
-                      style: GoogleFonts.dmSans(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF000000),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Text(
-                            "Today",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xFF000000),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          RecentTransactions()));
-                            },
                             child: Text(
-                              "View all",
+                              "Switch to Main",
                               style: GoogleFonts.dmSans(
-                                fontSize: 18,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold,
-                                color: const Color(0xFF000000),
+                                color: const Color(0xff57435C),
+                              ),
+                            ),
+                          ) : Container(
+                            padding: EdgeInsets.only(left: 8,right: 8,),
+                            decoration:  BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(
+                                color:Colors.grey,
+                              )
+                            ),
+                            child: Text(
+                              "Show more",
+                              style: GoogleFonts.dmSans(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: const Color(0xff57435C),
                               ),
                             ),
                           ),
@@ -454,12 +344,63 @@ class _DetailsScreenState extends State<DetailsScreen>
                     const SizedBox(
                       height: 20,
                     ),
-                    transactionCards(context),
+                    visible ?tallyDashboard(context) : importantLinks(context),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Transactions",
+                      style: GoogleFonts.dmSans(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xff57435C),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment:  MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            "Today",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xff57435C),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>RecentTransactions()));
+                            },
+                            child: Text(
+                              "View all",
+                              style: GoogleFonts.dmSans(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: const Color(0xff57435C),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                   transactionCards(context),
                     const SizedBox(
                       height: 20,
                     ),
                   ],
                 ),
+
               ],
             ),
           ),
@@ -469,8 +410,8 @@ class _DetailsScreenState extends State<DetailsScreen>
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.blue.shade100,
-        backgroundColor: Colors.blue.shade900,
+        overlayColor: Colors.purple.shade100,
+        backgroundColor: Colors.deepPurple,
         spacing: 12,
         // childrenButtonSize: 60,
         spaceBetweenChildren: 8,
@@ -493,10 +434,10 @@ class _DetailsScreenState extends State<DetailsScreen>
                 const url = "http://itaxeasy.com/";
                 openUrl(url: url, inApp: true);
               },
-              child: Icon(
+              child: const Icon(
                 FontAwesomeIcons.twitter,
                 size: 30,
-                color: Colors.blue.shade900,
+                color: Colors.lightBlue,
               )),
           SpeedDialChild(
               onTap: () async {
@@ -504,10 +445,10 @@ class _DetailsScreenState extends State<DetailsScreen>
                     "https://www.linkedin.com/company/itaxeasy-pvt-limited/";
                 openUrl(url: url, inApp: true);
               },
-              child: Icon(
+              child: const Icon(
                 FontAwesomeIcons.linkedin,
                 size: 30,
-                color: Colors.blue.shade900,
+                color: Colors.blue,
               )),
           SpeedDialChild(
             onTap: () async {
@@ -536,6 +477,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         ],
       );
 
+
+
   Widget importantLinks(BuildContext context) {
     _scale = 1 - _controller.value;
     _scale1 = 1 - _controller1.value;
@@ -554,9 +497,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown,
           onTapUp: _tapUp,
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => EasyTax()));
+          onTap:  (){
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyTax()));
           },
           child: Transform.scale(
             scale: _scale,
@@ -592,7 +534,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -603,9 +545,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown1,
           onTapUp: _tapUp1,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => OtherSections()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> OtherSections() ));
           },
           child: Transform.scale(
             scale: _scale1,
@@ -641,7 +582,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -652,9 +593,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown2,
           onTapUp: _tapUp2,
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => EasyLinks()));
+          onTap:  (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
           },
           child: Transform.scale(
             scale: _scale2,
@@ -690,7 +630,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -701,9 +641,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown3,
           onTapUp: _tapUp3,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => DashService()));
+          onTap:  (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
           },
           child: Transform.scale(
             scale: _scale3,
@@ -739,7 +678,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -751,85 +690,69 @@ class _DetailsScreenState extends State<DetailsScreen>
     );
   }
 
-  Widget transactionCards(BuildContext context) {
+  Widget transactionCards(BuildContext context){
     return Column(
       children: [
         ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundColor: Color(0xffE3E9ED),
+            backgroundColor:  Color(0xffE3E9ED),
             child: Icon(
               Icons.account_circle_rounded,
               color: KColors.icon,
               size: 35,
             ),
           ),
-          title: Text(
-            "Tiana Saris",
-            style: GoogleFonts.dmSans(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF000000),
-            ),
-          ),
-          subtitle: Text(
-            "BCA • 2468 3545 ****",
-            style: GoogleFonts.dmSans(
-              fontSize: 16,
-              // fontWeight: FontWeight.bold,
-              color: const Color(0xff78828A),
-            ),
-          ),
-          trailing: Text(
-            "200",
-            style: GoogleFonts.dmSans(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF000000),
-            ),
-          ),
+           title: Text("Tiana Saris", style: GoogleFonts.dmSans(
+             fontSize: 20,
+             fontWeight: FontWeight.bold,
+             color: const Color(0xff57435C),
+           ),),
+          subtitle: Text("BCA • 2468 3545 ****", style: GoogleFonts.dmSans(
+            fontSize: 16,
+            // fontWeight: FontWeight.bold,
+            color: const Color(0xff78828A),
+          ),),
+          trailing: Text("200", style: GoogleFonts.dmSans(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: const  Color(0xff57435C),
+          ),),
         ),
         Divider(),
         ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundColor: Color(0xffE3E9ED),
+            backgroundColor:  Color(0xffE3E9ED),
             child: Icon(
               Icons.account_circle_rounded,
               color: KColors.icon,
               size: 35,
             ),
           ),
-          title: Text(
-            "Mukul Bedi",
-            style: GoogleFonts.dmSans(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF000000),
-            ),
-          ),
-          subtitle: Text(
-            "Salary",
-            style: GoogleFonts.dmSans(
-              fontSize: 16,
-              // fontWeight: FontWeight.bold,
-              color: const Color(0xff78828A),
-            ),
-          ),
-          trailing: Text(
-            "Cr 30000",
-            style: GoogleFonts.dmSans(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF000000),
-            ),
-          ),
+          title: Text("Mukul Bedi", style: GoogleFonts.dmSans(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xff57435C),
+          ),),
+          subtitle: Text("Salary", style: GoogleFonts.dmSans(
+            fontSize: 16,
+            // fontWeight: FontWeight.bold,
+            color: const Color(0xff78828A),
+          ),),
+          trailing: Text("Cr 30000", style: GoogleFonts.dmSans(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: const  Color(0xff57435C),
+          ),),
         ),
       ],
     );
   }
 
+
   Widget tallyDashboard(BuildContext context) {
+
     _scale = 1 - _controller.value;
     _scale1 = 1 - _controller1.value;
     _scale2 = 1 - _controller2.value;
@@ -851,9 +774,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown,
           onTapUp: _tapUp,
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Vouchers()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Vouchers()));
           },
           child: Transform.scale(
             scale: _scale,
@@ -889,7 +811,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -900,9 +822,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown1,
           onTapUp: _tapUp1,
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SaleUi()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> SaleUi() ));
           },
           child: Transform.scale(
             scale: _scale1,
@@ -938,7 +859,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -949,9 +870,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown2,
           onTapUp: _tapUp2,
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Purchases()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Purchases()));
           },
           child: Transform.scale(
             scale: _scale2,
@@ -987,7 +907,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -998,7 +918,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown3,
           onTapUp: _tapUp3,
-          onTap: () {
+          onTap:  (){
             // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
           },
           child: Transform.scale(
@@ -1035,7 +955,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -1046,9 +966,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown4,
           onTapUp: _tapUp4,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CashAndBank()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>CashAndBank()));
           },
           child: Transform.scale(
             scale: _scale4,
@@ -1084,7 +1003,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -1095,9 +1014,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown5,
           onTapUp: _tapUp5,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => TradingAccount()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
           },
           child: Transform.scale(
             scale: _scale5,
@@ -1133,7 +1051,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -1141,10 +1059,12 @@ class _DetailsScreenState extends State<DetailsScreen>
             ),
           ),
         ),
+
+
         GestureDetector(
           onTapDown: _tapDown6,
           onTapUp: _tapUp6,
-          onTap: () {
+          onTap:  (){
             // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
           },
           child: Transform.scale(
@@ -1181,7 +1101,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -1192,9 +1112,8 @@ class _DetailsScreenState extends State<DetailsScreen>
         GestureDetector(
           onTapDown: _tapDown7,
           onTapUp: _tapUp7,
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => BalanceSheet()));
+          onTap:  (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>BalanceSheet()));
           },
           child: Transform.scale(
             scale: _scale7,
@@ -1230,7 +1149,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xFF000000),
+                      color: const Color(0xff57435C),
                     ),
                   ),
                 ],
@@ -1245,31 +1164,24 @@ class _DetailsScreenState extends State<DetailsScreen>
   void _tapDown(TapDownDetails details) {
     _controller.forward();
   }
-
   void _tapUp(TapUpDetails details) {
     _controller.reverse();
   }
-
   void _tapDown1(TapDownDetails details) {
     _controller1.forward();
   }
-
   void _tapUp1(TapUpDetails details) {
     _controller1.reverse();
   }
-
   void _tapDown2(TapDownDetails details) {
     _controller2.forward();
   }
-
   void _tapUp2(TapUpDetails details) {
     _controller2.reverse();
   }
-
   void _tapDown3(TapDownDetails details) {
     _controller3.forward();
   }
-
   void _tapUp3(TapUpDetails details) {
     _controller3.reverse();
   }
@@ -1277,15 +1189,12 @@ class _DetailsScreenState extends State<DetailsScreen>
   void _tapDown4(TapDownDetails details) {
     _controller4.forward();
   }
-
   void _tapUp4(TapUpDetails details) {
     _controller4.reverse();
   }
-
   void _tapDown5(TapDownDetails details) {
     _controller5.forward();
   }
-
   void _tapUp5(TapUpDetails details) {
     _controller5.reverse();
   }
@@ -1293,7 +1202,6 @@ class _DetailsScreenState extends State<DetailsScreen>
   void _tapDown6(TapDownDetails details) {
     _controller6.forward();
   }
-
   void _tapUp6(TapUpDetails details) {
     _controller6.reverse();
   }
@@ -1301,12 +1209,10 @@ class _DetailsScreenState extends State<DetailsScreen>
   void _tapDown7(TapDownDetails details) {
     _controller7.forward();
   }
-
   void _tapUp7(TapUpDetails details) {
     _controller7.reverse();
   }
 }
-
 Future openUrl({
   String url,
   bool inApp = false,

@@ -78,7 +78,7 @@ class _LinkAadhaarStatusState extends State<LinkAadhaarStatus> {
                               ),
                               Image.asset(
                                 'assets/images/accent.png',
-                                color: Colors.blue.shade900,
+                                color:Colors.purple,
                                 width: 99,
                                 height: 4,
                               ),
@@ -115,12 +115,12 @@ class _LinkAadhaarStatusState extends State<LinkAadhaarStatus> {
                               ),
                               child: TextFormField(
                                 inputFormatters: [
-                                  FilteringTextInputFormatter.allow(
-                                      RegExp("[0-9a-zA-Z]")),
+                                  FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z]")),
                                   LengthLimitingTextInputFormatter(10),
                                 ],
                                 textCapitalization:
-                                    TextCapitalization.characters,
+                                TextCapitalization.characters,
+
                                 controller: panCont,
                                 decoration: InputDecoration(
                                   hintText: 'Pan Number',
@@ -153,12 +153,12 @@ class _LinkAadhaarStatusState extends State<LinkAadhaarStatus> {
                                 borderRadius: BorderRadius.circular(14.0),
                               ),
                               child: TextFormField(
-                                autovalidateMode:
-                                    AutovalidateMode.onUserInteraction,
+                                autovalidateMode: AutovalidateMode.onUserInteraction,
                                 inputFormatters: [
                                   // FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z]")),
                                   LengthLimitingTextInputFormatter(12),
                                 ],
+
                                 controller: adhaarCont,
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
@@ -185,38 +185,23 @@ class _LinkAadhaarStatusState extends State<LinkAadhaarStatus> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.blue.shade900,
+                              color:Colors.purple,
                               onPressed: () async {
-                                FocusScope.of(context)
-                                    .requestFocus(FocusNode());
-                                if (panCont.text.isEmpty ||
-                                    adhaarCont.text.isEmpty) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content:
-                                        Text("Please fill the given fields"),
-                                  ));
+                                FocusScope.of(context).requestFocus(FocusNode());
+                                if(panCont.text.isEmpty || adhaarCont.text.isEmpty ){
+                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please fill the given fields"),));
                                 }
-                                if (panCont.text.length < 10) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content:
-                                        Text("PAN Number Should be 10 Digits"),
-                                  ));
-                                }
-                                if (adhaarCont.text.length < 12) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(const SnackBar(
-                                    content: Text(
-                                        "Aadhaar Number Should be 21 Digits"),
-                                  ));
-                                } else {
+                                if(panCont.text.length<10 ){
+                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("PAN Number Should be 10 Digits"),));
+                                }   if(adhaarCont.text.length<12 ){
+                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Aadhaar Number Should be 21 Digits"),));
+                                }else{
                                   setState(() {
                                     isLoading = true;
                                   });
                                   final result =
-                                      await apiServices.linkAdhaarStatus(
-                                          panCont.text, adhaarCont.text);
+                                  await apiServices.linkAdhaarStatus(
+                                      panCont.text, adhaarCont.text);
                                   setState(() {
                                     isLoading = false;
                                   });
@@ -224,19 +209,15 @@ class _LinkAadhaarStatusState extends State<LinkAadhaarStatus> {
                                     showDialog(
                                         context: context,
                                         builder: (_) => AlertDialog(
-                                              title: Text(result.data.status),
-                                              content:
-                                                  Text(result.data.company),
-                                            ));
+                                          title: Text(result.data.status),
+                                          content: Text(result.data.company),
+                                        ));
 
                                     print(
                                         "------------------SUCCESS-----------------");
                                   } else {
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(const SnackBar(
-                                      content: Text(
-                                          "Something Went Wrong, Please check Your Details"),
-                                    ));
+                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Something Went Wrong, Please check Your Details"),));
+
                                   }
                                 }
 

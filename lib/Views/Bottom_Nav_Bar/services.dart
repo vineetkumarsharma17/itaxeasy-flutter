@@ -6,6 +6,7 @@ import 'package:gst_app/Views/SideBar/header.dart';
 import 'package:gst_app/Views/SideBar/side_menu.dart';
 import 'package:provider/provider.dart';
 
+
 class ContactUs extends StatelessWidget {
   const ContactUs({Key key}) : super(key: key);
 
@@ -19,7 +20,7 @@ class ContactUs extends StatelessWidget {
           child: FadeInDown(
             delay: const Duration(milliseconds: 500),
             duration: const Duration(milliseconds: 500),
-            child: Column(
+            child:    Column(
               children: [
                 FadeInDown(
                   delay: const Duration(milliseconds: 550),
@@ -38,7 +39,7 @@ class ContactUs extends StatelessWidget {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.blue.shade900,
+                          color:Colors.purple,
                           width: 99,
                           height: 4,
                         ),
@@ -54,48 +55,42 @@ class ContactUs extends StatelessWidget {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 600),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      padding: const EdgeInsets.only(left: 20,right: 20),
                       child: Column(
                         children: [
                           SizedBox(
                             width: double.infinity,
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 20, right: 20, top: 10, bottom: 10),
+                                padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: const [
-                                    Text(
-                                      "Services we are providing",
-                                      // textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                    Text("Services we are providing",
+                                       // textAlign: TextAlign.center,
+                                       style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.bold,
                                         letterSpacing: 1.5,
                                         fontSize: 17.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 20,
                                     ),
-                                    Text(
-                                      "1. PF & ESI Monthly Return",
+                                    Text("1. PF & ESI Monthly Return",
                                       // textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "2. PF Registration",
+                                    Text("2. PF Registration",
                                       // textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
@@ -105,23 +100,30 @@ class ContactUs extends StatelessWidget {
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "3. ESI Registration",
+                                    Text("3. ESI Registration",
                                       // textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "4. TDS Filing",
+                                    Text("4. TDS Filing",
                                       // textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style :TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 1.5,
+                                        fontSize: 15.5,
+                                      ),),
+                                    SizedBox(
+                                      height: 7,
+                                    ),
+                                    Text("5. GST Filing",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
@@ -131,529 +133,433 @@ class ContactUs extends StatelessWidget {
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "5. GST Filing",
-                                      style: TextStyle(
+                                    Text("6. ROC Filing",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "6. ROC Filing",
-                                      style: TextStyle(
+                                    Text("7. Income Tax Filing",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "7. Income Tax Filing",
-                                      style: TextStyle(
+                                    Text("8. DSC (Digital Signature Certificate)",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "8. DSC (Digital Signature Certificate)",
-                                      style: TextStyle(
+                                    Text("9. TAN Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "9. TAN Registration",
-                                      style: TextStyle(
+                                    Text("10. GST Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "10. GST Registration",
-                                      style: TextStyle(
+                                    Text("11. License Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "11. License Registration",
-                                      style: TextStyle(
+                                    Text("12. FSSAI (Food License)",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "12. FSSAI (Food License)",
-                                      style: TextStyle(
+                                    Text("13. Professional Tax Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "13. Professional Tax Registration",
-                                      style: TextStyle(
+                                    Text("14. Trademark Hearing",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "14. Trademark Hearing",
-                                      style: TextStyle(
+                                    Text("15. Trademark Objection",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "15. Trademark Objection",
-                                      style: TextStyle(
+                                    Text("16. Trademark Opposition",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "16. Trademark Opposition",
-                                      style: TextStyle(
+                                    Text("17. Private Limited Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "17. Private Limited Registration",
-                                      style: TextStyle(
+                                    Text("18. Proprietorship/MSME Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "18. Proprietorship/MSME Registration",
-                                      style: TextStyle(
+                                    Text("19. OPC Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "19. OPC Registration",
-                                      style: TextStyle(
+                                    Text("20. Section8/NGO Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "20. Section8/NGO Registration",
-                                      style: TextStyle(
+                                    Text("21. Limited Liability Partnership Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "21. Limited Liability Partnership Registration",
-                                      style: TextStyle(
+                                    Text("22. Nidhi Company Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "22. Nidhi Company Registration",
-                                      style: TextStyle(
+                                    Text("23. Public Limited Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "23. Public Limited Registration",
-                                      style: TextStyle(
+                                    Text("24. Trust Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "24. Trust Registration",
-                                      style: TextStyle(
+                                    Text("25. IE License Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "25. IE License Registration",
-                                      style: TextStyle(
+                                    Text("26. PAN",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "26. PAN",
-                                      style: TextStyle(
+                                    Text("27. Trade Mark Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "27. Trade Mark Registration",
-                                      style: TextStyle(
+                                    Text("28. Club Foundation",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "28. Club Foundation",
-                                      style: TextStyle(
+                                    Text("29. Trade Mark Renewal",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "29. Trade Mark Renewal",
-                                      style: TextStyle(
+                                    Text("30. Copy Right Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "30. Copy Right Registration",
-                                      style: TextStyle(
+                                    Text("31. ISO Certification",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "31. ISO Certification",
-                                      style: TextStyle(
+                                    Text("32. Corporation License",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "32. Corporation License",
-                                      style: TextStyle(
+                                    Text("33. Fire License Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "33. Fire License Registration",
-                                      style: TextStyle(
+                                    Text("34. Factory License Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "34. Factory License Registration",
-                                      style: TextStyle(
+                                    Text("35. Registered office change",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "35. Registered office change",
-                                      style: TextStyle(
+                                    Text("36. Director change",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "36. Director change",
-                                      style: TextStyle(
+                                    Text("37. Share capital increase",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "37. Share capital increase",
-                                      style: TextStyle(
+                                    Text("38. Share allotment",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "38. Share allotment",
-                                      style: TextStyle(
+                                    Text("39. Partnership registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "39. Partnership registration",
-                                      style: TextStyle(
+                                    Text("40. Copyright Reply",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "40. Copyright Reply",
-                                      style: TextStyle(
+                                    Text("41. Association Formation",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "41. Association Formation",
-                                      style: TextStyle(
+                                    Text("42. TradeMark Reply",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "42. TradeMark Reply",
-                                      style: TextStyle(
+                                    Text("43. SEO and SMO (Digital Marketing)",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "43. SEO and SMO (Digital Marketing)",
-                                      style: TextStyle(
+                                    Text("44. News Paper Registration",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "44. News Paper Registration",
-                                      style: TextStyle(
+                                    Text("45. Advertisement Agency",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "45. Advertisement Agency",
-                                      style: TextStyle(
+                                    Text("46. Application Development",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                     SizedBox(
                                       height: 7,
                                     ),
-                                    Text(
-                                      "46. Application Development",
-                                      style: TextStyle(
+                                    Text("47. Web and Design Services",
+                                      style :TextStyle(
                                         fontFamily: "Poppins",
                                         fontWeight: FontWeight.w500,
                                         letterSpacing: 1.5,
                                         fontSize: 15.5,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 7,
-                                    ),
-                                    Text(
-                                      "47. Web and Design Services",
-                                      style: TextStyle(
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w500,
-                                        letterSpacing: 1.5,
-                                        fontSize: 15.5,
-                                      ),
-                                    ),
+                                      ),),
                                   ],
                                 ),
                               ),
-                            ),
-                          ),
+                            ),),
                         ],
                       ),
                     )),
               ],
             ),
+
           ),
         ),
       ),

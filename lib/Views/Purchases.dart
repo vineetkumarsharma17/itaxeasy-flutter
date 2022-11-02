@@ -43,7 +43,6 @@ class _PurchasesState extends State<Purchases> {
 
     loadingController.forward();
   }
-
   getImagecam() async {
     var img = await image.pickImage(source: ImageSource.camera);
 
@@ -86,7 +85,7 @@ class _PurchasesState extends State<Purchases> {
               children: [
                 FadeInDown(
                   delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
+                  duration: const  Duration(milliseconds: 500),
                   child: Row(
                     children: [
                       IconButton(
@@ -125,7 +124,7 @@ class _PurchasesState extends State<Purchases> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color: Colors.blue.shade900,
+                            color:Colors.purple,
                             width: 99,
                             height: 4,
                           ),
@@ -140,10 +139,11 @@ class _PurchasesState extends State<Purchases> {
                 const SizedBox(height: 20),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 80, right: 80),
+                  padding: const EdgeInsets.only(left: 20,right: 20),
                   child: Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20)
+                    ),
                     elevation: 5,
                     child: Container(
                       padding: const EdgeInsets.all(defaultPadding),
@@ -156,14 +156,12 @@ class _PurchasesState extends State<Purchases> {
                       child: Column(
                         children: [
                           Center(
-                            child: Image.asset("assets/images/rent.png",
-                                width: 100, height: 100),
+                            child: Image.asset("assets/images/rent.png",width: 100,height:100),
                           ),
                           const SizedBox(
                             height: 10,
                           ),
-                          Text(
-                            "Purchase",
+                          Text("Purchase",
                             style: GoogleFonts.recursive(
                               fontSize: 30.0,
                               fontWeight: FontWeight.w700,
@@ -175,7 +173,7 @@ class _PurchasesState extends State<Purchases> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height:20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -185,7 +183,8 @@ class _PurchasesState extends State<Purchases> {
                         height: 130,
                         child: Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(20)
+                          ),
                           elevation: 5,
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding),
@@ -198,16 +197,12 @@ class _PurchasesState extends State<Purchases> {
                             child: Column(
                               children: [
                                 Center(
-                                  child: Image.asset(
-                                      "assets/icons/purchasing.png",
-                                      width: 50,
-                                      height: 50),
+                                  child: Image.asset("assets/icons/purchasing.png",width: 50,height:50),
                                 ),
                                 const SizedBox(
                                   height: 20,
                                 ),
-                                Text(
-                                  "Purchase",
+                                Text("Purchase",
                                   style: GoogleFonts.recursive(
                                     fontSize: 15.0,
                                     fontWeight: FontWeight.w700,
@@ -223,8 +218,10 @@ class _PurchasesState extends State<Purchases> {
                       child: SizedBox(
                         height: 130,
                         child: Card(
+
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(20)
+                          ),
                           elevation: 5,
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding),
@@ -237,22 +234,16 @@ class _PurchasesState extends State<Purchases> {
                             child: Column(
                               children: [
                                 Center(
-                                  child: Image.asset(
-                                      "assets/icons/return-box.png",
-                                      width: 50,
-                                      height: 50),
+                                  child: Image.asset("assets/icons/return-box.png",width: 50,height:50),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Expanded(
-                                  child: Text(
-                                    "Credit\nPurchase",
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.recursive(
-                                      fontSize: 13.0,
-                                      fontWeight: FontWeight.w700,
-                                    ),
+                                Text("Credit\nPurchase",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.recursive(
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w700,
                                   ),
                                 ),
                               ],
@@ -264,7 +255,8 @@ class _PurchasesState extends State<Purchases> {
                     Expanded(
                       child: Card(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
+                            borderRadius: BorderRadius.circular(20)
+                        ),
                         elevation: 5,
                         child: Container(
                           padding: const EdgeInsets.all(defaultPadding),
@@ -277,16 +269,15 @@ class _PurchasesState extends State<Purchases> {
                           child: Column(
                             children: [
                               Center(
-                                child: Image.asset("assets/icons/creditp.png",
-                                    width: 50, height: 50),
+                                child: Image.asset("assets/icons/creditp.png",width: 50,height:50),
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                "Purchase\nReturn",
+                              Text("Purchase\nReturn",
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.recursive(
+
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w700,
                                 ),
@@ -312,48 +303,35 @@ class _PurchasesState extends State<Purchases> {
                           radius: const Radius.circular(10),
                           dashPattern: const [10, 4],
                           strokeCap: StrokeCap.round,
-                          color: Colors.blue.shade900,
+                          color: Colors.blue.shade400,
                           child: Container(
                             width: double.infinity,
                             height: 150,
                             decoration: BoxDecoration(
                                 color: Colors.blue.shade50.withOpacity(.3),
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(10)
+                            ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(
-                                  Iconsax.folder_open,
-                                  color: Colors.blue.shade900,
-                                  size: 40,
-                                ),
-                                const SizedBox(
-                                  height: 15,
-                                ),
-                                Text(
-                                  'Select your file',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      color: Colors.grey.shade400),
-                                ),
+                                const Icon(Iconsax.folder_open, color: Colors.blue, size: 40,),
+                                const    SizedBox(height: 15,),
+                                Text('Select your file', style: TextStyle(fontSize: 15, color: Colors.grey.shade400),),
                               ],
                             ),
                           ),
                         ),
                       ),
                     ),
+
                   ],
                 ),
-                const SizedBox(
-                  height: 40,
-                ),
-                Text(
-                  "Total Purchase :",
-                  style: GoogleFonts.recursive(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
+                const SizedBox(height:40 ,),
+                Text("Total Purchase :",         style: GoogleFonts.recursive(
+
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w700,
+                ),),
                 // const SizedBox(height: 10),
                 // FadeInLeft(
                 //   delay: const Duration(milliseconds: 500),
@@ -380,16 +358,16 @@ class _PurchasesState extends State<Purchases> {
                 //                 Container(
                 //                   padding: const EdgeInsets.all(8),
                 //                   decoration: BoxDecoration(
-                //                     color:  Colors.blue.shade900.withOpacity(0.1),
+                //                     color:  Colors.purple.withOpacity(0.1),
                 //                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                 //                   ),
                 //                   child: Icon(
                 //                     Icons.qr_code_scanner_outlined,
-                //                     color:Colors.blue.shade900,
+                //                     color:Colors.purple,
                 //                   ),
                 //                   // SvgPicture.asset(
                 //                   //   "assets/icons/Documents.svg",
-                //                   //   color:  Colors.blue.shade900,
+                //                   //   color:  Colors.purple,
                 //                   // ),
                 //                 ),
                 //                 const Text(
@@ -404,7 +382,7 @@ class _PurchasesState extends State<Purchases> {
                 //                 ),
                 //                 const Icon(
                 //                          Icons.more_vert,
-                //                          color: Colors.blue.shade900),
+                //                          color: Colors.purple),
                 //               ],
                 //             ),
                 //           ],
@@ -440,12 +418,12 @@ class _PurchasesState extends State<Purchases> {
                 //                 Container(
                 //                   padding: const EdgeInsets.all(8),
                 //                   decoration: BoxDecoration(
-                //                     color:  Colors.blue.shade900.withOpacity(0.1),
+                //                     color:  Colors.purple.withOpacity(0.1),
                 //                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                 //                   ),
                 //                   child: Icon(
                 //                     Icons.document_scanner_outlined,
-                //                     color:Colors.blue.shade900,
+                //                     color:Colors.purple,
                 //                   ),
                 //                 ),
                 //                 const Text(
@@ -459,7 +437,7 @@ class _PurchasesState extends State<Purchases> {
                 //                   overflow: TextOverflow.ellipsis,
                 //                 ),
                 //                 const Icon(Icons.more_vert,
-                //                     color: Colors.blue.shade900)
+                //                     color: Colors.purple)
                 //               ],
                 //             ),
                 //           ],
@@ -494,12 +472,12 @@ class _PurchasesState extends State<Purchases> {
                 //                 Container(
                 //                   padding: const EdgeInsets.all(8),
                 //                   decoration: BoxDecoration(
-                //                     color:  Colors.blue.shade900.withOpacity(0.1),
+                //                     color:  Colors.purple.withOpacity(0.1),
                 //                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                 //                   ),
                 //                   child: Icon(
                 //                     Icons.aspect_ratio_outlined,
-                //                     color:Colors.blue.shade900
+                //                     color:Colors.purple
                 //                   ),
                 //                 ),
                 //                 const Text(
@@ -513,7 +491,7 @@ class _PurchasesState extends State<Purchases> {
                 //                   overflow: TextOverflow.ellipsis,
                 //                 ),
                 //                 const Icon(Icons.more_vert,
-                //                     color: Colors.blue.shade900)
+                //                     color: Colors.purple)
                 //               ],
                 //             ),
                 //           ],
@@ -548,12 +526,12 @@ class _PurchasesState extends State<Purchases> {
                 //                 Container(
                 //                   padding: const EdgeInsets.all(8),
                 //                   decoration: BoxDecoration(
-                //                     color:  Colors.blue.shade900.withOpacity(0.1),
+                //                     color:  Colors.purple.withOpacity(0.1),
                 //                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                 //                   ),
                 //                   child: Icon(
                 //                     Icons.center_focus_weak_outlined,
-                //                     color:Colors.blue.shade900
+                //                     color:Colors.purple
                 //                   ),
                 //                 ),
                 //                 const Text(
@@ -567,7 +545,7 @@ class _PurchasesState extends State<Purchases> {
                 //                   overflow: TextOverflow.ellipsis,
                 //                 ),
                 //                 const Icon(Icons.more_vert,
-                //                     color: Colors.blue.shade900)
+                //                     color: Colors.purple)
                 //               ],
                 //             ),
                 //           ],
@@ -611,8 +589,8 @@ class _PurchasesState extends State<Purchases> {
 void SelectedItem(BuildContext context, item) {
   switch (item) {
     case 0:
-      // Navigator.of(context)
-      //     .push(MaterialPageRoute(builder: (context) => VerifyReturn()));
+    // Navigator.of(context)
+    //     .push(MaterialPageRoute(builder: (context) => VerifyReturn()));
       break;
     case 1:
       print("Privacy Clicked");
@@ -625,3 +603,4 @@ void SelectedItem(BuildContext context, item) {
       break;
   }
 }
+

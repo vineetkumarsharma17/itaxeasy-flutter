@@ -22,7 +22,7 @@ import 'package:shake/shake.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  HttpOverrides.global = MyHttpOverrides();
+  HttpOverrides.global =  MyHttpOverrides();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -37,18 +37,17 @@ Future main() async {
 
   runApp(MyApp());
 }
-
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback =
-          (X509Certificate cert, String host, int port) => true;
+    return super.createHttpClient(context)..badCertificateCallback =
+        (X509Certificate cert, String host, int port) => true;
   }
 }
-
 class MyApp extends StatefulWidget {
   @override
+
+
   State<MyApp> createState() => _MyAppState();
 }
 
@@ -87,19 +86,18 @@ class _MyAppState extends State<MyApp> {
   ShakeDetector detector;
   @override
   void initState() {
-    detector = ShakeDetector.autoStart(onPhoneShake: () async {
-      await HapticFeedback.mediumImpact()
-          .then((value) => SystemNavigator.pop());
-    });
+    detector =  ShakeDetector.autoStart(
+        onPhoneShake: () async{
+          await    HapticFeedback.mediumImpact().then((value) =>SystemNavigator.pop());
+        }
+    );
     super.initState();
   }
 
   @override
   void dispose() {
-    detector.stopListening();
-    super.dispose();
+    detector.stopListening();    super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -109,12 +107,12 @@ class _MyAppState extends State<MyApp> {
           primarySwatch: Colors.teal,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: const SplashScreen()
+        home:  const SplashScreen()
         // routes: {
         //   '/login': (context) => Login(),
         //   '/mainpage': (context) => Navbar(),
         // }
-        );
+    );
   }
 
   // getToken() async {

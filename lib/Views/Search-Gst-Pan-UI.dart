@@ -59,31 +59,29 @@ class _GSTByPanState extends State<GSTByPan> {
                             const SizedBox(
                               width: 20,
                             ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 20),
-                                    child: Text(
-                                      'Search Taxpayer by Pan',
-                                      style: GoogleFonts.dmSans(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 25,
-                                          color: KColors.headline),
-                                    ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 20),
+                                  child: Text(
+                                    'Search Taxpayer by Pan',
+                                    style: GoogleFonts.dmSans(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25,
+                                        color: KColors.headline),
                                   ),
-                                  const SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(
-                                    'assets/images/accent.png',
-                                    width: 99,
-                                    height: 4,
-                                    color: Colors.blue.shade900,
-                                  ),
-                                ],
-                              ),
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                Image.asset(
+                                  'assets/images/accent.png',
+                                  width: 99,
+                                  height: 4,
+                                  color: Colors.purple,
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -186,7 +184,7 @@ class _GSTByPanState extends State<GSTByPan> {
                               borderRadius: BorderRadius.circular(14.0),
                             ),
                             child: GFButton(
-                                color: Colors.blue.shade900,
+                                color: Colors.purple,
                                 onPressed: () async {
                                   FocusScope.of(context)
                                       .requestFocus(FocusNode());
@@ -225,8 +223,7 @@ class _GSTByPanState extends State<GSTByPan> {
                                         visible = true;
                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>testFile(gst: gstinCont.text,)));
                                       });
-                                      print(
-                                          "---------------SUCCESS--------------");
+                                      print("---------------SUCCESS--------------");
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(

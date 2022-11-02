@@ -62,7 +62,7 @@ class _GstLoginState extends State<GstLogin> {
                                 ),
                                 Image.asset(
                                   'assets/images/accent.png',
-                                  color: Colors.blue.shade900,
+                                  color: Colors.purple,
                                   width: 99,
                                   height: 4,
                                 ),
@@ -139,7 +139,7 @@ class _GstLoginState extends State<GstLogin> {
                               child: Container(
                                 height: 56,
                                 decoration: BoxDecoration(
-                                  color: Colors.blue.shade900,
+                                  color: Colors.purple,
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: Material(
@@ -233,8 +233,8 @@ class _GstLoginState extends State<GstLogin> {
                               },
                               child: Text(
                                 'Register',
-                                style: regular16pt.copyWith(
-                                    color: Colors.blue.shade900),
+                                style:
+                                    regular16pt.copyWith(color: Colors.purple),
                               ),
                             ),
                           ],

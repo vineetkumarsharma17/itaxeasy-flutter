@@ -16,21 +16,29 @@ class DashService extends StatefulWidget {
 }
 
 class _DashServiceState extends State<DashService> {
-  final FixedExtentScrollController _scrollController =
-      FixedExtentScrollController();
+  final FixedExtentScrollController _scrollController = FixedExtentScrollController();
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: Column(
+        body:  Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
-              decoration: const BoxDecoration(),
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF655B96),
+                      Color(0xFFA644B7),
+                    ],
+                  )
+              ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:  CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -43,14 +51,14 @@ class _DashServiceState extends State<DashService> {
                           child: Container(
                             height: 45,
                             width: 45,
-                            decoration: BoxDecoration(
-                              color: Colors.blue.shade900,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
+                              BorderRadius.all(Radius.circular(20)),
                             ),
                             child: const Icon(
                               Icons.chevron_left_rounded,
-                              color: Colors.white,
+                              color: KColors.icon,
                               size: 35,
                             ),
                           ),
@@ -64,12 +72,13 @@ class _DashServiceState extends State<DashService> {
                             fontSize: 25,
                             letterSpacing: 3,
                             fontWeight: FontWeight.w500,
-                            color: Colors.blue.shade900,
+                            color: Colors.white,
                           ),
                         ),
                       ),
                     ],
                   ),
+
                   SizedBox(
                     height: 10,
                   ),
@@ -82,7 +91,7 @@ class _DashServiceState extends State<DashService> {
                       autoPlay: true,
                       autoPlayInterval: const Duration(seconds: 3),
                       autoPlayAnimationDuration:
-                          const Duration(milliseconds: 800),
+                      const Duration(milliseconds: 800),
                       autoPlayCurve: Curves.fastOutSlowIn,
                       // scrollDirection: Axis.horizontal,
                     ),
@@ -99,10 +108,7 @@ class _DashServiceState extends State<DashService> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
+                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -121,7 +127,8 @@ class _DashServiceState extends State<DashService> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white),
+                                    color: Colors.white
+                                ),
                               ),
                             ],
                           ),
@@ -139,10 +146,7 @@ class _DashServiceState extends State<DashService> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
+                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -161,7 +165,8 @@ class _DashServiceState extends State<DashService> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white),
+                                    color: Colors.white
+                                ),
                               ),
                             ],
                           ),
@@ -179,10 +184,7 @@ class _DashServiceState extends State<DashService> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
+                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -201,7 +203,8 @@ class _DashServiceState extends State<DashService> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white),
+                                    color: Colors.white
+                                ),
                               ),
                             ],
                           ),
@@ -219,10 +222,7 @@ class _DashServiceState extends State<DashService> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
+                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -241,7 +241,8 @@ class _DashServiceState extends State<DashService> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white),
+                                    color: Colors.white
+                                ),
                               ),
                             ],
                           ),
@@ -259,10 +260,7 @@ class _DashServiceState extends State<DashService> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
+                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -281,12 +279,14 @@ class _DashServiceState extends State<DashService> {
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
                                     fontSize: 20.5,
-                                    color: Colors.white),
+                                    color: Colors.white
+                                ),
                               ),
                             ],
                           ),
                         ),
                       ),
+
                     ],
                   ),
                 ],
@@ -302,7 +302,7 @@ class _DashServiceState extends State<DashService> {
     );
   }
 
-  Widget sectionCard(BuildContext context) {
+  Widget sectionCard(BuildContext context){
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -310,14 +310,17 @@ class _DashServiceState extends State<DashService> {
           child: Column(
             children: [
               GestureDetector(
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
+                onTap: (){
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                      const SnackBar(
+                        behavior: SnackBarBehavior.floating,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        content: Text(
+                            "Contact our Organization"),
+                      ));
                 },
                 child: Row(
                   children: [
@@ -326,7 +329,10 @@ class _DashServiceState extends State<DashService> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -382,18 +388,19 @@ class _DashServiceState extends State<DashService> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
+                onTap: (){
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                      const SnackBar(
+                        behavior: SnackBarBehavior.floating,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        content: Text(
+                            "Contact our Organization"),
+                      ));
                 },
                 child: Row(
                   children: [
@@ -402,7 +409,10 @@ class _DashServiceState extends State<DashService> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -458,27 +468,31 @@ class _DashServiceState extends State<DashService> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
+                onTap: (){
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                      const SnackBar(
+                        behavior: SnackBarBehavior.floating,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        content: Text(
+                            "Contact our Organization"),
+                      ));
                 },
-                child: Row(
+                 child: Row(
                   children: [
                     Container(
                       height: 72,
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -533,18 +547,19 @@ class _DashServiceState extends State<DashService> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
+                onTap: (){
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                      const SnackBar(
+                        behavior: SnackBarBehavior.floating,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        content: Text(
+                            "Contact our Organization"),
+                      ));
                 },
                 child: Row(
                   children: [
@@ -553,7 +568,10 @@ class _DashServiceState extends State<DashService> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -678,13 +696,10 @@ class _DashServiceState extends State<DashService> {
               //     ],
               //   ),
               // ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OCRSystem()));
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>OCRSystem()));
                 },
                 child: Row(
                   children: [
@@ -693,7 +708,10 @@ class _DashServiceState extends State<DashService> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -748,13 +766,10 @@ class _DashServiceState extends State<DashService> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
+              SizedBox(height: 25,),
               GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PincodeInfoUi()));
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PincodeInfoUi()));
                 },
                 child: Row(
                   children: [
@@ -763,7 +778,10 @@ class _DashServiceState extends State<DashService> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 6
+                            ),
                           ],
                           border: Border.all(
                             width: 1.5,

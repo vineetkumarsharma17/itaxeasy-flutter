@@ -17,10 +17,10 @@ class TakeHomeDisplay extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 ImageIcon(
                   AssetImage('assets/icons/wallet.png'),
-                  color: Colors.blue.shade900,
+                  color: Colors.blue,
                   size: 26.0,
                   semanticLabel: 'wallet icon',
                 ),
@@ -30,8 +30,7 @@ class TakeHomeDisplay extends StatelessWidget {
                   child: Text(
                     'Take Home Amount',
                     style: TextStyle(
-                        color: Colors.blue.shade900,
-                        fontWeight: FontWeight.w600),
+                        color: Colors.blue, fontWeight: FontWeight.w600),
                   ),
                 ),
               ],

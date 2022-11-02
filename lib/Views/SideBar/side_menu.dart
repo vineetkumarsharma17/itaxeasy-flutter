@@ -81,48 +81,49 @@ class _SideMenuState extends State<SideMenu> {
               duration: const Duration(milliseconds: 500),
               child: DrawerHeader(
                   child: Padding(
-                padding: const EdgeInsets.only(top: 20.0),
-                child: Stack(fit: StackFit.loose, children: <Widget>[
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                          width: 140.0,
-                          height: 140.0,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: ExactAssetImage('assets/images/as.png'),
-                              fit: BoxFit.cover,
-                            ),
-                          )),
-                    ],
-                  ),
-                  Padding(
-                      padding: const EdgeInsets.only(top: 90.0, right: 100.0),
-                      child: Row(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Stack(fit: StackFit.loose, children: <Widget>[
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          CircleAvatar(
-                            backgroundColor: Colors.blue.shade900,
-                            radius: 25.0,
-                            child: Icon(
-                              Icons.camera_alt,
-                              color: Colors.white,
-                            ),
-                          ),
+                          Container(
+                              width: 140.0,
+                              height: 140.0,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image: ExactAssetImage('assets/images/as.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              )),
                         ],
-                      )),
-                ]),
-              )),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(top: 90.0, right: 100.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              CircleAvatar(
+                                backgroundColor: Colors.blue,
+                                radius: 25.0,
+                                child: Icon(
+                                  Icons.camera_alt,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          )),
+                    ]),
+                  )),
             ),
             FadeInRightBig(
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.blue.shade900,
-                title: DrawerListTile(
+                iconColor: Colors.purple,
+
+                title:  DrawerListTile(
                   title: "Easy GSTIN Search",
                   svgSrc: "assets/icons/taxxx.svg",
                   press: () {},
@@ -137,8 +138,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Search by GSTIN",
                         svgSrc: "assets/icons/taxxx.svg",
                         press: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => GST()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>GST()));
                         },
                       ),
                     ),
@@ -152,10 +152,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Search by Pan",
                         svgSrc: "assets/icons/taxxx.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => GSTByPan()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>GSTByPan()));
                         },
                       ),
                     ),
@@ -169,10 +166,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Track GST Return",
                         svgSrc: "assets/icons/taxxx.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TrackGST()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const TrackGST()));
                         },
                       ),
                     ),
@@ -184,8 +178,9 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.blue.shade900,
-                title: DrawerListTile(
+                iconColor: Colors.purple,
+
+                title:  DrawerListTile(
                   title: "Easy ITR Links",
                   svgSrc: "assets/icons/tax2.svg",
                   press: () {},
@@ -218,10 +213,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ItrStatus()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> ItrStatus()));
                         },
                       ),
                     ),
@@ -253,10 +245,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => InstantEPan()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> InstantEPan()));
                         },
                       ),
                     ),
@@ -288,10 +277,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => VerifyReturn()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>VerifyReturn()));
                         },
                       ),
                     ),
@@ -323,10 +309,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => EPayTax()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> EPayTax()));
                         },
                       ),
                     ),
@@ -358,10 +341,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => KnowYourTan()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> KnowYourTan()));
                         },
                       ),
                     ),
@@ -375,10 +355,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Easy Verify your PAN",
                         svgSrc: "assets/icons/pan.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const VerifyYourPan()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const VerifyYourPan()));
                         },
                       ),
                     ),
@@ -410,14 +387,12 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TDS()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const TDS()));
                         },
                       ),
                     ),
                   ),
+
                   FadeInRightBig(
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
@@ -427,10 +402,8 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Easy Authenticate notice/order issued by ITD",
                         svgSrc: "assets/icons/auth.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ITD()));
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const ITD()));
                         },
                       ),
                     ),
@@ -446,8 +419,7 @@ class _SideMenuState extends State<SideMenu> {
                         press: () {
                           Dialogs.materialDialog(
                             color: Colors.white,
-                            msg:
-                                'This feature will be available in the next release',
+                            msg: 'This feature will be available in the next release',
                             title: 'Thank You',
                             // animations: 'assets/cong_example.json',
                             context: context,
@@ -495,10 +467,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => KnowYourAo()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> KnowYourAo()));
                         },
                       ),
                     ),
@@ -530,10 +499,7 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => PanDetailsUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> PanDetailsUI()));
                         },
                       ),
                     ),
@@ -545,8 +511,8 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.blue.shade900,
-                title: DrawerListTile(
+                iconColor: Colors.purple,
+                title:  DrawerListTile(
                   title: "Easy Bank Links",
                   svgSrc: "assets/icons/bank.svg",
                   press: () {},
@@ -561,10 +527,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "IFSC Code",
                         svgSrc: "assets/icons/code.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => IfscFinder()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>IfscFinder()));
                         },
                       ),
                     ),
@@ -578,11 +541,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Verify Bank Account",
                         svgSrc: "assets/icons/bank.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const BankVerification()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const BankVerification()));
                         },
                       ),
                     ),
@@ -598,8 +557,7 @@ class _SideMenuState extends State<SideMenu> {
                         press: () {
                           Dialogs.materialDialog(
                             color: Colors.white,
-                            msg:
-                                'This feature will be available in the next release',
+                            msg: 'This feature will be available in the next release',
                             title: 'Thank You',
                             // animations: 'assets/cong_example.json',
                             context: context,
@@ -620,6 +578,7 @@ class _SideMenuState extends State<SideMenu> {
                       ),
                     ),
                   ),
+
                 ],
               ),
             ),
@@ -627,8 +586,9 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.blue.shade900,
-                title: DrawerListTile(
+                iconColor: Colors.purple,
+
+                title:  DrawerListTile(
                   title: "Easy Aadhaar Links",
                   svgSrc: "assets/icons/easyadhaar.svg",
                   press: () {},
@@ -643,11 +603,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Easy Link Aadhaar Status",
                         svgSrc: "assets/icons/cardstatus.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const LinkAadhaarStatus()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const LinkAadhaarStatus()));
                         },
                       ),
                     ),
@@ -679,14 +635,13 @@ class _SideMenuState extends State<SideMenu> {
                           //   //   ),
                           //   // ]
                           // );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LinkAadhaar()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> LinkAadhaar()));
                         },
                       ),
                     ),
                   ),
+
+
                 ],
               ),
             ),
@@ -699,20 +654,18 @@ class _SideMenuState extends State<SideMenu> {
                   title: " Easy Ministry of Corporate Affairs (MCA)",
                   svgSrc: "assets/icons/company.svg",
                   press: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CompanySearch()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const CompanySearch()));
                   },
                 ),
               ),
             ),
 
+
             FadeInLeftBig(
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                title: DrawerListTile(
+                title:  DrawerListTile(
                   title: "Easy Financial Calculators",
                   svgSrc: "assets/icons/calci.svg",
                   press: () {},
@@ -727,10 +680,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "GST Calculator",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const GstUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const GstUi()));
                         },
                       ),
                     ),
@@ -758,10 +708,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Income Tax/New Regime",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const NewRegimeUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NewRegimeUi()));
                         },
                       ),
                     ),
@@ -775,10 +722,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Income Tax/Old Regime",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const OldRegimeUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const OldRegimeUi()));
                         },
                       ),
                     ),
@@ -792,11 +736,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Fixed Deposit",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FixedDepositUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const FixedDepositUi()));
                         },
                       ),
                     ),
@@ -810,11 +750,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Simple Interest",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SimpleInterestUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const SimpleInterestUi()));
                         },
                       ),
                     ),
@@ -828,14 +764,11 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Compound Interest",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const CompoundInterestUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const CompoundInterestUi()));
                         },
                       ),
                     ),
+
                   ),
                   FadeInLeftBig(
                     delay: const Duration(milliseconds: 500),
@@ -846,10 +779,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "EMI ",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const EmiUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const EmiUI()));
                         },
                       ),
                     ),
@@ -863,10 +793,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Compound annual growth rate",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const CagrUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const CagrUi()));
                         },
                       ),
                     ),
@@ -880,10 +807,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "SIP Gain",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SipGainUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const SipGainUI()));
                         },
                       ),
                     ),
@@ -897,10 +821,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Lump Sum",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const LumpSumUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const LumpSumUI()));
                         },
                       ),
                     ),
@@ -914,11 +835,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Recursive Deposite",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const RecursiveDepositeUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const RecursiveDepositeUI()));
                         },
                       ),
                     ),
@@ -932,10 +849,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "House Rent Allowance",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HraUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const HraUI()));
                         },
                       ),
                     ),
@@ -949,10 +863,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Monthly Income Scheme",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const MisUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const MisUi()));
                         },
                       ),
                     ),
@@ -966,11 +877,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Business Loan Calculator",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const BusinessLoanUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const BusinessLoanUI()));
                         },
                       ),
                     ),
@@ -984,10 +891,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Depreciation Calculator ",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DepricationUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DepricationUi()));
                         },
                       ),
                     ),
@@ -1001,10 +905,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Home Loan EMI",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomeLoanEMIUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeLoanEMIUI()));
                         },
                       ),
                     ),
@@ -1018,10 +919,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Car Loan EMI",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const CarLoanUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const CarLoanUI()));
                         },
                       ),
                     ),
@@ -1035,11 +933,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Personal Loan EMI",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const PersonalLoanUI()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const PersonalLoanUI()));
                         },
                       ),
                     ),
@@ -1053,10 +947,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Tax Deducted at Source (TDS)",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TdsUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const TdsUi()));
                         },
                       ),
                     ),
@@ -1070,10 +961,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "Capital Gain",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const CapitalGainUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const CapitalGainUi()));
                         },
                       ),
                     ),
@@ -1087,10 +975,7 @@ class _SideMenuState extends State<SideMenu> {
                         title: "National Pension System (NPS)",
                         svgSrc: "assets/icons/calci.svg",
                         press: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const NpsUi()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NpsUi()));
                         },
                       ),
                     ),
@@ -1098,6 +983,13 @@ class _SideMenuState extends State<SideMenu> {
                 ],
               ),
             ),
+
+
+
+
+
+
+
 
             FadeInRightBig(
               delay: const Duration(milliseconds: 500),
@@ -1108,10 +1000,7 @@ class _SideMenuState extends State<SideMenu> {
                   title: "Account Misuse",
                   svgSrc: "assets/icons/account.svg",
                   press: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const AccountMisuse()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const AccountMisuse()));
                   },
                 ),
               ),
@@ -1132,6 +1021,7 @@ class _SideMenuState extends State<SideMenu> {
             //     ),
             //   ),
             // ),
+
 
             //
             // FadeInRightBig(
@@ -1169,12 +1059,9 @@ class _SideMenuState extends State<SideMenu> {
                 child: DrawerListTile(
                   title: "Services",
                   svgSrc: "assets/icons/qrcode.svg",
-                  press: () async {
+                  press: () async{
                     // await storage.delete(key: "token");
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ContactUs()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const ContactUs()));
                   },
                 ),
               ),
@@ -1187,12 +1074,9 @@ class _SideMenuState extends State<SideMenu> {
                 child: DrawerListTile(
                   title: "PinCode Info",
                   svgSrc: "assets/icons/qrcode.svg",
-                  press: () async {
+                  press: () async{
                     // await storage.delete(key: "token");
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => PincodeInfoUi()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> PincodeInfoUi()));
                   },
                 ),
               ),
@@ -1201,8 +1085,9 @@ class _SideMenuState extends State<SideMenu> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: ExpansionTile(
-                iconColor: Colors.blue.shade900,
-                title: DrawerListTile(
+                iconColor: Colors.purple,
+
+                title:  DrawerListTile(
                   title: "Easy Convertors",
                   svgSrc: "assets/icons/qrcode.svg",
                   press: () {},
@@ -1218,10 +1103,7 @@ class _SideMenuState extends State<SideMenu> {
                         svgSrc: "assets/icons/qrcode.svg",
                         press: () {
                           // await storage.delete(key: "token");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ImageCompressor()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> ImageCompressor()));
                         },
                       ),
                     ),
@@ -1234,12 +1116,9 @@ class _SideMenuState extends State<SideMenu> {
                       child: DrawerListTile(
                         title: "OCR",
                         svgSrc: "assets/icons/ocr.svg",
-                        press: () async {
+                        press: () async{
                           // await storage.delete(key: "token");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const OCRSystem()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const OCRSystem()));
                         },
                       ),
                     ),
@@ -1252,12 +1131,9 @@ class _SideMenuState extends State<SideMenu> {
                       child: DrawerListTile(
                         title: "Merge PDF/PDFto image  or File Size",
                         svgSrc: "assets/icons/generatorpdf.svg",
-                        press: () async {
+                        press: () async{
                           // await storage.delete(key: "token");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Generators()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Generators()));
                         },
                       ),
                     ),
@@ -1270,12 +1146,9 @@ class _SideMenuState extends State<SideMenu> {
                       child: DrawerListTile(
                         title: "Image To Pdf",
                         svgSrc: "assets/icons/generatorpdf.svg",
-                        press: () async {
+                        press: () async{
                           // await storage.delete(key: "token");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ImageToPdf()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const ImageToPdf()));
                         },
                       ),
                     ),
@@ -1288,12 +1161,9 @@ class _SideMenuState extends State<SideMenu> {
                       child: DrawerListTile(
                         title: "Invoice Generator",
                         svgSrc: "assets/icons/pdf.svg",
-                        press: () async {
+                        press: () async{
                           // await storage.delete(key: "token");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MyInvoice()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MyInvoice()));
                         },
                       ),
                     ),
@@ -1301,6 +1171,7 @@ class _SideMenuState extends State<SideMenu> {
                 ],
               ),
             ),
+
 
             FadeInLeftBig(
               delay: const Duration(milliseconds: 500),
@@ -1310,13 +1181,15 @@ class _SideMenuState extends State<SideMenu> {
                 child: DrawerListTile(
                   title: "Settings",
                   svgSrc: "assets/icons/settings.svg",
-                  press: () async {
-                    // await storage.delete(key: "token");
-                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileWidget()));
+                  press: () async{
+                     // await storage.delete(key: "token");
+                     // Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileWidget()));
                   },
                 ),
               ),
             ),
+
+
 
             // FadeInLeftBig(
             //   delay: const Duration(milliseconds: 500),
@@ -1353,6 +1226,8 @@ class _SideMenuState extends State<SideMenu> {
             //   ),
             // ),
 
+
+
             FadeInRightBig(
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
@@ -1361,13 +1236,9 @@ class _SideMenuState extends State<SideMenu> {
                 child: DrawerListTile(
                   title: "SignOut",
                   svgSrc: "assets/icons/logout.svg",
-                  press: () async {
+                  press: () async{
                     await storage.deleteAll();
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginPage()),
-                        (route) => false);
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>const LoginPage()), (route) => false);
                   },
                 ),
               ),
@@ -1383,9 +1254,9 @@ class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
     Key key,
     // For selecting those three line once press "Command+D"
-    this.title,
-    this.svgSrc,
-    this.press,
+     this.title,
+     this.svgSrc,
+     this.press,
   }) : super(key: key);
 
   final String title, svgSrc;
@@ -1398,13 +1269,16 @@ class DrawerListTile extends StatelessWidget {
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
-        color: Colors.blue.shade900,
+        color: Colors.purple,
         height: 25,
       ),
       title: Text(
         title,
-        style: GoogleFonts.dmSans(
-            color: KColors.headline, fontSize: 15, fontWeight: FontWeight.w600),
+        style:  GoogleFonts.dmSans(
+          color: KColors.headline,
+          fontSize: 15,
+          fontWeight: FontWeight.w600
+        ),
       ),
     );
   }

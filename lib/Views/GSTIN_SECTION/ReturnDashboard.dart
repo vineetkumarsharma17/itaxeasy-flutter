@@ -51,7 +51,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.blue.shade900,
+                          color: Colors.purple,
                           width: 99,
                           height: 4,
                         ),
@@ -85,36 +85,35 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   height: 50,
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                  padding: EdgeInsets.only(
+                      left: 5, right: 5, top: 10, bottom: 10
+                  ),
                   color: Colors.grey,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("GSTR-1/FF",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("Jan-2022",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("Feb-2022",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("Mar-2022",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
+                      Text("GSTR-1/FF", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("Jan-2022", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("Feb-2022", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("Mar-2022", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+
                     ],
                   ),
                 ),
+
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Ledger Balance",
+
+                Text("Ledger Balance",
                   style: GoogleFonts.recursive(
                     color: Colors.black,
                     fontSize: 25.0,
@@ -125,42 +124,37 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   height: 20,
                 ),
                 Container(
-                  padding:
-                      EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                  padding: EdgeInsets.only(
+                      left: 5, right: 5, top: 10, bottom: 10
+                  ),
                   color: Colors.grey,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Electronic Liability \nRegister(Return related)",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("IGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("SGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CESS",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
+                      Text("Electronic Liability \nRegister(Return related)", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("IGST", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("CGST", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("SGST", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+                      Text("CESS", style:GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                      )),
+
                     ],
                   ),
                 ),
-                Text(
-                  "Quick Links",
-                  style: GoogleFonts.dmSans(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Colors.red.shade800),
-                ),
+                Text("Quick Links", style: GoogleFonts.dmSans(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: Colors.red
+                ),),
                 SizedBox(
                   height: 10,
                 ),
@@ -172,8 +166,9 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
                           padding: const EdgeInsets.all(10),
+
                           shape: GFButtonShape.pills,
-                          color: Colors.blue.shade800,
+
                           onPressed: () {},
                           text: "Cash balance"),
                     ),
@@ -183,7 +178,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                       child: GFButton(
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-                          color: Colors.blue.shade800,
+
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -195,7 +190,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                       child: GFButton(
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-                          color: Colors.blue.shade800,
+
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -203,25 +198,25 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                     ),
                   ],
                 ),
+
                 SizedBox(
                   height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
-                          color: Colors.blue.shade900,
+                          color: Colors.purple,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
+
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => GstnList()));
-                          },
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => GstnList()));                          },
                           text: "File Returns"),
                     ),
                     SizedBox(
@@ -231,14 +226,18 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
-                          color: Colors.blue.shade900,
+                          color: Colors.purple,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-                          onPressed: () {},
+
+                          onPressed: () {
+
+                          },
                           text: "Pay Tax"),
                     ),
                   ],
                 ),
+
               ],
             ),
           ),

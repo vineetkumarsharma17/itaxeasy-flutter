@@ -55,7 +55,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.blue.shade900,
+                        color: Colors.purple,
                         width: 99,
                         height: 4,
                       ),
@@ -87,13 +87,13 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                              color: Colors.blue.shade900.withOpacity(0.1),
+                              color: Colors.purple.withOpacity(0.1),
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(10)),
                             ),
                             child: SvgPicture.asset(
                               "assets/icons/Documents.svg",
-                              color: Colors.blue.shade900,
+                              color: Colors.purple,
                             ),
                           ),
                           const Text(
@@ -139,7 +139,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             delay: const Duration(milliseconds: 500),
                             duration: const Duration(milliseconds: 500),
                             child: GFButton(
-                                color: Colors.blue.shade900,
+                                color: Colors.purple,
                                 padding: const EdgeInsets.all(10),
                                 shape: GFButtonShape.pills,
                                 onPressed: () {},
@@ -149,7 +149,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             delay: const Duration(milliseconds: 500),
                             duration: const Duration(milliseconds: 500),
                             child: GFButton(
-                                color: Colors.blue.shade900,
+                                color: Colors.purple,
                                 padding: const EdgeInsets.all(10),
                                 shape: GFButtonShape.pills,
                                 onPressed: () {
@@ -207,7 +207,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               Container(
                 padding:
                     EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                color: Colors.blue.shade700,
+                color: Colors.purple.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -224,6 +224,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                         style: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w700,
                         )),
+
                   ],
                 ),
               ),
@@ -233,18 +234,15 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                color: Colors.blue..shade700,
+                EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                color: Colors.purple.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomCheckbox(),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 10,
-                          right: 10,
-                        ),
+                        padding: const EdgeInsets.only(left:10, right:10, ),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton<String>(
                             value: dropdownValue6,
@@ -252,13 +250,11 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             onChanged: (String newValue) {
                               setState(() {
                                 dropdownValue6 = newValue;
+
                               });
                             },
-                            items: <String>[
-                              'January',
-                              'February',
-                              'March',
-                            ].map<DropdownMenuItem<String>>((String value) {
+                            items: <String>['January', 'February', 'March',]
+                                .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),
@@ -280,6 +276,10 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             fontWeight: FontWeight.w700,
                           )),
                     ),
+
+
+
+
                   ],
                 ),
               ),
@@ -289,13 +289,15 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+
                   FadeInRight(
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.red,
+                      color: Colors.red,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },
@@ -308,9 +310,11 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.blue.shade900,
+                        color: Colors.purple,
+
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },
@@ -321,6 +325,9 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               SizedBox(
                 height: 20,
               ),
+
+
+
 
               // Container(
               //   padding:
@@ -379,8 +386,8 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                color: Colors.blue.shade700,
+                EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                color: Colors.purple.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -397,6 +404,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                         style: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w700,
                         )),
+
                   ],
                 ),
               ),
@@ -406,18 +414,15 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                color: Colors.blue.shade700,
+                EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                color: Colors.purple.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomCheckbox(),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 10,
-                          right: 10,
-                        ),
+                        padding: const EdgeInsets.only(left:10, right:10, ),
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton<String>(
                             value: dropdownValue6,
@@ -425,13 +430,11 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             onChanged: (String newValue) {
                               setState(() {
                                 dropdownValue6 = newValue;
+
                               });
                             },
-                            items: <String>[
-                              'January',
-                              'February',
-                              'March',
-                            ].map<DropdownMenuItem<String>>((String value) {
+                            items: <String>['January', 'February', 'March',]
+                                .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(value),
@@ -453,6 +456,10 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                             fontWeight: FontWeight.w700,
                           )),
                     ),
+
+
+
+
                   ],
                 ),
               ),
@@ -462,6 +469,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+
                   FadeInRight(
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
@@ -469,6 +477,7 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                         color: Colors.red,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },
@@ -481,9 +490,11 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.blue.shade900,
+                        color: Colors.purple,
+
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },
@@ -498,13 +509,15 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+
                   FadeInRight(
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.blue.shade900,
+                        color: Colors.purple,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },
@@ -517,9 +530,11 @@ class _SalePurchaseADDState extends State<SalePurchaseADD> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.blue.shade900,
+                        color: Colors.purple,
+
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
+
                         onPressed: () {
                           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                         },

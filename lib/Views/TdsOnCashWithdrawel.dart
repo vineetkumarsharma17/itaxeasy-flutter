@@ -4,6 +4,7 @@ import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/theme.dart';
 
+
 class TDS extends StatefulWidget {
   const TDS({Key key}) : super(key: key);
 
@@ -17,11 +18,12 @@ class _TDSState extends State<TDS> {
 
   String _code = '';
 
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: FadeInDown(
+        body:  FadeInDown(
           delay: const Duration(milliseconds: 500),
           duration: const Duration(milliseconds: 500),
           child: Column(
@@ -52,7 +54,7 @@ class _TDSState extends State<TDS> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.blue.shade900,
+                        color:Colors.purple,
                         width: 99,
                         height: 4,
                       ),
@@ -63,41 +65,37 @@ class _TDSState extends State<TDS> {
               Expanded(
                 child: Theme(
                   data: ThemeData(
-                      accentColor: Colors.blue.shade900,
-                      primarySwatch: Colors.blue.shade900,
-                      colorScheme:
-                          ColorScheme.light(primary: Colors.blue.shade900)),
+                      accentColor: Colors.purple,
+                      primarySwatch: Colors.purple,
+                      colorScheme: ColorScheme.light(
+                          primary: Colors.purple
+                      )
+                  ),
                   child: Stepper(
                     type: stepperType,
                     physics: const ScrollPhysics(),
                     currentStep: _currentStep,
                     onStepTapped: (step) => tapped(step),
-                    onStepContinue: continued,
+                    onStepContinue:  continued,
                     onStepCancel: cancel,
                     steps: <Step>[
                       Step(
-                        title: const Text('Enter Details'),
+                        title:  const Text('Enter Details'),
                         content: FadeInDown(
                           delay: const Duration(milliseconds: 600),
                           duration: const Duration(milliseconds: 600),
                           child: Column(
                             children: <Widget>[
                               const Padding(
-                                padding: EdgeInsets.only(
-                                  left: 10,
-                                  bottom: 10,
-                                ),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "PAN of Taxpayer",
+                                padding: EdgeInsets.only(left: 10,bottom: 10,),
+                                child: Align(alignment: Alignment.centerLeft,
+                                  child: Text("PAN of Taxpayer",
                                     style: TextStyle(
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 1.5,
                                       fontSize: 17.5,
-                                    ),
-                                  ),
+                                    ),),
                                 ),
                               ),
                               Container(
@@ -109,8 +107,7 @@ class _TDSState extends State<TDS> {
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'PAN of Taxpayer',
-                                    hintStyle:
-                                        heading6.copyWith(color: textGrey),
+                                    hintStyle: heading6.copyWith(color: textGrey),
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),
@@ -118,19 +115,15 @@ class _TDSState extends State<TDS> {
                                 ),
                               ),
                               const Padding(
-                                padding: EdgeInsets.only(
-                                    left: 10, bottom: 10, top: 10),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Mobile Number",
+                                padding: EdgeInsets.only(left: 10,bottom: 10,top: 10),
+                                child: Align(alignment: Alignment.centerLeft,
+                                  child: Text("Mobile Number",
                                     style: TextStyle(
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 1.5,
                                       fontSize: 17.5,
-                                    ),
-                                  ),
+                                    ),),
                                 ),
                               ),
                               Container(
@@ -142,8 +135,7 @@ class _TDSState extends State<TDS> {
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'Mobile Number',
-                                    hintStyle:
-                                        heading6.copyWith(color: textGrey),
+                                    hintStyle: heading6.copyWith(color: textGrey),
                                     border: const OutlineInputBorder(
                                       borderSide: BorderSide.none,
                                     ),
@@ -154,29 +146,21 @@ class _TDSState extends State<TDS> {
                           ),
                         ),
                         isActive: _currentStep >= 0,
-                        state: _currentStep >= 0
-                            ? StepState.complete
-                            : StepState.disabled,
+                        state: _currentStep >= 0 ?
+                        StepState.complete : StepState.disabled,
                       ),
                       Step(
-                        title: const Text('Verification'),
+                        title:  const Text('Verification'),
                         content: Column(
                           children: <Widget>[
                             FadeInDown(
                               delay: const Duration(milliseconds: 500),
                               duration: const Duration(milliseconds: 500),
-                              child: Text(
-                                "Please enter the 4 digit code sent to \n +93 706-399-999",
+                              child: Text("Please enter the 4 digit code sent to \n +93 706-399-999",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.grey.shade500,
-                                    height: 1.5),
-                              ),
+                                style: TextStyle(fontSize: 16, color: Colors.grey.shade500, height: 1.5),),
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20,),
 
                             // Verification Code Input
                             FadeInDown(
@@ -184,8 +168,7 @@ class _TDSState extends State<TDS> {
                               duration: const Duration(milliseconds: 500),
                               child: VerificationCode(
                                 length: 4,
-                                textStyle: const TextStyle(
-                                    fontSize: 20, color: Colors.black),
+                                textStyle: const TextStyle(fontSize: 20, color: Colors.black),
                                 underlineColor: Colors.black,
                                 keyboardType: TextInputType.number,
                                 underlineUnfocusedColor: Colors.black,
@@ -200,24 +183,21 @@ class _TDSState extends State<TDS> {
                           ],
                         ),
                         isActive: _currentStep >= 0,
-                        state: _currentStep >= 1
-                            ? StepState.complete
-                            : StepState.disabled,
+                        state: _currentStep >= 1 ?
+                        StepState.complete : StepState.disabled,
                       ),
                       Step(
-                        title: const Text('Percentage Of TDS'),
+                        title:  const Text('Percentage Of TDS'),
                         content: Column(
                           children: <Widget>[
                             TextFormField(
-                              decoration: const InputDecoration(
-                                  labelText: 'Mobile Number'),
+                              decoration: const InputDecoration(labelText: 'Mobile Number'),
                             ),
                           ],
                         ),
-                        isActive: _currentStep >= 0,
-                        state: _currentStep >= 2
-                            ? StepState.complete
-                            : StepState.disabled,
+                        isActive:_currentStep >= 0,
+                        state: _currentStep >= 2 ?
+                        StepState.complete : StepState.disabled,
                       ),
                     ],
                   ),
@@ -230,6 +210,7 @@ class _TDSState extends State<TDS> {
         //   child: Icon(Icons.list),
         //   onPressed: switchStepsType,
         // ),
+
       ),
     );
   }
@@ -239,15 +220,16 @@ class _TDSState extends State<TDS> {
   //       : stepperType = StepperType.vertical);
   // }
 
-  tapped(int step) {
+  tapped(int step){
     setState(() => _currentStep = step);
   }
 
-  continued() {
-    _currentStep < 2 ? setState(() => _currentStep += 1) : null;
+  continued(){
+    _currentStep < 2 ?
+    setState(() => _currentStep += 1): null;
   }
-
-  cancel() {
-    _currentStep > 0 ? setState(() => _currentStep -= 1) : null;
+  cancel(){
+    _currentStep > 0 ?
+    setState(() => _currentStep -= 1) : null;
   }
 }

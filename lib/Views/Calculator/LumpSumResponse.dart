@@ -11,6 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 import '../Theme/colors.dart';
 
+
 class LumpSumResponseUI extends StatefulWidget {
   LumpSumResponseUI({Key key, this.apiResponse}) : super(key: key);
 
@@ -23,8 +24,11 @@ class LumpSumResponseUI extends StatefulWidget {
 class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
   bool isLoading = false;
 
+
+
   @override
   void initState() {
+
     super.initState();
   }
 
@@ -35,7 +39,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-            floatingActionButton: buildSpeedDial(),
+      floatingActionButton: buildSpeedDial(),
             backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: SafeArea(
@@ -81,9 +85,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                                 height: 10,
                               ),
                               Image.asset('assets/images/accent.png',
-                                  width: 99,
-                                  height: 4,
-                                  color: Colors.blue.shade900),
+                                  width: 99, height: 4, color: Colors.purple),
                             ],
                           ),
                         ],
@@ -138,8 +140,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Text(
-                                          widget.apiResponse.data.total
-                                              .toString(),
+                                          widget.apiResponse.data.total.toString(),
                                           style: const TextStyle(
                                             fontFamily: "Poppins",
                                             fontWeight: FontWeight.w500,
@@ -148,8 +149,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                                           ),
                                         ),
                                         Text(
-                                          widget.apiResponse.data.invested
-                                              .toString(),
+                                          widget.apiResponse.data.invested.toString(),
                                           style: const TextStyle(
                                             fontFamily: "Poppins",
                                             fontWeight: FontWeight.w500,
@@ -205,28 +205,27 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Opening Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Closing Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Interest Earned',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                     ],
-                                    rows: widget
-                                        .apiResponse.data.yearlyCalculation
+                                    rows:    widget.apiResponse.data.yearlyCalculation
                                         .map((e) {
                                       return DataRow(cells: [
                                         DataCell(Text(e.year.toString())),
@@ -266,29 +265,27 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Opening Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Closing Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Interest Earned',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                     ],
-                                    rows: widget
-                                        .apiResponse.data.monthlyCalculation
-                                        .map((e) {
+                                    rows:        widget.apiResponse.data.monthlyCalculation.map((e) {
                                       return DataRow(cells: [
                                         DataCell(Text(e.month.toString())),
                                         DataCell(
@@ -325,11 +322,12 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
             pw.Text(
               "Lump Sum",
               style: pw.TextStyle(
-                fontWeight: pw.FontWeight.bold,
+                fontWeight:  pw.FontWeight.bold,
                 letterSpacing: 1.5,
                 fontSize: 17.5,
               ),
             ),
+
             pw.Row(
                 mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
                 children: [
@@ -339,7 +337,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                         pw.Text(
                           "Total",
                           style: pw.TextStyle(
-                            fontWeight: pw.FontWeight.bold,
+                            fontWeight:  pw.FontWeight.bold,
                             letterSpacing: 1.5,
                             fontSize: 17.5,
                           ),
@@ -354,7 +352,7 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                           "Invested",
                           style: pw.TextStyle(
                             // fontFamily: "Poppins",
-                            fontWeight: pw.FontWeight.bold,
+                            fontWeight:  pw.FontWeight.bold,
 
                             letterSpacing: 1.5,
                             fontSize: 17.5,
@@ -382,24 +380,27 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                     ),
                   ),
                 ]),
-            pw.Column(children: [
-              pw.Text(
-                "Gain",
-                style: pw.TextStyle(
-                  fontWeight: pw.FontWeight.bold,
-                  letterSpacing: 1.5,
-                  fontSize: 17.5,
-                ),
-              ),
-              pw.SizedBox(height: 10),
-              pw.Text(
-                widget.apiResponse.data.gain.toString(),
-                style: pw.TextStyle(
-                  letterSpacing: 1.5,
-                  fontSize: 17.5,
-                ),
-              ),
-            ]),
+            pw.Column(
+                children: [
+                  pw.Text(
+                   "Gain",
+                    style: pw.TextStyle(
+                      fontWeight:  pw.FontWeight.bold,
+                      letterSpacing: 1.5,
+                      fontSize: 17.5,
+                    ),
+                  ),
+                  pw.SizedBox(
+                    height:10
+                  ),
+                  pw.Text(
+                    widget.apiResponse.data.gain.toString(),
+                    style: pw.TextStyle(
+                      letterSpacing: 1.5,
+                      fontSize: 17.5,
+                    ),
+                  ),
+                ]),
             pw.Text(
               "Years",
               style: pw.TextStyle(
@@ -436,26 +437,30 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse.data.yearlyCalculation.map((e) {
-              return pw.Row(
-                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                  children: [
-                    pw.Expanded(
-                      child: pw.Text(e.year.toString()),
-                    ),
-                    pw.SizedBox(width: 20),
-                    pw.Expanded(
-                      child: pw.Text(e.openingBalance.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.closingBalance.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.interestEarned.toString()),
-                    ),
-                  ]);
-            }).toList()),
-            pw.SizedBox(height: 20),
+                children:    widget.apiResponse.data.yearlyCalculation
+                    .map((e) {
+                  return pw.Row(
+                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                      children: [
+                        pw.Expanded(
+                          child: pw.Text(e.year.toString()),
+                        ),
+                        pw.SizedBox(width: 20),
+                        pw.Expanded(
+                          child: pw.Text(e.openingBalance.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.closingBalance.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.interestEarned.toString()),
+                        ),
+                      ]);
+                }).toList()),
+
+            pw.SizedBox(
+                height: 20
+            ),
             pw.Text(
               "Months",
               style: pw.TextStyle(
@@ -492,25 +497,26 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse.data.monthlyCalculation.map((e) {
-              return pw.Row(
-                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                  children: [
-                    pw.Expanded(
-                      child: pw.Text(e.month.toString()),
-                    ),
-                    pw.SizedBox(width: 20),
-                    pw.Expanded(
-                      child: pw.Text(e.openingBalance.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.closingBalance.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.closingBalance.toString()),
-                    ),
-                  ]);
-            }).toList()),
+                children:   widget.apiResponse.data.monthlyCalculation
+                    .map((e) {
+                  return pw.Row(
+                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                      children: [
+                        pw.Expanded(
+                          child: pw.Text(e.month.toString()),
+                        ),
+                        pw.SizedBox(width: 20),
+                        pw.Expanded(
+                          child: pw.Text(e.openingBalance.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.closingBalance.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.closingBalance.toString()),
+                        ),
+                      ]);
+                }).toList()),
           ]);
         })); //
     // image = (await rootBundle.load("assets/images/itax.png")).buffer.asUint8List();
@@ -519,37 +525,37 @@ class _LumpSumResponseUIState extends State<LumpSumResponseUI> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.blue.shade700,
-        backgroundColor: Colors.blue.shade900,
-        spacing: 12,
-        // childrenButtonSize: 60,
-        spaceBetweenChildren: 8,
-        // animatedIcon: AnimatedIcons.menu_close,
-        icon: Icons.share,
-        children: [
-          SpeedDialChild(
-            onTap: () async {
-              // const phoneNumber = "8770877270";
-              // const url = 'tel:$phoneNumber';
-              //
-              // if (await canLaunch(url)) {
-              //   await launch(url);
-              // }
-            },
-            child: const Icon(FontAwesomeIcons.print,
-                size: 30, color: KColors.primary),
-          ),
-          SpeedDialChild(
-            onTap: () async {
-              final pdfFile = await generatePDF();
-              PdfApi.openFile(pdfFile);
-            },
-            child: const Icon(
-              FontAwesomeIcons.filePdf,
-              size: 30,
-              color: Colors.red,
-            ),
-          ),
-        ],
-      );
+    overlayColor: Colors.purple.shade100,
+    backgroundColor: Colors.deepPurple,
+    spacing: 12,
+    // childrenButtonSize: 60,
+    spaceBetweenChildren: 8,
+    // animatedIcon: AnimatedIcons.menu_close,
+    icon: Icons.share,
+    children: [
+      SpeedDialChild(
+        onTap: () async {
+          // const phoneNumber = "8770877270";
+          // const url = 'tel:$phoneNumber';
+          //
+          // if (await canLaunch(url)) {
+          //   await launch(url);
+          // }
+        },
+        child: const Icon(FontAwesomeIcons.print,
+            size: 30, color: KColors.primary),
+      ),
+      SpeedDialChild(
+        onTap: () async {
+          final pdfFile = await generatePDF();
+          PdfApi.openFile(pdfFile);
+        },
+        child: const Icon(
+          FontAwesomeIcons.filePdf,
+          size: 30,
+          color: Colors.red,
+        ),
+      ),
+    ],
+  );
 }

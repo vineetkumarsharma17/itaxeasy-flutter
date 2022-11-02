@@ -65,7 +65,7 @@ class _Challan282State extends State<Challan282> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.blue.shade900,
+                        color:Colors.purple,
                         width: 99,
                         height: 4,
                       ),
@@ -109,6 +109,7 @@ class _Challan282State extends State<Challan282> {
                             ),
                           ],
                         ),
+
                         const SizedBox(
                           height: 10,
                         ),
@@ -116,7 +117,7 @@ class _Challan282State extends State<Challan282> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
                               value: 0,
                               groupValue: groupValue,
                               onChanged: (value) {
@@ -125,7 +126,7 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.blue.shade900,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -210,8 +211,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -242,8 +243,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -274,8 +275,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -306,8 +307,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -338,8 +339,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -370,8 +371,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -435,7 +436,7 @@ class _Challan282State extends State<Challan282> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
                               value: 0,
                               groupValue: groupValue1,
                               onChanged: (value) {
@@ -444,7 +445,7 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.blue.shade900,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -475,8 +476,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -507,8 +508,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -539,8 +540,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -617,7 +618,7 @@ class _Challan282State extends State<Challan282> {
                           children: [
                             GFRadio(
                               size: 20,
-                              activeBorderColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
                               value: 0,
                               groupValue: groupValue2,
                               onChanged: (value) {
@@ -626,7 +627,7 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              radioColor: Colors.blue.shade900,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -693,8 +694,8 @@ class _Challan282State extends State<Challan282> {
                                 });
                               },
                               inactiveIcon: null,
-                              activeBorderColor: Colors.blue.shade900,
-                              radioColor: Colors.blue.shade900,
+                              activeBorderColor: Colors.purple,
+                              radioColor: Colors.purple,
                             ),
                             const SizedBox(
                               width: 10,
@@ -1213,7 +1214,7 @@ class _Challan282State extends State<Challan282> {
                   borderRadius: BorderRadius.circular(14.0),
                 ),
                 child: GFButton(
-                    color: Colors.blue.shade900,
+                  color: Colors.purple,
                     onPressed: () {
                       // Navigator.push(
                       //     context,

@@ -22,11 +22,10 @@ class EPayTax extends StatefulWidget {
 class _EPayTaxState extends State<EPayTax> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return  SafeArea(child: Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10.0, 10.0, 20.0, 0),
+          padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0),
           child: Stack(
             children: [
               Column(
@@ -57,12 +56,13 @@ class _EPayTaxState extends State<EPayTax> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color: Colors.blue.shade900,
+                            color:Colors.purple,
                             width: 99,
                             height: 4,
                           ),
                         ],
                       ),
+
                     ],
                   ),
                   const SizedBox(
@@ -77,6 +77,8 @@ class _EPayTaxState extends State<EPayTax> {
       ),
     ));
   }
+
+
 }
 
 class epay extends StatefulWidget {
@@ -97,580 +99,522 @@ class _epayState extends State<epay> {
       mainAxisSpacing: 5,
       children: <Widget>[
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan281()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan281()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "TDS/TCS",
+                      const Text("TDS/TCS",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 17.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 281",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 17.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 281",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan280()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan280()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "NON-TDS/\nTCS",
+                      const Text("NON-TDS/\nTCS",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 17.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 280",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 17.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 280",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan282()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan282()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "NON-TDS/\nTCS",
+                      const Text("NON-TDS/\nTCS",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 17.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 282",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 17.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 282",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan283()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan283()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "NON-TDS/\nTCS",
+                      const Text("NON-TDS/\nTCS",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 17.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 283",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 17.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 283",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const BlackMoney()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const BlackMoney()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "Black Money",
+                      const Text("Black Money",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 15.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 284",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 15.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 284",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deducted",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deducted",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const EqualizationLevy()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const EqualizationLevy()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "Equalization\nLevy",
+                      const Text("Equalization\nLevy",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 15.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 285",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 15.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 285",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deducted",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deducted",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan286()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan286()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "Income\nDeclaration",
+                      const Text("Income\nDeclaration",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 15.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 286",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 15.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 286",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
         GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Challan287()));
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const Challan287()));
           },
           child: Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(defaultPadding * 0.75),
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade900.withOpacity(0.1),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.only(left:10,top: 10,right:10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment : MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(defaultPadding * 0.75),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color:   Colors.purple.withOpacity(0.1),
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: SvgPicture.asset("assets/icons/Documents.svg", color:Colors.purple,),
                       ),
-                      child: SvgPicture.asset(
-                        "assets/icons/Documents.svg",
-                        color: Colors.blue.shade900,
-                      ),
-                    ),
-                    const Text(
-                      "PMGKY",
+                      const Text("PMGKY",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 17.5,
+                        ),),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("CHALLAN NO./ITNS 287",
                       style: TextStyle(
                         fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 17.5,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "CHALLAN NO./ITNS 287",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w600,
-                      // letterSpacing: 1.5,
-                      fontSize: 14.5,
-                    ),
+                        fontWeight: FontWeight.w600,
+                        // letterSpacing: 1.5,
+                        fontSize: 14.5,
+                      ),),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Payment of TDS/TCS by Company or Non Company Deductee",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w500,
-                      // letterSpacing: 1.5,
-                      fontSize: 12.5,
-                    ),
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text("Payment of TDS/TCS by Company or Non Company Deductee",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w500,
+                        // letterSpacing: 1.5,
+                        fontSize: 12.5,
+                      ),),
+                  ),
+
+                ],
+              ),
             ),
           ),
         ),
@@ -734,7 +678,13 @@ class _epayState extends State<epay> {
         //     ),
         //   ),
         // ),
+
+
+
       ],
     );
   }
 }
+
+
+

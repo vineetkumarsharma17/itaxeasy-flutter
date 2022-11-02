@@ -54,7 +54,7 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.blue.shade900,
+                        color:Colors.purple,
                         width: 99,
                         height: 4,
                       ),
@@ -265,11 +265,8 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                       delay: const Duration(milliseconds: 300),
                       duration: const Duration(milliseconds: 300),
                       child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const B2bInvoice()));
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const B2bInvoice()));
                         },
                         child: Card(
                           elevation: 5,
@@ -330,11 +327,8 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                       delay: const Duration(milliseconds: 400),
                       duration: const Duration(milliseconds: 400),
                       child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const B2cInvoice()));
+                        onTap:(){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const B2cInvoice()));
                         },
                         child: Card(
                           elevation: 5,
@@ -1464,11 +1458,11 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                         ),
                         isVisible3
                             ? const Icon(
-                                Icons.expand_less,
-                              )
+                          Icons.expand_less,
+                        )
                             : const Icon(
-                                Icons.expand_more,
-                              ),
+                          Icons.expand_more,
+                        ),
                       ],
                     ),
                   ),
@@ -1500,7 +1494,7 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                                 ),
                                 padding: const EdgeInsets.all(10),
                                 child: const Text(
-                                  "No files available for download",
+                                      "No files available for download",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: "Poppins",
@@ -1515,6 +1509,7 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                         ),
                       ),
                     ),
+
                   ],
                 ),
               ),
@@ -1522,6 +1517,8 @@ class _PrepareOnlineState extends State<PrepareOnline> {
               const SizedBox(
                 height: 20,
               ),
+
+
 
               FadeInRight(
                 delay: const Duration(milliseconds: 500),
@@ -1532,7 +1529,8 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                     borderRadius: BorderRadius.circular(14.0),
                   ),
                   child: GFButton(
-                      color: Colors.blue.shade900,
+                      color:Colors.purple,
+
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                       },
@@ -1548,7 +1546,7 @@ class _PrepareOnlineState extends State<PrepareOnline> {
               //       borderRadius: BorderRadius.circular(14.0),
               //     ),
               //     child: GFButton(
-              //         color:Colors.blue.shade900,
+              //         color:Colors.purple,
               //
               //         onPressed: () {
               //           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
@@ -1565,13 +1563,15 @@ class _PrepareOnlineState extends State<PrepareOnline> {
                     borderRadius: BorderRadius.circular(14.0),
                   ),
                   child: GFButton(
-                      color: Colors.blue.shade900,
+                      color:Colors.purple,
+
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                       },
                       text: "PREVIEW"),
                 ),
               ),
+ 
 
               // FadeInRight(
               //   delay: const Duration(milliseconds: 500),
@@ -1582,7 +1582,7 @@ class _PrepareOnlineState extends State<PrepareOnline> {
               //       borderRadius: BorderRadius.circular(14.0),
               //     ),
               //     child: GFButton(
-              //         color:Colors.blue.shade900,
+              //         color:Colors.purple,
               //
               //         onPressed: () {
               //           // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));

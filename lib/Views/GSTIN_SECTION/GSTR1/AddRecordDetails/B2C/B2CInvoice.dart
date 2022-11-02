@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import '../../../../Calculator/ifsc_calcii/Theme.dart';
 import 'package:getwidget/getwidget.dart';
 
+
 import 'package:awesome_dialog/awesome_dialog.dart';
 
 import 'AddRecord.dart';
+
 
 class B2cInvoice extends StatefulWidget {
   const B2cInvoice({Key key}) : super(key: key);
@@ -19,7 +21,7 @@ class _B2cInvoiceState extends State<B2cInvoice> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child:Scaffold(
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -52,7 +54,7 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.blue.shade900,
+                          color:Colors.purple,
                           width: 99,
                           height: 4,
                         ),
@@ -67,7 +69,7 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.blue.shade900.withOpacity(0.5),
+                    color: Colors.purple.withOpacity(0.5),
                   ),
                   padding: const EdgeInsets.all(10),
                   child: const Text(
@@ -102,12 +104,14 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                               fontSize: 16.5,
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(
+                              height: 10
+                          ),
                           Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue.shade900.withOpacity(0.5),
+                              color: Colors.purple.withOpacity(0.5),
                             ),
                             padding: const EdgeInsets.all(10),
                             child: const Text(
@@ -121,7 +125,9 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(
+                              height: 10
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
@@ -129,15 +135,11 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                                 delay: const Duration(milliseconds: 500),
                                 duration: const Duration(milliseconds: 500),
                                 child: GFButton(
-                                    color: Colors.blue.shade900,
+                                  color:Colors.purple,
                                     padding: const EdgeInsets.all(10),
                                     shape: GFButtonShape.pills,
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const AddRecordB2C()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const AddRecordB2C()));
                                     },
                                     text: "ADD RECORD"),
                               ),
@@ -145,7 +147,7 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                                 delay: const Duration(milliseconds: 500),
                                 duration: const Duration(milliseconds: 500),
                                 child: GFButton(
-                                    color: Colors.blue.shade900,
+                                  color:Colors.purple,
                                     padding: const EdgeInsets.all(10),
                                     shape: GFButtonShape.pills,
                                     onPressed: () {
@@ -167,12 +169,11 @@ class _B2cInvoiceState extends State<B2cInvoice> {
                                             Text(
                                               'For current tax period no EWB invoices are available to import.',
                                               textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  fontStyle: FontStyle.italic),
+                                              style: TextStyle(fontStyle: FontStyle.italic),
                                             ),
                                           ],
                                         ),
-                                        btnOkColor: Colors.red,
+                                        btnOkColor:Colors.red ,
                                         btnOkOnPress: () {},
                                       ).show();
                                       // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));

@@ -11,6 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 import '../Theme/colors.dart';
 
+
 class PersonalLoanResponseUi extends StatefulWidget {
   PersonalLoanResponseUi({Key key, this.apiResponse}) : super(key: key);
   ApiResponse<PersonalLoanResponse> apiResponse;
@@ -29,8 +30,9 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-            floatingActionButton: buildSpeedDial(),
-            resizeToAvoidBottomInset: false,
+      floatingActionButton: buildSpeedDial(),
+
+      resizeToAvoidBottomInset: false,
             backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: SafeArea(
@@ -76,9 +78,7 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                                 height: 10,
                               ),
                               Image.asset('assets/images/accent.png',
-                                  width: 99,
-                                  height: 4,
-                                  color: Colors.blue.shade900),
+                                  width: 99, height: 4, color: Colors.purple),
                             ],
                           ),
                         ],
@@ -133,8 +133,7 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                                           MainAxisAlignment.spaceAround,
                                       children: [
                                         Text(
-                                          widget.apiResponse.data.emi
-                                              .toString(),
+                                          widget.apiResponse.data.emi.toString(),
                                           style: const TextStyle(
                                             fontFamily: "Poppins",
                                             fontWeight: FontWeight.w500,
@@ -232,6 +231,7 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                           const SizedBox(
                             height: 10,
                           ),
+
                           ScrollableWidget(
                             child: Card(
                               shadowColor: KColors.icon,
@@ -244,37 +244,38 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('EMI',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Towards Loan',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Towards Interest',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                       DataColumn(
                                           label: Text('OutStanding Loan',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                      FontWeight.bold))),
+                                                  FontWeight.bold))),
                                     ],
-                                    rows: widget.apiResponse.data.monthlyPayment
+                                    rows:  widget.apiResponse.data.monthlyPayment
                                         .map((e) {
                                       return DataRow(cells: [
                                         DataCell(Text(e.month.toString())),
-                                        DataCell(Text(e.emi.toString())),
+                                        DataCell(
+                                            Text(e.emi.toString())),
                                         DataCell(
                                             Text(e.towardsLoan.toString())),
                                         DataCell(
@@ -288,6 +289,7 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                           ),
                         ],
                       ),
+
                     ],
                   ),
                 ),
@@ -295,7 +297,6 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
             ),
           );
   }
-
   Future<File> generatePDF() async {
     final pdf = pw.Document();
 
@@ -353,6 +354,7 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                     ),
                   ),
                 ]),
+
             pw.SizedBox(height: 20),
             pw.Row(
                 mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
@@ -446,28 +448,30 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse.data.monthlyPayment.map((e) {
-              return pw.Row(
-                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                  children: [
-                    pw.Expanded(
-                      child: pw.Text(e.month.toString()),
-                    ),
-                    pw.SizedBox(width: 20),
-                    pw.Expanded(
-                      child: pw.Text(e.emi.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.towardsLoan.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.towardsInterest.toString()),
-                    ),
-                    pw.Expanded(
-                      child: pw.Text(e.outstandingLoan.toString()),
-                    ),
-                  ]);
-            }).toList()),
+                children:widget.apiResponse.data.monthlyPayment
+                    .map((e) {
+                  return pw.Row(
+                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                      children: [
+                        pw.Expanded(
+                          child: pw.Text(e.month.toString()),
+                        ),
+                        pw.SizedBox(width: 20),
+                        pw.Expanded(
+                          child: pw.Text(e.emi.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.towardsLoan.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.towardsInterest.toString()),
+                        ),
+                        pw.Expanded(
+                          child: pw.Text(e.outstandingLoan.toString()),
+                        ),
+                      ]);
+                }).toList()),
+
           ]);
         })); //
 
@@ -475,37 +479,37 @@ class _PersonalLoanResponseUiState extends State<PersonalLoanResponseUi> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.blue.shade700,
-        backgroundColor: Colors.blue.shade900,
-        spacing: 12,
-        // childrenButtonSize: 60,
-        spaceBetweenChildren: 8,
-        // animatedIcon: AnimatedIcons.menu_close,
-        icon: Icons.share,
-        children: [
-          SpeedDialChild(
-            onTap: () async {
-              // const phoneNumber = "8770877270";
-              // const url = 'tel:$phoneNumber';
-              //
-              // if (await canLaunch(url)) {
-              //   await launch(url);
-              // }
-            },
-            child: const Icon(FontAwesomeIcons.print,
-                size: 30, color: KColors.primary),
-          ),
-          SpeedDialChild(
-            onTap: () async {
-              final pdfFile = await generatePDF();
-              PdfApi.openFile(pdfFile);
-            },
-            child: const Icon(
-              FontAwesomeIcons.filePdf,
-              size: 30,
-              color: Colors.red,
-            ),
-          ),
-        ],
-      );
+    overlayColor: Colors.purple.shade100,
+    backgroundColor: Colors.deepPurple,
+    spacing: 12,
+    // childrenButtonSize: 60,
+    spaceBetweenChildren: 8,
+    // animatedIcon: AnimatedIcons.menu_close,
+    icon: Icons.share,
+    children: [
+      SpeedDialChild(
+        onTap: () async {
+          // const phoneNumber = "8770877270";
+          // const url = 'tel:$phoneNumber';
+          //
+          // if (await canLaunch(url)) {
+          //   await launch(url);
+          // }
+        },
+        child: const Icon(FontAwesomeIcons.print,
+            size: 30, color: KColors.primary),
+      ),
+      SpeedDialChild(
+        onTap: () async {
+          final pdfFile = await generatePDF();
+          PdfApi.openFile(pdfFile);
+        },
+        child: const Icon(
+          FontAwesomeIcons.filePdf,
+          size: 30,
+          color: Colors.red,
+        ),
+      ),
+    ],
+  );
 }

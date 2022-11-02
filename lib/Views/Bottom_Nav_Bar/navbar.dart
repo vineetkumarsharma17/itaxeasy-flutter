@@ -33,8 +33,7 @@ class Navbar extends StatelessWidget {
           primaryColor: const Color(0xFFC41A3B),
           primaryColorDark: KColors.icon,
           primaryColorLight: const Color(0xFFFBE0E6),
-          colorScheme: ColorScheme.fromSwatch()
-              .copyWith(secondary: const Color(0xFF1B1F32)),
+          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFF1B1F32)),
         ),
         home: const Navlist(),
       ),
@@ -76,7 +75,7 @@ class _NavlistState extends State<Navlist> with SingleTickerProviderStateMixin {
       //   centerTitle: true,
       // ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue.shade900,
+        backgroundColor: Colors.deepPurple,
         child: const Icon(
           Iconsax.document,
           size: 30,
@@ -107,8 +106,9 @@ class _NavlistState extends State<Navlist> with SingleTickerProviderStateMixin {
         duration: const Duration(milliseconds: 630),
         child: Container(
           height: 80,
-          decoration: BoxDecoration(
-            color: Color(0xffFFFFFF),
+          decoration:  BoxDecoration(
+            color:Color(0xffFFFFFF),
+
           ),
           padding: const EdgeInsets.all(16.0),
           child: TabBar(
@@ -121,7 +121,7 @@ class _NavlistState extends State<Navlist> with SingleTickerProviderStateMixin {
               borderSide: BorderSide(color: Color(0xffFFFFFF), width: 0),
               insets: EdgeInsets.fromLTRB(50.0, 0.0, 50.0, 40.0),
             ),
-            indicatorColor: Theme.of(context).primaryColor,
+            indicatorColor: Theme.of(context).primaryColorDark,
             tabs: <Widget>[
               const Tab(
                 icon: Icon(

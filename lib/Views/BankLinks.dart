@@ -26,7 +26,10 @@ class _BankLinksUiState extends State<BankLinksUi> {
                   gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Colors.blue.shade900, Colors.blue.shade900],
+                colors: [
+                  Color(0xFF655B96),
+                  Color(0xFFA644B7),
+                ],
               )),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,7 +102,8 @@ class _BankLinksUiState extends State<BankLinksUi> {
                       width: 83,
                       decoration: BoxDecoration(
                         boxShadow: const [
-                          BoxShadow(color: Colors.grey, blurRadius: 6),
+                          BoxShadow(
+                              color: Colors.grey, blurRadius: 6),
                         ],
                         border: Border.all(
                           width: 1.5,

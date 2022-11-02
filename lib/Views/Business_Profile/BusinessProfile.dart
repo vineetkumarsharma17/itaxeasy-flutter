@@ -27,6 +27,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
             padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
             child: Column(
               children: [
+
                 Row(
                   children: [
                     IconButton(
@@ -53,7 +54,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.blue.shade900,
+                          color: Colors.purple,
                           width: 99,
                           height: 4,
                         ),
@@ -65,8 +66,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                 Card(
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 10, bottom: 10, left: 10, right: 10),
+                    padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
                     child: Row(
                       children: [
                         Expanded(
@@ -82,6 +82,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                   fontSize: 17.5,
                                 ),
                               ),
+
                               Text(
                                 "XXXXX XXX XXX",
                                 style: TextStyle(
@@ -103,6 +104,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                   fontSize: 17.5,
                                 ),
                               ),
+
                               Text(
                                 "XXXXX",
                                 style: TextStyle(
@@ -124,6 +126,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                   fontSize: 17.5,
                                 ),
                               ),
+
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -151,8 +154,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                            image: ExactAssetImage(
-                                                'assets/images/as.png'),
+                                            image: ExactAssetImage('assets/images/as.png'),
                                             fit: BoxFit.cover,
                                           ),
                                         )),
@@ -182,7 +184,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height:20,
                 ),
                 Container(
                   color: const Color(0xffFFFFFF),
@@ -196,7 +198,8 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                             padding: const EdgeInsets.only(
                                 left: 25.0, right: 25.0, top: 25.0),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment
+                                  .spaceBetween,
                               mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
                                 Column(
@@ -249,8 +252,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 Flexible(
                                   child: TextField(
                                     decoration: const InputDecoration(
-                                      hintText:
-                                          "Enter Your Business Legal Name",
+                                      hintText: "Enter Your Business Legal Name",
                                     ),
                                     enabled: !_status,
                                     autofocus: !_status,
@@ -364,7 +366,8 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                               children: <Widget>[
                                 Flexible(
                                   child: Padding(
-                                    padding: const EdgeInsets.only(right: 10.0),
+                                    padding: const EdgeInsets.only(
+                                        right: 10.0),
                                     child: TextField(
                                       decoration: const InputDecoration(
                                           hintText: "Enter MSME Number"),
@@ -420,6 +423,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ),
                               ],
                             )),
+
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
@@ -439,8 +443,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ],
                               ),
                             ],
-                          ),
-                        ),
+                          ),),
                         Padding(
                             padding: const EdgeInsets.only(
                                 left: 25.0, right: 25.0, top: 2.0),
@@ -458,6 +461,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ),
                               ],
                             )),
+
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
@@ -477,8 +481,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ],
                               ),
                             ],
-                          ),
-                        ),
+                          ),),
                         Padding(
                             padding: const EdgeInsets.only(
                                 left: 25.0, right: 25.0, top: 2.0),
@@ -488,8 +491,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 Flexible(
                                   child: TextField(
                                     decoration: const InputDecoration(
-                                      hintText:
-                                          "Enter Incorporation Certification",
+                                      hintText: "Enter Incorporation Certification",
                                     ),
                                     enabled: !_status,
                                     autofocus: !_status,
@@ -509,7 +511,6 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
       ),
     );
   }
-
   @override
   void dispose() {
     // Clean up the controller when the Widget is disposed
