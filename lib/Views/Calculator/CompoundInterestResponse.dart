@@ -12,13 +12,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 
 import '../Theme/colors.dart';
+
 class CompoundInterestResponseUi extends StatefulWidget {
-  CompoundInterestResponseUi(
-      {Key key,this.apiResponse })
-      : super(key: key);
+  CompoundInterestResponseUi({Key key, this.apiResponse}) : super(key: key);
 
   ApiResponse<CompoundInterestResponse> apiResponse;
-
 
   @override
   _CompoundInterestResponseUiState createState() =>
@@ -29,12 +27,8 @@ class _CompoundInterestResponseUiState
     extends State<CompoundInterestResponseUi> {
   bool isLoading = false;
 
-
-
-
   @override
   void initState() {
-
     super.initState();
   }
 
@@ -45,8 +39,8 @@ class _CompoundInterestResponseUiState
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-      floatingActionButton: buildSpeedDial(),
-      backgroundColor: Colors.white,
+            floatingActionButton: buildSpeedDial(),
+            backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -91,7 +85,9 @@ class _CompoundInterestResponseUiState
                                 height: 10,
                               ),
                               Image.asset('assets/images/accent.png',
-                                  width: 99, height: 4, color: Colors.purple),
+                                  width: 99,
+                                  height: 4,
+                                  color: Colors.blue.shade900),
                             ],
                           ),
                         ],
@@ -195,28 +191,28 @@ class _CompoundInterestResponseUiState
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Opening Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Closing Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Interest Earned',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                     ],
-                                    rows:    widget.apiResponse
-                                        .data.yearWiseInterest
+                                    rows: widget
+                                        .apiResponse.data.yearWiseInterest
                                         .map((e) {
                                       return DataRow(cells: [
                                         DataCell(Text(e.year.toString())),
@@ -256,28 +252,28 @@ class _CompoundInterestResponseUiState
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Opening Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Closing Balance',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                       DataColumn(
                                           label: Text('Interest Earned',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   fontWeight:
-                                                  FontWeight.bold))),
+                                                      FontWeight.bold))),
                                     ],
-                                    rows:  widget.apiResponse
-                                        .data.monthlyCalculation
+                                    rows: widget
+                                        .apiResponse.data.monthlyCalculation
                                         .map((e) {
                                       return DataRow(cells: [
                                         DataCell(Text(e.month.toString())),
@@ -294,7 +290,6 @@ class _CompoundInterestResponseUiState
                           ),
                         ],
                       ),
-
                     ],
                   ),
                 ),
@@ -405,31 +400,26 @@ class _CompoundInterestResponseUiState
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse
-                    .data.yearWiseInterest
-                    .map((e) {
-                  return pw.Row(
-                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                      children: [
-                        pw.Expanded(
-                          child: pw.Text(e.year.toString()),
-                        ),
-                        pw.SizedBox(width: 20),
-                        pw.Expanded(
-                          child: pw.Text(e.openingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.closingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.interestEarned.toString()),
-                        ),
-                      ]);
-                }).toList()),
-
-            pw.SizedBox(
-                height: 20
-            ),
+                children: widget.apiResponse.data.yearWiseInterest.map((e) {
+              return pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Text(e.year.toString()),
+                    ),
+                    pw.SizedBox(width: 20),
+                    pw.Expanded(
+                      child: pw.Text(e.openingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.closingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.interestEarned.toString()),
+                    ),
+                  ]);
+            }).toList()),
+            pw.SizedBox(height: 20),
             pw.Text(
               "Months",
               style: pw.TextStyle(
@@ -466,27 +456,25 @@ class _CompoundInterestResponseUiState
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse
-                    .data.monthlyCalculation
-                    .map((e) {
-                  return pw.Row(
-                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                      children: [
-                        pw.Expanded(
-                          child: pw.Text(e.month.toString()),
-                        ),
-                        pw.SizedBox(width: 20),
-                        pw.Expanded(
-                          child: pw.Text(e.openingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.closingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.closingBalance.toString()),
-                        ),
-                      ]);
-                }).toList()),
+                children: widget.apiResponse.data.monthlyCalculation.map((e) {
+              return pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Text(e.month.toString()),
+                    ),
+                    pw.SizedBox(width: 20),
+                    pw.Expanded(
+                      child: pw.Text(e.openingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.closingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.closingBalance.toString()),
+                    ),
+                  ]);
+            }).toList()),
           ]);
         })); //
     // image = (await rootBundle.load("assets/images/itax.png")).buffer.asUint8List();
@@ -495,37 +483,37 @@ class _CompoundInterestResponseUiState
   }
 
   Widget buildSpeedDial() => SpeedDial(
-    overlayColor: Colors.purple.shade100,
-    backgroundColor: Colors.deepPurple,
-    spacing: 12,
-    // childrenButtonSize: 60,
-    spaceBetweenChildren: 8,
-    // animatedIcon: AnimatedIcons.menu_close,
-    icon: Icons.share,
-    children: [
-      SpeedDialChild(
-        onTap: () async {
-          // const phoneNumber = "8770877270";
-          // const url = 'tel:$phoneNumber';
-          //
-          // if (await canLaunch(url)) {
-          //   await launch(url);
-          // }
-        },
-        child: const Icon(FontAwesomeIcons.print,
-            size: 30, color: KColors.primary),
-      ),
-      SpeedDialChild(
-        onTap: () async {
-          final pdfFile = await generatePDF();
-          PdfApi.openFile(pdfFile);
-        },
-        child: const Icon(
-          FontAwesomeIcons.filePdf,
-          size: 30,
-          color: Colors.red,
-        ),
-      ),
-    ],
-  );
+        overlayColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue.shade900,
+        spacing: 12,
+        // childrenButtonSize: 60,
+        spaceBetweenChildren: 8,
+        // animatedIcon: AnimatedIcons.menu_close,
+        icon: Icons.share,
+        children: [
+          SpeedDialChild(
+            onTap: () async {
+              // const phoneNumber = "8770877270";
+              // const url = 'tel:$phoneNumber';
+              //
+              // if (await canLaunch(url)) {
+              //   await launch(url);
+              // }
+            },
+            child: const Icon(FontAwesomeIcons.print,
+                size: 30, color: KColors.primary),
+          ),
+          SpeedDialChild(
+            onTap: () async {
+              final pdfFile = await generatePDF();
+              PdfApi.openFile(pdfFile);
+            },
+            child: const Icon(
+              FontAwesomeIcons.filePdf,
+              size: 30,
+              color: Colors.red,
+            ),
+          ),
+        ],
+      );
 }

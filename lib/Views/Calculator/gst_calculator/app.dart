@@ -8,7 +8,7 @@ class App extends StatelessWidget {
       title: 'Income Tax Calculator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue.shade900,
       ),
       home: const Home(title: 'Income Tax Calculator'),
     );

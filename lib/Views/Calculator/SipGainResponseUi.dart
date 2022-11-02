@@ -3,7 +3,6 @@ import 'package:gst_app/Models/api_response.dart';
 import '../../Models/sip-gain.dart';
 import '../Login_And_Register/Theme.dart';
 
-
 import '../Tables/widget/scrollable_widget.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -13,243 +12,249 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 import '../Theme/colors.dart';
 
-
-
 class SipGainResponseUi extends StatefulWidget {
-  SipGainResponseUi({Key key,this.apiResponse}) : super(key: key);
+  SipGainResponseUi({Key key, this.apiResponse}) : super(key: key);
 
   ApiResponse<SipGainResponse> apiResponse;
-
-
 
   @override
   _SipGainResponseUiState createState() => _SipGainResponseUiState();
 }
 
 class _SipGainResponseUiState extends State<SipGainResponseUi> {
-
   bool isLoading = false;
-
-
-
 
   @override
   void initState() {
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return  isLoading ? const Center(child: CircularProgressIndicator(),) : Scaffold(
-      floatingActionButton: buildSpeedDial(),
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      icon: const Icon(Icons.arrow_back),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: Text(
-                            'Sip Gain',
-                            style: heading2.copyWith(color: textBlack),
+    return isLoading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : Scaffold(
+            floatingActionButton: buildSpeedDial(),
+            backgroundColor: Colors.white,
+            body: SingleChildScrollView(
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            icon: const Icon(Icons.arrow_back),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Text(
-                          "(Details you get as per your request)",
-                          style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 1.5,
-                            fontSize: 13.0,
+                          const SizedBox(
+                            width: 20,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Image.asset(
-                            'assets/images/accent.png',
-                            width: 99,
-                            height: 4,
-                            color:Colors.purple
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 48,
-                ),
-                Column(
-                  children: [
-                    Card(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top:5,bottom:5),
-                        child: Column(
-                          children: [
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children:[
-                                  Expanded(
-                                    child: Column(
-                                      children: const [
-                                        Text("Total",
-                                          style :TextStyle(
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: Text(
+                                  'Sip Gain',
+                                  style: heading2.copyWith(color: textBlack),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              const Text(
+                                "(Details you get as per your request)",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 13.0,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Image.asset('assets/images/accent.png',
+                                  width: 99,
+                                  height: 4,
+                                  color: Colors.blue.shade900),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 48,
+                      ),
+                      Column(
+                        children: [
+                          Card(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 5, bottom: 5),
+                              child: Column(
+                                children: [
+                                  Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Expanded(
+                                          child: Column(
+                                            children: const [
+                                              Text(
+                                                "Total",
+                                                style: TextStyle(
+                                                  fontFamily: "Poppins",
+                                                  fontWeight: FontWeight.bold,
+                                                  letterSpacing: 1.5,
+                                                  fontSize: 17.5,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                            children: const [
+                                              Text(
+                                                "Invested",
+                                                style: TextStyle(
+                                                  fontFamily: "Poppins",
+                                                  fontWeight: FontWeight.bold,
+                                                  letterSpacing: 1.5,
+                                                  fontSize: 17.5,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ]),
+                                  Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          widget.apiResponse.data.total
+                                              .toString(),
+                                          style: const TextStyle(
                                             fontFamily: "Poppins",
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                             letterSpacing: 1.5,
                                             fontSize: 17.5,
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Column(
-                                      children: const [
-                                        Text("Invested",
-                                          style :TextStyle(
+                                        Text(
+                                          widget.apiResponse.data.invested
+                                              .toString(),
+                                          style: const TextStyle(
                                             fontFamily: "Poppins",
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                             letterSpacing: 1.5,
                                             fontSize: 17.5,
                                           ),
                                         ),
-                                      ],
+                                      ]),
+                                  const Text(
+                                    "Gain",
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.5,
+                                      fontSize: 17.5,
                                     ),
                                   ),
-                                ]
-                            ),
-                            Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children:[
-                                  Text(widget.apiResponse.data.total.toString(),
-                                    style :const TextStyle(
+                                  Text(
+                                    widget.apiResponse.data.gain.toString(),
+                                    style: const TextStyle(
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 1.5,
                                       fontSize: 17.5,
                                     ),
                                   ),
-                                  Text(widget.apiResponse.data.invested.toString(),
-                                    style :const TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 1.5,
-                                      fontSize: 17.5,
-                                    ),
-                                  ),
-                                ]
-                            ),
-                            const Text("Gain",
-                              style :TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
+                                ],
                               ),
                             ),
-                            Text(widget.apiResponse.data.gain.toString(),
-                              style :const TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
-                              ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            "Years",
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.5,
+                              fontSize: 20.5,
                             ),
-                          ],
-                        ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          ScrollableWidget(
+                            child: Card(
+                              child: Column(children: [
+                                DataTable(
+                                    columns: [
+                                      DataColumn(
+                                          label: Text('Year',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                      DataColumn(
+                                          label: Text('Investment Amount',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                      DataColumn(
+                                          label: Text('Interest Earned',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                      DataColumn(
+                                          label: Text('Maturity Amount',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight:
+                                                      FontWeight.bold))),
+                                    ],
+                                    rows: widget
+                                        .apiResponse.data.yearlyCalculation
+                                        .map((e) {
+                                      return DataRow(cells: [
+                                        DataCell(Text(e.year.toString())),
+                                        DataCell(Text(
+                                            e.investmentAmount.toString())),
+                                        DataCell(
+                                            Text(e.interestEarned.toString())),
+                                        DataCell(
+                                            Text(e.maturityAmount.toString())),
+                                      ]);
+                                    }).toList()),
+                              ]),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(height: 10,),
-                    const Text("Years",
-                      style :TextStyle(
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.5,
-                        fontSize: 20.5,
-                      ),),
-                    const SizedBox(height: 10,),
-                    ScrollableWidget(
-                      child: Card(
-                        child: Column(children: [
-                          DataTable(
-                              columns: [
-                                DataColumn(
-                                    label: Text('Year',
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight:
-                                            FontWeight.bold))),
-                                DataColumn(
-                                    label: Text('Investment Amount',
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight:
-                                            FontWeight.bold))),
-                                DataColumn(
-                                    label: Text('Interest Earned',
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight:
-                                            FontWeight.bold))),
-                                DataColumn(
-                                    label: Text('Maturity Amount',
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight:
-                                            FontWeight.bold))),
-                              ],
-                              rows: widget.apiResponse.data.yearlyCalculation
-                                  .map((e) {
-                                return DataRow(cells: [
-                                  DataCell(Text(e.year.toString())),
-                                  DataCell(
-                                      Text(e.investmentAmount.toString())),
-                                  DataCell(
-                                      Text(e.interestEarned.toString())),
-                                  DataCell(
-                                      Text(e.maturityAmount.toString())),
-                                ]);
-                              }).toList()),
-                        ]),
-                      ),
-                    ),
-
-
-
-                  ],
+                      // Padding(
+                      //     padding: EdgeInsets.only(
+                      //         bottom: MediaQuery.of(context).viewInsets.bottom)),
+                    ],
+                  ),
                 ),
-                // Padding(
-                //     padding: EdgeInsets.only(
-                //         bottom: MediaQuery.of(context).viewInsets.bottom)),
-              ],
+              ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
   }
+
   Future<File> generatePDF() async {
     final pdf = pw.Document();
 
@@ -281,7 +286,6 @@ class _SipGainResponseUiState extends State<SipGainResponseUi> {
                           "Invested",
                           style: pw.TextStyle(
                             fontWeight: pw.FontWeight.bold,
-
                             letterSpacing: 1.5,
                             fontSize: 17.5,
                           ),
@@ -308,12 +312,11 @@ class _SipGainResponseUiState extends State<SipGainResponseUi> {
                     ),
                   ),
                 ]),
-
             pw.Row(
                 mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
                 children: [
                   pw.Text(
-                "Gain",
+                    "Gain",
                     style: pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
                       letterSpacing: 1.5,
@@ -328,7 +331,6 @@ class _SipGainResponseUiState extends State<SipGainResponseUi> {
                     ),
                   ),
                 ]),
-
             pw.Text(
               "Years",
               style: pw.TextStyle(
@@ -364,29 +366,25 @@ class _SipGainResponseUiState extends State<SipGainResponseUi> {
                   ),
                 ]),
             pw.Column(
-                children:  widget.apiResponse.data.yearlyCalculation
-                    .map((e) {
-                  return pw.Row(
-                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                      children: [
-                        pw.Expanded(
-                          child: pw.Text(e.year.toString()),
-                        ),
-                        pw.SizedBox(width: 20),
-                        pw.Expanded(
-                          child: pw.Text(e.investmentAmount.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.interestEarned.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.maturityAmount.toString()),
-                        ),
-                      ]);
-                }).toList()),
-
-
-
+                children: widget.apiResponse.data.yearlyCalculation.map((e) {
+              return pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Text(e.year.toString()),
+                    ),
+                    pw.SizedBox(width: 20),
+                    pw.Expanded(
+                      child: pw.Text(e.investmentAmount.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.interestEarned.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.maturityAmount.toString()),
+                    ),
+                  ]);
+            }).toList()),
           ]);
         })); //
     // image = (await rootBundle.load("assets/images/itax.png")).buffer.asUint8List();
@@ -395,39 +393,37 @@ class _SipGainResponseUiState extends State<SipGainResponseUi> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-    overlayColor: Colors.purple.shade100,
-    backgroundColor: Colors.deepPurple,
-    spacing: 12,
-    // childrenButtonSize: 60,
-    spaceBetweenChildren: 8,
-    // animatedIcon: AnimatedIcons.menu_close,
-    icon: Icons.share,
-    children: [
-      SpeedDialChild(
-        onTap: () async {
-          // const phoneNumber = "8770877270";
-          // const url = 'tel:$phoneNumber';
-          //
-          // if (await canLaunch(url)) {
-          //   await launch(url);
-          // }
-        },
-        child: const Icon(FontAwesomeIcons.print,
-            size: 30, color: KColors.primary),
-      ),
-      SpeedDialChild(
-        onTap: () async {
-          final pdfFile = await generatePDF();
-          PdfApi.openFile(pdfFile);
-        },
-        child: const Icon(
-          FontAwesomeIcons.filePdf,
-          size: 30,
-          color: Colors.red,
-        ),
-      ),
-    ],
-  );
+        overlayColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue.shade900,
+        spacing: 12,
+        // childrenButtonSize: 60,
+        spaceBetweenChildren: 8,
+        // animatedIcon: AnimatedIcons.menu_close,
+        icon: Icons.share,
+        children: [
+          SpeedDialChild(
+            onTap: () async {
+              // const phoneNumber = "8770877270";
+              // const url = 'tel:$phoneNumber';
+              //
+              // if (await canLaunch(url)) {
+              //   await launch(url);
+              // }
+            },
+            child: const Icon(FontAwesomeIcons.print,
+                size: 30, color: KColors.primary),
+          ),
+          SpeedDialChild(
+            onTap: () async {
+              final pdfFile = await generatePDF();
+              PdfApi.openFile(pdfFile);
+            },
+            child: const Icon(
+              FontAwesomeIcons.filePdf,
+              size: 30,
+              color: Colors.red,
+            ),
+          ),
+        ],
+      );
 }
-
-

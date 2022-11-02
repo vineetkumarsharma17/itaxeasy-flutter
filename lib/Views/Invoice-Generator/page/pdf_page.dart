@@ -28,7 +28,7 @@ class _PdfPageState extends State<PdfPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.purple[50],
+        backgroundColor: Colors.blue[100],
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -61,7 +61,7 @@ class _PdfPageState extends State<PdfPage> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -347,157 +347,172 @@ class _PdfPageState extends State<PdfPage> {
                 ),
                 Row(
                   children: [
-                    groupValue == 1 ? Expanded(
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "IGST",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.5,
-                              fontSize: 17.5,
+                    groupValue == 1
+                        ? Expanded(
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 10, top: 10),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  "IGST",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ) :SizedBox(),
-                 groupValue == 0 ?  Expanded(
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "CGST",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.5,
-                              fontSize: 17.5,
+                          )
+                        : SizedBox(),
+                    groupValue == 0
+                        ? Expanded(
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 10, top: 10),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  "CGST",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ) : SizedBox(),
-                    groupValue == 0 ?   Expanded(
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "SGST",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.5,
-                              fontSize: 17.5,
+                          )
+                        : SizedBox(),
+                    groupValue == 0
+                        ? Expanded(
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 10, top: 10),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  "SGST",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
-                    groupValue == 2 ?   Expanded(
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "UTGST",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.5,
-                              fontSize: 17.5,
+                          )
+                        : SizedBox(),
+                    groupValue == 2
+                        ? Expanded(
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                  left: 10, bottom: 10, top: 10),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  "UTGST",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
-
+                          )
+                        : SizedBox(),
                   ],
                 ),
                 Row(
                   children: [
-                    groupValue == 1?   Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                        child: TextFormField(
-                          controller: vat,
-                          decoration: InputDecoration(
-                            hintText: 'IGST',
-                            hintStyle: heading6.copyWith(color: textGrey),
-                            border: const OutlineInputBorder(
-                              borderSide: BorderSide.none,
+                    groupValue == 1
+                        ? Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: textWhiteGrey,
+                                borderRadius: BorderRadius.circular(14.0),
+                              ),
+                              child: TextFormField(
+                                controller: vat,
+                                decoration: InputDecoration(
+                                  hintText: 'IGST',
+                                  hintStyle: heading6.copyWith(color: textGrey),
+                                  border: const OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
-                    SizedBox(
-                      width:5
-                    ),
-        groupValue == 0 ?  Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                        child: TextFormField(
-                          controller: vat,
-                          decoration: InputDecoration(
-                            hintText: 'CGST',
-                            hintStyle: heading6.copyWith(color: textGrey),
-                            border: const OutlineInputBorder(
-                              borderSide: BorderSide.none,
+                          )
+                        : SizedBox(),
+                    SizedBox(width: 5),
+                    groupValue == 0
+                        ? Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: textWhiteGrey,
+                                borderRadius: BorderRadius.circular(14.0),
+                              ),
+                              child: TextFormField(
+                                controller: vat,
+                                decoration: InputDecoration(
+                                  hintText: 'CGST',
+                                  hintStyle: heading6.copyWith(color: textGrey),
+                                  border: const OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
-                    SizedBox(
-                        width:5
-                    ),
-                    groupValue == 0 ?     Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                        child: TextFormField(
-                          controller: vat,
-                          decoration: InputDecoration(
-                            hintText: 'SGST',
-                            hintStyle: heading6.copyWith(color: textGrey),
-                            border: const OutlineInputBorder(
-                              borderSide: BorderSide.none,
+                          )
+                        : SizedBox(),
+                    SizedBox(width: 5),
+                    groupValue == 0
+                        ? Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: textWhiteGrey,
+                                borderRadius: BorderRadius.circular(14.0),
+                              ),
+                              child: TextFormField(
+                                controller: vat,
+                                decoration: InputDecoration(
+                                  hintText: 'SGST',
+                                  hintStyle: heading6.copyWith(color: textGrey),
+                                  border: const OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
-                    groupValue == 2 ?      Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                        child: TextFormField(
-                          controller: vat,
-                          decoration: InputDecoration(
-                            hintText: 'UTGST',
-                            hintStyle: heading6.copyWith(color: textGrey),
-                            border: const OutlineInputBorder(
-                              borderSide: BorderSide.none,
+                          )
+                        : SizedBox(),
+                    groupValue == 2
+                        ? Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: textWhiteGrey,
+                                borderRadius: BorderRadius.circular(14.0),
+                              ),
+                              child: TextFormField(
+                                controller: vat,
+                                decoration: InputDecoration(
+                                  hintText: 'UTGST',
+                                  hintStyle: heading6.copyWith(color: textGrey),
+                                  border: const OutlineInputBorder(
+                                    borderSide: BorderSide.none,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                    ): SizedBox(),
+                          )
+                        : SizedBox(),
                   ],
                 ),
                 const Padding(
@@ -538,7 +553,7 @@ class _PdfPageState extends State<PdfPage> {
                     borderRadius: BorderRadius.circular(14.0),
                   ),
                   child: GFButton(
-                    color: Colors.purple,
+                    color: Colors.blue.shade900,
                     text: 'Invoice PDF',
                     onPressed: () async {
                       final date = DateTime.now();

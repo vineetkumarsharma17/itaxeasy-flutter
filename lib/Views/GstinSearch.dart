@@ -16,46 +16,49 @@ class GstinSearchUi extends StatefulWidget {
 class _GstinSearchUiState extends State<GstinSearchUi> {
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body:  Column(
+        body: Column(
           children: [
             Container(
               height: 230,
               width: double.infinity,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF655B96),
-                      Color(0xFFA644B7),
-                    ],
-                  )
-              ),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.blue.shade900,
+                  Colors.blue.shade800,
+                ],
+              )),
               child: Column(
-                crossAxisAlignment:  CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20,top: 20),
+                    padding: const EdgeInsets.only(left: 20, top: 20),
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pop(context);
                       },
                       child: Container(
                         height: 45,
                         width: 45,
-                        decoration:  const BoxDecoration(
-                          color: Colors.white ,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                         ),
-                        child:  const Icon(Icons.chevron_left_rounded,color: KColors.icon,size: 35,),
+                        child: const Icon(
+                          Icons.chevron_left_rounded,
+                          color: KColors.icon,
+                          size: 35,
+                        ),
                       ),
                     ),
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 70,left: 20),
+                      padding: const EdgeInsets.only(top: 70, left: 20),
                       child: Text(
                         "Easy GSTIN Search",
                         overflow: TextOverflow.ellipsis,
@@ -63,7 +66,7 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                           fontSize: 40,
                           letterSpacing: 3,
                           fontWeight: FontWeight.w500,
-                          color:  Colors.white,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -81,7 +84,7 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
     );
   }
 
-  Widget sectionCard(BuildContext context){
+  Widget sectionCard(BuildContext context) {
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -89,8 +92,9 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
           child: Column(
             children: [
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>GST()));
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => GST()));
                 },
                 child: Row(
                   children: [
@@ -99,10 +103,7 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -159,10 +160,13 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>GSTByPan()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => GSTByPan()));
                 },
                 child: Row(
                   children: [
@@ -171,10 +175,7 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -231,10 +232,13 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TrackGST()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TrackGST()));
                 },
                 child: Row(
                   children: [
@@ -243,10 +247,7 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                       width: 83,
                       decoration: BoxDecoration(
                           boxShadow: const [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 6
-                            ),
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
                           ],
                           border: Border.all(
                             width: 1.5,
@@ -303,8 +304,6 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                   ],
                 ),
               ),
-
-
             ],
           ),
         ),
@@ -312,4 +311,3 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
     );
   }
 }
-

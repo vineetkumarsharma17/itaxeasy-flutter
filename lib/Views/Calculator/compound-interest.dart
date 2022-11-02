@@ -79,7 +79,7 @@ class _CompoundInterestUiState extends State<CompoundInterestUi> {
                               ),
                               Image.asset(
                                 'assets/images/accent.png',
-                                color: Colors.purple,
+                                color: Colors.blue.shade900,
                                 width: 99,
                                 height: 4,
                               ),
@@ -240,13 +240,20 @@ class _CompoundInterestUiState extends State<CompoundInterestUi> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.purple,
+                              color: Colors.blue.shade900,
                               onPressed: () async {
-
-                                FocusScope.of(context).requestFocus(FocusNode());
-                                if(principle.text.isEmpty || rate.text.isEmpty || year.text.isEmpty || compound.text.isEmpty  ){
-                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Fill The Given Field"),));
-                                }else{
+                                FocusScope.of(context)
+                                    .requestFocus(FocusNode());
+                                if (principle.text.isEmpty ||
+                                    rate.text.isEmpty ||
+                                    year.text.isEmpty ||
+                                    compound.text.isEmpty) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content:
+                                        Text("Please Fill The Given Field"),
+                                  ));
+                                } else {
                                   setState(() {
                                     isLoading = true;
                                   });
@@ -255,22 +262,29 @@ class _CompoundInterestUiState extends State<CompoundInterestUi> {
                                       rate: double.parse(rate.text),
                                       year: int.parse(year.text),
                                       compoundFreqInYear:
-                                      int.parse(compound.text));
-                                  final result =
-                                  await apiServices.compoundInterest(insert);
+                                          int.parse(compound.text));
+                                  final result = await apiServices
+                                      .compoundInterest(insert);
 
                                   if (result.resposeCode == 200) {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                CompoundInterestResponseUi(apiResponse: result,)));
+                                                CompoundInterestResponseUi(
+                                                  apiResponse: result,
+                                                )));
 
-                                    print("------------------SUCCESS-----------------");
+                                    print(
+                                        "------------------SUCCESS-----------------");
                                   } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("SomeThing Went Wrong"),));
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text("SomeThing Went Wrong"),
+                                    ));
 
-                                    print("------------------ERROR-----------------");
+                                    print(
+                                        "------------------ERROR-----------------");
                                   }
                                   setState(() {
                                     isLoading = false;

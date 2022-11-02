@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../Calculator/ifsc_calcii/Theme.dart';
 
-
 class ChalaanGenerated extends StatefulWidget {
   const ChalaanGenerated({Key key}) : super(key: key);
 
@@ -48,11 +47,10 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
-
                         SizedBox(
                           height: 20,
                         ),
@@ -78,16 +76,16 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                   height: 20,
                 ),
 
-                Text("GST CHALLAN",style: GoogleFonts.dmSans(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-                ),),
+                Text(
+                  "GST CHALLAN",
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
                 SizedBox(
                   height: 10,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                      left: 10, bottom: 10, top: 10),
+                  padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -124,8 +122,8 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -158,15 +156,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                        width:10
-                    ),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -211,8 +207,8 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -226,17 +222,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                               ),
                             ),
                           ),
-
                         ],
                       ),
                     ),
-                    const SizedBox(
-                        width:10
-                    ),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Column(
                         children: [
-
                           Container(
                             decoration: BoxDecoration(
                               color: textWhiteGrey,
@@ -262,13 +254,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Details of Taxpayer",style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20
-                ),),
+                Text(
+                  "Details of Taxpayer",
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
                 Padding(
-                  padding: EdgeInsets.only(
-                      left: 10, bottom: 10, top: 10),
+                  padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -305,8 +297,8 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -339,15 +331,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                        width:10
-                    ),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -390,8 +380,8 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -424,15 +414,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                        width:10
-                    ),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Column(
                         children: [
                           const Padding(
-                            padding: EdgeInsets.only(
-                                left: 10, bottom: 10, top: 10),
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -471,13 +459,13 @@ class _ChalaanGeneratedState extends State<ChalaanGenerated> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Details of Taxpayer",style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20
-                ),),
+                Text(
+                  "Details of Taxpayer",
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
                 Padding(
-                  padding: EdgeInsets.only(
-                      left: 10, bottom: 10, top: 10),
+                  padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(

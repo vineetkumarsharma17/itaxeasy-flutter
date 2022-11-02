@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../Theme/colors.dart';
 
-
 class Statistics extends StatefulWidget {
   const Statistics({Key key}) : super(key: key);
 
@@ -15,18 +14,20 @@ class _StatisticsState extends State<Statistics> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:  Scaffold(
+      child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 25,right: 20,left: 20),
+            padding: const EdgeInsets.only(top: 25, right: 20, left: 20),
             child: Column(
-              crossAxisAlignment:  CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Statistics", style: GoogleFonts.dmSans(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xff57435C),
-            ),),
+                Text(
+                  "Statistics",
+                  style: GoogleFonts.dmSans(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF0D47A1)),
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -35,12 +36,10 @@ class _StatisticsState extends State<Statistics> {
                   height: 30,
                 ),
                 Row(
-             children: [
-               Expanded(
-                   child: Image.asset("assets/images/Income.png")),
-               Expanded(
-                   child: Image.asset("assets/images/Outcome.png")),
-             ],
+                  children: [
+                    Expanded(child: Image.asset("assets/images/Income.png")),
+                    Expanded(child: Image.asset("assets/images/Outcome.png")),
+                  ],
                 ),
                 SizedBox(
                   height: 30,
@@ -52,7 +51,7 @@ class _StatisticsState extends State<Statistics> {
                     style: GoogleFonts.dmSans(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xff57435C),
+                      color: const Color(0xFF0D47A1),
                     ),
                   ),
                 ),
@@ -67,61 +66,80 @@ class _StatisticsState extends State<Statistics> {
       ),
     );
   }
-  Widget transactionCards(BuildContext context){
+
+  Widget transactionCards(BuildContext context) {
     return Column(
       children: [
         ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundColor:  Color(0xffE3E9ED),
+            backgroundColor: Color(0xffE3E9ED),
             child: Icon(
               Icons.account_circle_rounded,
               color: KColors.icon,
               size: 35,
             ),
           ),
-          title: Text("Tiana Saris", style: GoogleFonts.dmSans(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: const Color(0xff57435C),
-          ),),
-          subtitle: Text("BCA • 2468 3545 ****", style: GoogleFonts.dmSans(
-            fontSize: 16,
-            // fontWeight: FontWeight.bold,
-            color: const Color(0xff78828A),
-          ),),
-          trailing: Text("200", style: GoogleFonts.dmSans(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: const  Color(0xff57435C),
-          ),),
+          title: Text(
+            "Tiana Saris",
+            style: GoogleFonts.dmSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
+          subtitle: Text(
+            "BCA • 2468 3545 ****",
+            style: GoogleFonts.dmSans(
+              fontSize: 16,
+              // fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
+          trailing: Text(
+            "200",
+            style: GoogleFonts.dmSans(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
         ),
         Divider(),
         ListTile(
           leading: CircleAvatar(
             radius: 30,
-            backgroundColor:  Color(0xffE3E9ED),
+            backgroundColor: Color(0xffE3E9ED),
             child: Icon(
               Icons.account_circle_rounded,
               color: KColors.icon,
               size: 35,
             ),
           ),
-          title: Text("Mukul Bedi", style: GoogleFonts.dmSans(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: const Color(0xff57435C),
-          ),),
-          subtitle: Text("Salary", style: GoogleFonts.dmSans(
-            fontSize: 16,
-            // fontWeight: FontWeight.bold,
-            color: const Color(0xff78828A),
-          ),),
-          trailing: Text("Cr 50000", style: GoogleFonts.dmSans(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: const  Color(0xff57435C),
-          ),),
+          title: Text(
+            "Mukul Bedi",
+            style: GoogleFonts.dmSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
+          subtitle: Text(
+            "Salary",
+            style: GoogleFonts.dmSans(
+              fontSize: 16,
+              // fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
+          trailing: Text(
+            "Cr 50000",
+            style: GoogleFonts.dmSans(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF0D47A1),
+            ),
+          ),
         ),
       ],
     );

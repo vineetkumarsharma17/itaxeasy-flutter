@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 import 'Calculator/ifsc_calcii/Theme.dart';
+
 class ReceiptVoucher extends StatefulWidget {
   const ReceiptVoucher({Key key}) : super(key: key);
 
@@ -17,7 +18,8 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20,bottom: 20),
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
             child: Column(
               children: [
                 Row(
@@ -58,7 +60,7 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -76,21 +78,19 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
-
                           shape: GFButtonShape.pills,
-
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           text: "Print"),
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -100,9 +100,9 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -110,16 +110,15 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                    height:20
-                ),
+                const SizedBox(height: 20),
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 10,left: 10,bottom: 10),
+                    padding:
+                        const EdgeInsets.only(right: 10, left: 10, bottom: 10),
                     child: Column(
                       children: [
                         Row(
@@ -153,7 +152,8 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Voucher no:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -163,9 +163,7 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -195,7 +193,8 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Date:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -208,8 +207,8 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                           ],
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -362,7 +361,8 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Total:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -372,12 +372,11 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                                 ],
                               ),
                             ),
-
                           ],
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -422,21 +421,19 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
-
                           shape: GFButtonShape.pills,
-
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           text: "Accept"),
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -446,9 +443,9 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -464,5 +461,3 @@ class _ReceiptVoucherState extends State<ReceiptVoucher> {
     );
   }
 }
-
-

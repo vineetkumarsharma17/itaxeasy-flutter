@@ -24,15 +24,7 @@ class _EasyTaxState extends State<EasyTax> {
             Container(
               height: 250,
               width: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFF655B96),
-                  Color(0xFFA644B7),
-                ],
-              )),
+              decoration: BoxDecoration(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -47,14 +39,14 @@ class _EasyTaxState extends State<EasyTax> {
                           child: Container(
                             height: 45,
                             width: 45,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
+                            decoration: BoxDecoration(
+                              color: Colors.blue.shade900,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
                             ),
                             child: const Icon(
                               Icons.chevron_left_rounded,
-                              color: KColors.icon,
+                              color: Colors.white,
                               size: 35,
                             ),
                           ),
@@ -68,7 +60,7 @@ class _EasyTaxState extends State<EasyTax> {
                             fontSize: 25,
                             letterSpacing: 3,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: Colors.blue.shade900,
                           ),
                         ),
                       ),
@@ -103,14 +95,17 @@ class _EasyTaxState extends State<EasyTax> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -118,11 +113,52 @@ class _EasyTaxState extends State<EasyTax> {
                               Text(
                                 "GST",
                                 style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  fontSize: 20.5,
-                                  color: Colors.white
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        shadowColor: KColors.icon,
+                        elevation: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
+                              )),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.description_outlined,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: Text(
+                                  "ITR(Income Tax Return)",
+                                  style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.5,
+                                      fontSize: 20.5,
+                                      color: Colors.white),
                                 ),
                               ),
                             ],
@@ -141,27 +177,29 @@ class _EasyTaxState extends State<EasyTax> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
-                                "ITR(Income Tax Return)",
+                                "Add",
                                 style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  fontSize: 20.5,
-                                  color: Colors.white
-                                ),
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -179,14 +217,17 @@ class _EasyTaxState extends State<EasyTax> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -194,12 +235,11 @@ class _EasyTaxState extends State<EasyTax> {
                               Text(
                                 "Invoice",
                                 style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  fontSize: 20.5,
-                                  color: Colors.white
-                                ),
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
                               ),
                             ],
                           ),
@@ -217,14 +257,17 @@ class _EasyTaxState extends State<EasyTax> {
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
-                                colors: [Color(0xff9c2cf3), Color(0xff3a48f8)],
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Icon(
                                 Icons.description_outlined,
-                                color: KColors.icon,
+                                color: Colors.white,
                               ),
                               SizedBox(
                                 width: 10,
@@ -232,18 +275,16 @@ class _EasyTaxState extends State<EasyTax> {
                               Text(
                                 "E-TDS",
                                 style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.5,
-                                  fontSize: 20.5,
-                                  color: Colors.white
-                                ),
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
                               ),
                             ],
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ],

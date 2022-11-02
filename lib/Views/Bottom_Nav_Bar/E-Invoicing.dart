@@ -6,12 +6,12 @@ import '../Components/constants.dart';
 import '../Theme/colors.dart';
 import '../tester.dart';
 
-
 class SalesData {
   SalesData(this.year, this.sales);
   final String year;
   final double sales;
 }
+
 class EInvoicingUi extends StatefulWidget {
   const EInvoicingUi({Key key}) : super(key: key);
 
@@ -19,7 +19,8 @@ class EInvoicingUi extends StatefulWidget {
   State<EInvoicingUi> createState() => _EInvoicingUiState();
 }
 
-class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStateMixin  {
+class _EInvoicingUiState extends State<EInvoicingUi>
+    with TickerProviderStateMixin {
   double _scale;
   double _scale1;
   double _scale2;
@@ -42,8 +43,8 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     _controller1 = AnimationController(
       vsync: this,
@@ -53,8 +54,8 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     _controller2 = AnimationController(
       vsync: this,
@@ -64,9 +65,8 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
-
+        setState(() {});
+      });
 
     _controller3 = AnimationController(
       vsync: this,
@@ -76,53 +76,48 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
       lowerBound: 0.0,
       upperBound: 0.1,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
 
     super.initState();
   }
 
   @override
-
   void dispose() {
     super.dispose();
     _controller.dispose();
     _controller1.dispose();
     _controller2.dispose();
     _controller3.dispose();
-
   }
+
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body:  Column(
+        body: Column(
           children: [
             Container(
               height: 90,
               width: double.infinity,
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF655B96),
-                      Color(0xFFA644B7),
-                    ],
-                  )
-              ),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.blue.shade800, Colors.blue.shade900],
+              )),
               child: Column(
-                crossAxisAlignment:  CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 10,left: 20),
+                    padding: const EdgeInsets.only(top: 10, left: 20),
                     child: Text(
                       "E-Invoicing",
                       style: GoogleFonts.dmSans(
                         fontSize: 50,
                         letterSpacing: 3,
                         fontWeight: FontWeight.w500,
-                        color:  Colors.white,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -191,13 +186,14 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
       ),
     );
   }
+
   Widget importantLinks(BuildContext context) {
     _scale = 1 - _controller.value;
     _scale1 = 1 - _controller1.value;
     _scale2 = 1 - _controller2.value;
     _scale3 = 1 - _controller3.value;
     return Padding(
-      padding: const EdgeInsets.only(left: 20,right: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20),
       child: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -211,7 +207,7 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
           GestureDetector(
             onTapDown: _tapDown,
             onTapUp: _tapUp,
-            onTap:  (){
+            onTap: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyTax()));
             },
             child: Transform.scale(
@@ -259,7 +255,7 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
           GestureDetector(
             onTapDown: _tapDown1,
             onTapUp: _tapUp1,
-            onTap:  (){
+            onTap: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context)=> OtherSections() ));
             },
             child: Transform.scale(
@@ -307,7 +303,7 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
           GestureDetector(
             onTapDown: _tapDown2,
             onTapUp: _tapUp2,
-            onTap:  (){
+            onTap: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
             },
             child: Transform.scale(
@@ -355,7 +351,7 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
           GestureDetector(
             onTapDown: _tapDown3,
             onTapUp: _tapUp3,
-            onTap:  (){
+            onTap: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
             },
             child: Transform.scale(
@@ -408,26 +404,32 @@ class _EInvoicingUiState extends State<EInvoicingUi>     with TickerProviderStat
   void _tapDown(TapDownDetails details) {
     _controller.forward();
   }
+
   void _tapUp(TapUpDetails details) {
     _controller.reverse();
   }
+
   void _tapDown1(TapDownDetails details) {
     _controller1.forward();
   }
+
   void _tapUp1(TapUpDetails details) {
     _controller1.reverse();
   }
+
   void _tapDown2(TapDownDetails details) {
     _controller2.forward();
   }
+
   void _tapUp2(TapUpDetails details) {
     _controller2.reverse();
   }
+
   void _tapDown3(TapDownDetails details) {
     _controller3.forward();
   }
+
   void _tapUp3(TapUpDetails details) {
     _controller3.reverse();
   }
 }
-
