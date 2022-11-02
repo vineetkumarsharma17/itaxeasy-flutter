@@ -8,7 +8,6 @@ import 'JournalVoucher.dart';
 import 'PaymentVouchers.dart';
 import 'ReceiptVoucher.dart';
 
-
 class Vouchers extends StatefulWidget {
   const Vouchers({Key key}) : super(key: key);
 
@@ -18,13 +17,13 @@ class Vouchers extends StatefulWidget {
 
 class _VouchersState extends State<Vouchers> {
   @override
-
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child:  Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20,bottom: 20),
+          child: Padding(
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
             child: Column(
               children: [
                 Row(
@@ -65,7 +64,7 @@ class _VouchersState extends State<Vouchers> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -76,7 +75,6 @@ class _VouchersState extends State<Vouchers> {
                 const SizedBox(
                   height: 30,
                 ),
-
                 GridView(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -88,18 +86,21 @@ class _VouchersState extends State<Vouchers> {
                   physics: NeverScrollableScrollPhysics(),
                   children: [
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentVouchers()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaymentVouchers()));
                       },
                       child: Card(
-                        shadowColor: Colors.purple,
+                        shadowColor: Colors.blue.shade900,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                         elevation: 5,
-
-                        child:Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, left: 10, right: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -117,19 +118,21 @@ class _VouchersState extends State<Vouchers> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ReceiptVoucher()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ReceiptVoucher()));
                       },
                       child: Card(
-                        shadowColor: Colors.purple,
-
+                        shadowColor: Colors.blue.shade900,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                         elevation: 5,
-
-                        child:Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, left: 10, right: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -147,19 +150,21 @@ class _VouchersState extends State<Vouchers> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>JournalVouchers()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => JournalVouchers()));
                       },
                       child: Card(
-                        shadowColor: Colors.purple,
-
+                        shadowColor: Colors.blue.shade900,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                         elevation: 5,
-
-                        child:Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, left: 10, right: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -177,19 +182,21 @@ class _VouchersState extends State<Vouchers> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>DebitNote()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DebitNote()));
                       },
                       child: Card(
-                        shadowColor: Colors.purple,
-
+                        shadowColor: Colors.blue.shade900,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                         elevation: 5,
-
-                        child:Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, left: 10, right: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -207,19 +214,21 @@ class _VouchersState extends State<Vouchers> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CreditNote()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CreditNote()));
                       },
                       child: Card(
-                        shadowColor: Colors.purple,
-
+                        shadowColor: Colors.blue.shade900,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                         elevation: 5,
-
-                        child:Padding(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, bottom: 10, left: 10, right: 10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -236,16 +245,12 @@ class _VouchersState extends State<Vouchers> {
                         ),
                       ),
                     ),
-
-
                   ],
-
                 ),
               ],
             ),
           ),
         ),
-
       ),
     );
   }

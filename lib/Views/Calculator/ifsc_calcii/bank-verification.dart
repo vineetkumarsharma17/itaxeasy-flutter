@@ -66,7 +66,7 @@ class _BankVerificationState extends State<BankVerification> {
                               ),
                               Image.asset(
                                 'assets/images/accent.png',
-                                color:Colors.purple,
+                                color: Colors.blue.shade900,
                                 width: 99,
                                 height: 4,
                               ),
@@ -226,15 +226,27 @@ class _BankVerificationState extends State<BankVerification> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color:Colors.purple,
-
+                              color: Colors.blue.shade900,
                               onPressed: () async {
-                                FocusScope.of(context).requestFocus(FocusNode());
-                                if(nameCont.text.isEmpty || accountCont.text.isEmpty || ifscCont.text.isEmpty|| contactCont.text.isEmpty){
-                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Fill the given fields"),));
-                                }if(contactCont.text.length<10 ){
-                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Phone Number Should be 10 Digits"),));
-                                }else{
+                                FocusScope.of(context)
+                                    .requestFocus(FocusNode());
+                                if (nameCont.text.isEmpty ||
+                                    accountCont.text.isEmpty ||
+                                    ifscCont.text.isEmpty ||
+                                    contactCont.text.isEmpty) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content:
+                                        Text("Please Fill the given fields"),
+                                  ));
+                                }
+                                if (contactCont.text.length < 10) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content: Text(
+                                        "Phone Number Should be 10 Digits"),
+                                  ));
+                                } else {
                                   setState(() {
                                     isLoading = true;
                                   });
@@ -244,7 +256,7 @@ class _BankVerificationState extends State<BankVerification> {
                                       ifsc: ifscCont.text,
                                       mobile: contactCont.text);
                                   final result =
-                                  await apiServices.bankVerify(insert);
+                                      await apiServices.bankVerify(insert);
                                   setState(() {
                                     isLoading = false;
                                   });
@@ -259,12 +271,16 @@ class _BankVerificationState extends State<BankVerification> {
                                                   ifsc: ifscCont.text,
                                                   contact: contactCont.text,
                                                 )));
-                                    print("-------------------SUCCESS--------------------");
+                                    print(
+                                        "-------------------SUCCESS--------------------");
                                   } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Something Went Wrong, Please Check Your Details"),));
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text(
+                                          "Something Went Wrong, Please Check Your Details"),
+                                    ));
                                   }
                                 }
-
                               },
                               text: "Find Now"),
                         ),

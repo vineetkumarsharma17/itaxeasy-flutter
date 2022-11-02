@@ -7,9 +7,9 @@ class TabBarWidget extends StatelessWidget {
 
   const TabBarWidget({
     Key key,
-     this.title,
-     this.tabs,
-     this.children,
+    this.title,
+    this.tabs,
+    this.children,
   }) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class TabBarWidget extends StatelessWidget {
             flexibleSpace: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.purple, Colors.blue],
+                  colors: [Colors.blue.shade900, Colors.blue.shade700],
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
                 ),

@@ -55,7 +55,7 @@ class _ITDState extends State<ITD> {
                     ),
                     Image.asset(
                       'assets/images/accent.png',
-                      color:Colors.purple,
+                      color: Colors.blue.shade900,
                       width: 99,
                       height: 4,
                     ),
@@ -66,12 +66,10 @@ class _ITDState extends State<ITD> {
             Expanded(
               child: Theme(
                 data: ThemeData(
-                    accentColor: Colors.purple,
-                    primarySwatch: Colors.purple,
-                    colorScheme: ColorScheme.light(
-                        primary: Colors.purple
-                    )
-                ),
+                    accentColor: Colors.blue.shade900,
+                    primarySwatch: Colors.blue.shade900,
+                    colorScheme:
+                        ColorScheme.light(primary: Colors.blue.shade900)),
                 child: Stepper(
                   type: stepperType,
                   physics: const ScrollPhysics(),
@@ -207,8 +205,8 @@ class _ITDState extends State<ITD> {
                       content: Column(
                         children: <Widget>[
                           TextFormField(
-                            decoration:
-                                const InputDecoration(labelText: 'Mobile Number'),
+                            decoration: const InputDecoration(
+                                labelText: 'Mobile Number'),
                           ),
                         ],
                       ),

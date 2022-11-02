@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 
 class KColors {
-  static const Color background =  Color(0xFFF5F5F5);
-  static const Color primary = Color(0xff3E61ED);
+  static const Color background = Color(0xFFF5F5F5);
+  static const Color primary = Color(0xFF0D47A1);
   static const Color title = Color(0xff343740);
   static const Color subtitle = Color(0xff898C8D);
-  static const Color icon = Color(0xff8E05C2);
+  static const Color icon = Color(0xFF0D47A1);
   static const Color lightGrey = Color(0xffEEEFF1);
-  static const Color headline = Color(0xff57435C);
+  static const Color headline = Color(0xFF000000);
   static const Color subtitles = Color(0xff78828A);
 }
-
 
 class FitnessAppTheme {
   FitnessAppTheme._();
   static const Color nearlyWhite = Color(0xFFFAFAFA);
   static const Color white = Color(0xFFFFFFFF);
   static const Color background = Color(0xFFF2F3F8);
-  static const Color nearlyDarkBlue = Color(0xFF2633C5);
+  static const Color nearlyDarkBlue = Color(0xFF0D47A1);
 
-  static const Color nearlyBlue = Color(0xFF00B6F0);
+  static const Color nearlyBlue = Color(0xFF0D47A1);
   static const Color nearlyBlack = Color(0xFF213333);
   static const Color grey = Color(0xFF3A5160);
   static const Color dark_grey = Color(0xFF313A44);
@@ -192,7 +191,6 @@ class DesignCourseAppTheme {
     color: lightText, // was lightText
   );
 }
-
 
 const kBackgroundColor = Color(0xFFF8F8F8);
 const kActiveIconColor = Color(0xFFE68342);

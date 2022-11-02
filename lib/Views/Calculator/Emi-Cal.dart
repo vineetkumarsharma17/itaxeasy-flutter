@@ -89,7 +89,7 @@ class _EmiUIState extends State<EmiUI> {
                               ),
                               Image.asset(
                                 'assets/images/accent.png',
-                                color: Colors.purple,
+                                color: Colors.blue.shade900,
                                 width: 99,
                                 height: 4,
                               ),
@@ -217,12 +217,19 @@ class _EmiUIState extends State<EmiUI> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.purple,
+                              color: Colors.blue.shade900,
                               onPressed: () async {
-                                FocusScope.of(context).requestFocus(FocusNode());
-                                if(loanAmount.text.isEmpty || rate.text.isEmpty || loanTenure.text.isEmpty){
-                                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Fill The Given Field"),));
-                                }else{
+                                FocusScope.of(context)
+                                    .requestFocus(FocusNode());
+                                if (loanAmount.text.isEmpty ||
+                                    rate.text.isEmpty ||
+                                    loanTenure.text.isEmpty) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content:
+                                        Text("Please Fill The Given Field"),
+                                  ));
+                                } else {
                                   setState(() {
                                     isLoading = true;
                                   });
@@ -245,7 +252,10 @@ class _EmiUIState extends State<EmiUI> {
                                     print(
                                         "------------------SUCCESS-----------------");
                                   } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("SomeThing Went Wrong"),));
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(const SnackBar(
+                                      content: Text("SomeThing Went Wrong"),
+                                    ));
                                     print(
                                         "------------------ERROR-----------------");
                                   }

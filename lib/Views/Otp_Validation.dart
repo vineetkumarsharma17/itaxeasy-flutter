@@ -54,6 +54,7 @@ class _Otp_ValidationState extends State<Otp_Validation> {
                           'assets/images/accent.png',
                           width: 99,
                           height: 4,
+                          color: Colors.blue.shade900,
                         ),
                       ],
                     ),
@@ -134,33 +135,41 @@ class _Otp_ValidationState extends State<Otp_Validation> {
                           SizedBox(
                             width: double.infinity,
                             child: GFButton(
-                              onPressed: () => showDialog(context: context, builder: (BuildContext context) => AlertDialog(
-                                title: Column(
-                                  children: const [
-                                    Icon(
-                                      Icons.check_circle_outlined,
-                                      color: Colors.green,
-                                      size: 60,
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Text(
-                                      "Your details are sended to UIDAI, Please check status later",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontFamily: "Poppins",
-                                        fontWeight: FontWeight.w500,
-                                        letterSpacing: 1.5,
-                                        fontSize: 12.5,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                actions: [
-                                  GFButton(onPressed: (){},text: "OK",),
-                                ],
-                              )),
+                              color: Colors.blue.shade900,
+                              onPressed: () => showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      AlertDialog(
+                                        title: Column(
+                                          children: const [
+                                            Icon(
+                                              Icons.check_circle_outlined,
+                                              color: Colors.green,
+                                              size: 60,
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(
+                                              "Your details are sended to UIDAI, Please check status later",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.w500,
+                                                letterSpacing: 1.5,
+                                                fontSize: 12.5,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        actions: [
+                                          GFButton(
+                                            onPressed: () {},
+                                            color: Colors.blue.shade900,
+                                            text: "OK",
+                                          ),
+                                        ],
+                                      )),
                               text: "Validate",
                             ),
                           )

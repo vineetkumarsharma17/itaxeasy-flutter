@@ -4,7 +4,6 @@ import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/theme.dart';
 
-
 class StatusAndDownload extends StatefulWidget {
   const StatusAndDownload({Key key}) : super(key: key);
 
@@ -18,12 +17,11 @@ class _StatusAndDownloadState extends State<StatusAndDownload> {
 
   String _code = '';
 
-
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body:  FadeInDown(
+        body: FadeInDown(
           delay: const Duration(milliseconds: 500),
           duration: const Duration(milliseconds: 500),
           child: Column(
@@ -56,113 +54,140 @@ class _StatusAndDownloadState extends State<StatusAndDownload> {
                         'assets/images/accent.png',
                         width: 99,
                         height: 4,
+                        color: Colors.blue.shade900,
                       ),
                     ],
                   ),
                 ],
               ),
               Expanded(
-                child: Stepper(
-                  type: stepperType,
-                  physics: const ScrollPhysics(),
-                  currentStep: _currentStep,
-                  onStepTapped: (step) => tapped(step),
-                  onStepContinue:  continued,
-                  onStepCancel: cancel,
-                  steps: <Step>[
-                    Step(
-                      title:  const Text('Enter Aadhaar Number'),
-                      content: FadeInDown(
-                        delay: const Duration(milliseconds: 600),
-                        duration: const Duration(milliseconds: 600),
-                        child: Column(
-                          children: <Widget>[
-                            const Padding(
-                              padding: EdgeInsets.only(left: 10,bottom: 10,),
-                              child: Align(alignment: Alignment.centerLeft,
-                                child: Text("Aadhaar Number",
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w500,
-                                    letterSpacing: 1.5,
-                                    fontSize: 17.5,
-                                  ),),
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                keyboardType: TextInputType.phone,
-                                decoration: InputDecoration(
-                                  hintText: 'Aadhaar Number',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                child: Theme(
+                  data: ThemeData(
+                      accentColor: Colors.blue.shade900,
+                      primarySwatch: Colors.blue,
+                      colorScheme:
+                          ColorScheme.light(primary: Colors.blue.shade900)),
+                  child: Stepper(
+                    type: stepperType,
+                    physics: const ScrollPhysics(),
+                    currentStep: _currentStep,
+                    onStepTapped: (step) => tapped(step),
+                    onStepContinue: continued,
+                    onStepCancel: cancel,
+                    steps: <Step>[
+                      Step(
+                        title: const Text('Enter Aadhaar Number'),
+                        content: FadeInDown(
+                          delay: const Duration(milliseconds: 600),
+                          duration: const Duration(milliseconds: 600),
+                          child: Column(
+                            children: <Widget>[
+                              const Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10,
+                                  bottom: 10,
+                                ),
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Aadhaar Number",
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: 1.5,
+                                      fontSize: 17.5,
+                                    ),
                                   ),
                                 ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  keyboardType: TextInputType.phone,
+                                  decoration: InputDecoration(
+                                    hintText: 'Aadhaar Number',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 0
+                            ? StepState.complete
+                            : StepState.disabled,
+                      ),
+                      Step(
+                        title: const Text('OTP Validation'),
+                        content: Column(
+                          children: <Widget>[
+                            FadeInDown(
+                              delay: const Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
+                              child: Text(
+                                "Please enter the 4 digit code sent to \n +93 706-399-999",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    height: 1.5),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+
+                            // Verification Code Input
+                            FadeInDown(
+                              delay: const Duration(milliseconds: 600),
+                              duration: const Duration(milliseconds: 500),
+                              child: VerificationCode(
+                                length: 4,
+                                textStyle: const TextStyle(
+                                    fontSize: 20, color: Colors.black),
+                                underlineColor: Colors.black,
+                                keyboardType: TextInputType.number,
+                                underlineUnfocusedColor: Colors.black,
+                                onCompleted: (value) {
+                                  setState(() {
+                                    _code = value;
+                                  });
+                                },
+                                onEditing: (value) {},
                               ),
                             ),
                           ],
                         ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 1
+                            ? StepState.complete
+                            : StepState.disabled,
                       ),
-                      isActive: _currentStep >= 0,
-                      state: _currentStep >= 0 ?
-                      StepState.complete : StepState.disabled,
-                    ),
-                    Step(
-                      title:  const Text('OTP Validation'),
-                      content: Column(
-                        children: <Widget>[
-                          FadeInDown(
-                            delay: const Duration(milliseconds: 500),
-                            duration: const Duration(milliseconds: 500),
-                            child: Text("Please enter the 4 digit code sent to \n +93 706-399-999",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 16, color: Colors.grey.shade500, height: 1.5),),
-                          ),
-                          const SizedBox(height: 20,),
-
-                          // Verification Code Input
-                          FadeInDown(
-                            delay: const Duration(milliseconds: 600),
-                            duration: const Duration(milliseconds: 500),
-                            child: VerificationCode(
-                              length: 4,
-                              textStyle: const TextStyle(fontSize: 20, color: Colors.black),
-                              underlineColor: Colors.black,
-                              keyboardType: TextInputType.number,
-                              underlineUnfocusedColor: Colors.black,
-                              onCompleted: (value) {
-                                setState(() {
-                                  _code = value;
-                                });
-                              },
-                              onEditing: (value) {},
+                      Step(
+                        title: const Text('Check Status/Download PAN'),
+                        content: Column(
+                          children: <Widget>[
+                            TextFormField(
+                              decoration: const InputDecoration(
+                                  labelText: 'Mobile Number'),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
+                        isActive: _currentStep >= 0,
+                        state: _currentStep >= 2
+                            ? StepState.complete
+                            : StepState.disabled,
                       ),
-                      isActive: _currentStep >= 0,
-                      state: _currentStep >= 1 ?
-                      StepState.complete : StepState.disabled,
-                    ),
-                    Step(
-                      title:  const Text('Check Status/Download PAN'),
-                      content: Column(
-                        children: <Widget>[
-                          TextFormField(
-                            decoration: const InputDecoration(labelText: 'Mobile Number'),
-                          ),
-                        ],
-                      ),
-                      isActive:_currentStep >= 0,
-                      state: _currentStep >= 2 ?
-                      StepState.complete : StepState.disabled,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -172,7 +197,6 @@ class _StatusAndDownloadState extends State<StatusAndDownload> {
         //   child: Icon(Icons.list),
         //   onPressed: switchStepsType,
         // ),
-
       ),
     );
   }
@@ -182,16 +206,15 @@ class _StatusAndDownloadState extends State<StatusAndDownload> {
   //       : stepperType = StepperType.vertical);
   // }
 
-  tapped(int step){
+  tapped(int step) {
     setState(() => _currentStep = step);
   }
 
-  continued(){
-    _currentStep < 2 ?
-    setState(() => _currentStep += 1): null;
+  continued() {
+    _currentStep < 2 ? setState(() => _currentStep += 1) : null;
   }
-  cancel(){
-    _currentStep > 0 ?
-    setState(() => _currentStep -= 1) : null;
+
+  cancel() {
+    _currentStep > 0 ? setState(() => _currentStep -= 1) : null;
   }
 }

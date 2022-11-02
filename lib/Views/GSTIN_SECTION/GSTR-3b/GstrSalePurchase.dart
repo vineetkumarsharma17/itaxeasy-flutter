@@ -54,7 +54,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                       ),
                       Image.asset(
                         'assets/images/accent.png',
-                        color: Colors.purple,
+                        color: Colors.blue.shade900,
                         width: 99,
                         height: 4,
                       ),
@@ -86,13 +86,13 @@ class _SalePurchaseState extends State<SalePurchase> {
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                              color: Colors.purple.withOpacity(0.1),
+                              color: Colors.blue.shade900.withOpacity(0.1),
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(10)),
                             ),
                             child: SvgPicture.asset(
                               "assets/icons/Documents.svg",
-                              color: Colors.purple,
+                              color: Colors.blue.shade900,
                             ),
                           ),
                           const Text(
@@ -138,7 +138,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                             delay: const Duration(milliseconds: 500),
                             duration: const Duration(milliseconds: 500),
                             child: GFButton(
-                                color: Colors.purple,
+                                color: Colors.blue.shade900,
                                 padding: const EdgeInsets.all(10),
                                 shape: GFButtonShape.pills,
                                 onPressed: () {},
@@ -148,7 +148,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                             delay: const Duration(milliseconds: 500),
                             duration: const Duration(milliseconds: 500),
                             child: GFButton(
-                                color: Colors.purple,
+                                color: Colors.blue.shade900,
                                 padding: const EdgeInsets.all(10),
                                 shape: GFButtonShape.pills,
                                 onPressed: () {
@@ -162,7 +162,6 @@ class _SalePurchaseState extends State<SalePurchase> {
                   ),
                 ),
               ),
-
               SizedBox(
                 height: 20,
               ),
@@ -174,24 +173,24 @@ class _SalePurchaseState extends State<SalePurchase> {
                         columns: [
                           DataColumn(
                               label: Text('Name of supplies',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold))),
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold))),
                           DataColumn(
                               label: Text('Total Taxable value',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold))),
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold))),
                           DataColumn(
                               label: Text('Integrated tax',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold))),
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold))),
                           DataColumn(
                               label: Text('Central Tax',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold))),
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold))),
                           DataColumn(
                               label: Text('State/UT Tax',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold))),
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold))),
                           DataColumn(
                               label: Text('CESS',
                                   style: TextStyle(
@@ -240,7 +239,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.purple,
+                        color: Colors.blue.shade900,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
                         onPressed: () {},
@@ -250,8 +249,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                        color: Colors.purple,
-
+                        color: Colors.blue.shade900,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
                         onPressed: () {
@@ -263,7 +261,7 @@ class _SalePurchaseState extends State<SalePurchase> {
                     delay: const Duration(milliseconds: 500),
                     duration: const Duration(milliseconds: 500),
                     child: GFButton(
-                      color: Colors.purple,
+                        color: Colors.blue.shade900,
                         padding: const EdgeInsets.all(10),
                         shape: GFButtonShape.pills,
                         onPressed: () {

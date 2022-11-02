@@ -12,7 +12,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Invoice-Generator/api/pdf_api.dart';
 import '../Theme/colors.dart';
 
-
 class FixedDepositResponseUi extends StatefulWidget {
   FixedDepositResponseUi({Key key, this.apiResponse}) : super(key: key);
 
@@ -30,9 +29,6 @@ class FixedDepositResponseUi extends StatefulWidget {
 class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
   bool isLoading = false;
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return isLoading
@@ -40,7 +36,7 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-      floatingActionButton: buildSpeedDial(),
+            floatingActionButton: buildSpeedDial(),
             backgroundColor: Colors.white,
             body: SingleChildScrollView(
               child: SafeArea(
@@ -86,7 +82,9 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
                                 height: 10,
                               ),
                               Image.asset('assets/images/accent.png',
-                                  width: 99, height: 4, color: Colors.purple),
+                                  width: 99,
+                                  height: 4,
+                                  color: Colors.blue.shade900),
                             ],
                           ),
                         ],
@@ -150,7 +148,9 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
                                             fontSize: 17.5,
                                           ),
                                         ),
-                                        Text(widget.apiResponse.data.interestEarned.toString(),
+                                        Text(
+                                          widget.apiResponse.data.interestEarned
+                                              .toString(),
                                           style: const TextStyle(
                                             fontFamily: "Poppins",
                                             fontWeight: FontWeight.w500,
@@ -412,10 +412,7 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
                     ),
                   ]);
             }).toList()),
-
-            pw.SizedBox(
-              height: 20
-            ),
+            pw.SizedBox(height: 20),
             pw.Text(
               "Months",
               style: pw.TextStyle(
@@ -452,27 +449,27 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
                   ),
                 ]),
             pw.Column(
-                children: widget.apiResponse.data
-              .monthlyCalculation.monthlyCalculation
+                children: widget
+                    .apiResponse.data.monthlyCalculation.monthlyCalculation
                     .map((e) {
-                  return pw.Row(
-                      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-                      children: [
-                        pw.Expanded(
-                          child: pw.Text(e.month.toString()),
-                        ),
-                        pw.SizedBox(width: 20),
-                        pw.Expanded(
-                          child: pw.Text(e.openingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.closingBalance.toString()),
-                        ),
-                        pw.Expanded(
-                          child: pw.Text(e.closingBalance.toString()),
-                        ),
-                      ]);
-                }).toList()),
+              return pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+                  children: [
+                    pw.Expanded(
+                      child: pw.Text(e.month.toString()),
+                    ),
+                    pw.SizedBox(width: 20),
+                    pw.Expanded(
+                      child: pw.Text(e.openingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.closingBalance.toString()),
+                    ),
+                    pw.Expanded(
+                      child: pw.Text(e.closingBalance.toString()),
+                    ),
+                  ]);
+            }).toList()),
           ]);
         })); //
     // image = (await rootBundle.load("assets/images/itax.png")).buffer.asUint8List();
@@ -481,8 +478,8 @@ class _FixedDepositResponseUiState extends State<FixedDepositResponseUi> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.purple.shade100,
-        backgroundColor: Colors.deepPurple,
+        overlayColor: Colors.blue.shade900,
+        backgroundColor: Colors.blue.shade900,
         spacing: 12,
         // childrenButtonSize: 60,
         spaceBetweenChildren: 8,

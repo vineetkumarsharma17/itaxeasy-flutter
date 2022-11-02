@@ -16,12 +16,11 @@ class CompanySearch extends StatefulWidget {
 }
 
 class _CompanySearchState extends State<CompanySearch> {
-
   ApiServices apiServices = ApiServices();
   TextEditingController cinCount = TextEditingController();
   TextEditingController tanCount = TextEditingController();
 
-   bool isLoading ;
+  bool isLoading;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +63,7 @@ class _CompanySearchState extends State<CompanySearch> {
                           ),
                           Image.asset(
                             'assets/images/accent.png',
-                            color:Colors.purple,
+                            color: Colors.blue.shade900,
                             width: 99,
                             height: 4,
                           ),
@@ -103,7 +102,6 @@ class _CompanySearchState extends State<CompanySearch> {
                               borderRadius: BorderRadius.circular(14.0),
                             ),
                             child: TextFormField(
-
                               decoration: InputDecoration(
                                 hintText: 'Search',
                                 hintStyle: heading6.copyWith(color: textGrey),
@@ -125,7 +123,7 @@ class _CompanySearchState extends State<CompanySearch> {
                                 borderRadius: BorderRadius.circular(14.0),
                               ),
                               child: GFButton(
-                                  color:Colors.purple,
+                                  color: Colors.blue.shade900,
                                   onPressed: () {
                                     // Navigator.push(
                                     //     context,
@@ -138,14 +136,16 @@ class _CompanySearchState extends State<CompanySearch> {
                           const SizedBox(
                             height: 20,
                           ),
-                          const Text("You can search the company by filling any field given below",
+                          const Text(
+                            "You can search the company by filling any field given below",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: "Poppins",
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1.5,
                               fontSize: 14.5,
-                            ),),
+                            ),
+                          ),
                           const Padding(
                             padding:
                                 EdgeInsets.only(left: 10, bottom: 10, top: 15),
@@ -170,7 +170,8 @@ class _CompanySearchState extends State<CompanySearch> {
                             child: TextFormField(
                               controller: cinCount,
                               inputFormatters: [
-                                FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z]")),
+                                FilteringTextInputFormatter.allow(
+                                    RegExp("[0-9a-zA-Z]")),
                                 LengthLimitingTextInputFormatter(21),
                               ],
                               decoration: InputDecoration(
@@ -216,7 +217,7 @@ class _CompanySearchState extends State<CompanySearch> {
                           ),
                           const Padding(
                             padding:
-                            EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -248,7 +249,7 @@ class _CompanySearchState extends State<CompanySearch> {
                           ),
                           const Padding(
                             padding:
-                            EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -294,30 +295,44 @@ class _CompanySearchState extends State<CompanySearch> {
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       child: GFButton(
-                          color:Colors.purple,
-                          onPressed: ()async {
-                            if(cinCount.text.isEmpty ){
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Fill CIN Number"),));
-                            }if(cinCount.text.length<21 ||cinCount.text.length > 21){
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("PAN Number Should be 21 Digits"),));
-                            }else{
-
+                          color: Colors.blue.shade900,
+                          onPressed: () async {
+                            if (cinCount.text.isEmpty) {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(const SnackBar(
+                                content: Text("Please Fill CIN Number"),
+                              ));
+                            }
+                            if (cinCount.text.length < 21 ||
+                                cinCount.text.length > 21) {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(const SnackBar(
+                                content: Text("PAN Number Should be 21 Digits"),
+                              ));
+                            } else {
                               setState(() {
                                 isLoading = true;
                               });
                               final insert = cinCount.text;
-                              final result = await  apiServices.mca(insert);
+                              final result = await apiServices.mca(insert);
                               setState(() {
                                 isLoading = false;
                               });
-                              if(result.resposeCode == 200){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> CompanyView(data: cinCount.text,)));
-                              }else{
-                                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Something Went Wrong, Check Your details"),));
-
+                              if (result.resposeCode == 200) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CompanyView(
+                                              data: cinCount.text,
+                                            )));
+                              } else {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(const SnackBar(
+                                  content: Text(
+                                      "Something Went Wrong, Check Your details"),
+                                ));
                               }
                             }
-
                           },
                           text: "Find Now"),
                     ),

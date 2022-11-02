@@ -1,4 +1,3 @@
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -13,7 +12,7 @@ class SortablePage extends StatefulWidget {
 }
 
 class _SortablePageState extends State<SortablePage> {
-   List<User> users;
+  List<User> users;
   int sortColumnIndex;
   bool isAscending = false;
 
@@ -36,8 +35,7 @@ class _SortablePageState extends State<SortablePage> {
               children: [
                 Expanded(
                   child: const Padding(
-                    padding: EdgeInsets.only(
-                        left: 10, bottom: 10, top: 10),
+                    padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -77,7 +75,6 @@ class _SortablePageState extends State<SortablePage> {
                 ),
               ],
             ),
-
             SizedBox(
               height: 20,
             ),
@@ -89,20 +86,18 @@ class _SortablePageState extends State<SortablePage> {
                   duration: const Duration(milliseconds: 500),
                   child: GFButton(
                       padding: const EdgeInsets.all(10),
-
                       shape: GFButtonShape.pills,
-
-                      onPressed: () {
-                      },
+                      color: Colors.blue.shade900,
+                      onPressed: () {},
                       text: "Payment"),
                 ),
                 FadeInRight(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GFButton(
+                      color: Colors.blue.shade900,
                       padding: const EdgeInsets.all(10),
                       shape: GFButtonShape.pills,
-
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                       },
@@ -112,9 +107,9 @@ class _SortablePageState extends State<SortablePage> {
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: GFButton(
+                      color: Colors.blue.shade900,
                       padding: const EdgeInsets.all(10),
                       shape: GFButtonShape.pills,
-
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                       },
@@ -129,22 +124,19 @@ class _SortablePageState extends State<SortablePage> {
               delay: const Duration(milliseconds: 500),
               duration: const Duration(milliseconds: 500),
               child: GFButton(
-                size: GFSize.LARGE,
+                  color: Colors.blue.shade900,
+                  size: GFSize.LARGE,
                   padding: const EdgeInsets.all(10),
-
                   shape: GFButtonShape.pills,
-
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                   text: "Download"),
             ),
-
           ],
         ),
       );
 
   Widget buildDataTable() {
-    final columns = ['Date','Particular', 'Dr/Cr', 'Balance','Amount'];
+    final columns = ['Date', 'Particular', 'Dr/Cr', 'Balance', 'Amount'];
 
     return DataTable(
       sortAscending: isAscending,
@@ -162,7 +154,13 @@ class _SortablePageState extends State<SortablePage> {
       .toList();
 
   List<DataRow> getRows(List<User> users) => users.map((User user) {
-        final cells = [user.firstName, user.lastName, user.age ,user.ok, user.oko];
+        final cells = [
+          user.firstName,
+          user.lastName,
+          user.age,
+          user.ok,
+          user.oko
+        ];
 
         return DataRow(cells: getCells(cells));
       }).toList();
@@ -180,10 +178,10 @@ class _SortablePageState extends State<SortablePage> {
     } else if (columnIndex == 2) {
       users.sort((user1, user2) =>
           compareString(ascending, '${user1.age}', '${user2.age}'));
-    }else if (columnIndex == 3) {
+    } else if (columnIndex == 3) {
       users.sort((user1, user2) =>
           compareString(ascending, '${user1.oko}', '${user2.oko}'));
-    }else if (columnIndex == 4) {
+    } else if (columnIndex == 4) {
       users.sort((user1, user2) =>
           compareString(ascending, '${user1.ok}', '${user2.ok}'));
     }

@@ -18,7 +18,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20,bottom: 20),
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 20),
             child: Column(
               children: [
                 Row(
@@ -59,7 +60,7 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color:Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -77,21 +78,19 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
-
                           shape: GFButtonShape.pills,
-
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           text: "Print"),
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -101,9 +100,9 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -111,16 +110,15 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                    height:20
-                ),
+                const SizedBox(height: 20),
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 10,left: 10,bottom: 10),
+                    padding:
+                        const EdgeInsets.only(right: 10, left: 10, bottom: 10),
                     child: Column(
                       children: [
                         Row(
@@ -154,7 +152,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Voucher no:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -164,9 +163,7 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -196,7 +193,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Date:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -209,8 +207,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                           ],
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -272,7 +270,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Cash/Bank:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -282,9 +281,7 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                                width:10
-                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 children: [
@@ -314,7 +311,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                                       keyboardType: TextInputType.number,
                                       decoration: InputDecoration(
                                         hintText: 'Amount:',
-                                        hintStyle: heading6.copyWith(color: textGrey),
+                                        hintStyle:
+                                            heading6.copyWith(color: textGrey),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide.none,
                                         ),
@@ -377,8 +375,8 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                         //   ],
                         // ),
                         const Padding(
-                          padding: EdgeInsets.only(
-                              left: 10, bottom: 10, top: 10),
+                          padding:
+                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -423,21 +421,19 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
-
                           shape: GFButtonShape.pills,
-
-                          onPressed: () {
-                          },
+                          onPressed: () {},
                           text: "Accept"),
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
@@ -447,9 +443,9 @@ class _JournalVoucherssState extends State<JournalVouchers> {
                       delay: const Duration(milliseconds: 500),
                       duration: const Duration(milliseconds: 500),
                       child: GFButton(
+                          color: Colors.blue.shade900,
                           padding: const EdgeInsets.all(10),
                           shape: GFButtonShape.pills,
-
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
