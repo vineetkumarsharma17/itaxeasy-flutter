@@ -4,7 +4,6 @@ import 'package:getwidget/Components/button/gf_button.dart';
 
 import '../Calculator/ifsc_calcii/Theme.dart';
 
-
 class Alteration extends StatefulWidget {
   const Alteration({Key key}) : super(key: key);
 
@@ -22,7 +21,6 @@ class _AlterationState extends State<Alteration> {
             padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 20),
             child: Column(
               children: [
-
                 Row(
                   children: [
                     IconButton(
@@ -49,7 +47,7 @@ class _AlterationState extends State<Alteration> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -58,14 +56,11 @@ class _AlterationState extends State<Alteration> {
                   ],
                 ),
                 const SizedBox(height: 20),
-
-
                 Form(
                   child: Column(
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -96,8 +91,7 @@ class _AlterationState extends State<Alteration> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -129,8 +123,7 @@ class _AlterationState extends State<Alteration> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -161,7 +154,6 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ),
                       ),
-
                       Row(
                         children: [
                           Expanded(
@@ -193,7 +185,8 @@ class _AlterationState extends State<Alteration> {
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
                                       hintText: 'Pincode:',
-                                      hintStyle: heading6.copyWith(color: textGrey),
+                                      hintStyle:
+                                          heading6.copyWith(color: textGrey),
                                       border: const OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                       ),
@@ -203,9 +196,7 @@ class _AlterationState extends State<Alteration> {
                               ],
                             ),
                           ),
-                          const SizedBox(
-                              width:10
-                          ),
+                          const SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               children: [
@@ -235,7 +226,8 @@ class _AlterationState extends State<Alteration> {
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
                                       hintText: 'Select State:',
-                                      hintStyle: heading6.copyWith(color: textGrey),
+                                      hintStyle:
+                                          heading6.copyWith(color: textGrey),
                                       border: const OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                       ),
@@ -247,10 +239,8 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ],
                       ),
-
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -281,8 +271,6 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ),
                       ),
-
-
                       Row(
                         children: [
                           Expanded(
@@ -314,7 +302,8 @@ class _AlterationState extends State<Alteration> {
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
                                       hintText: 'PAN Number:',
-                                      hintStyle: heading6.copyWith(color: textGrey),
+                                      hintStyle:
+                                          heading6.copyWith(color: textGrey),
                                       border: const OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                       ),
@@ -324,9 +313,7 @@ class _AlterationState extends State<Alteration> {
                               ],
                             ),
                           ),
-                          const SizedBox(
-                              width:10
-                          ),
+                          const SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               children: [
@@ -356,7 +343,8 @@ class _AlterationState extends State<Alteration> {
                                     keyboardType: TextInputType.phone,
                                     decoration: InputDecoration(
                                       hintText: 'TAN Number:',
-                                      hintStyle: heading6.copyWith(color: textGrey),
+                                      hintStyle:
+                                          heading6.copyWith(color: textGrey),
                                       border: const OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                       ),
@@ -368,10 +356,8 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ],
                       ),
-
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -402,10 +388,8 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ),
                       ),
-
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -436,10 +420,8 @@ class _AlterationState extends State<Alteration> {
                           ),
                         ),
                       ),
-
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -473,11 +455,9 @@ class _AlterationState extends State<Alteration> {
                       const SizedBox(
                         height: 20,
                       ),
-
                     ],
                   ),
                 ),
-
                 Row(
                   children: [
                     Expanded(
@@ -579,7 +559,6 @@ class _AlterationState extends State<Alteration> {
                     ),
                   ],
                 ),
-
               ],
             ),
           ),

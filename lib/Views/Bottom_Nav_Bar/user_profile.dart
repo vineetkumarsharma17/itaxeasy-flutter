@@ -19,6 +19,7 @@ class ProfilePage extends StatefulWidget {
 
 class MapScreenState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
+  // var _formKey = GlobalKey<FormState>();
   ApiServices apiServices = ApiServices();
 
   void _showPicker(context) {
@@ -269,6 +270,44 @@ class MapScreenState extends State<ProfilePage>
                             ],
                           )),
                       Padding(
+                        padding: const EdgeInsets.only(
+                            left: 25.0, right: 25.0, top: 25.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: <Widget>[
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: const <Widget>[
+                                Text(
+                                  'PAN Number',
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(
+                              left: 25.0, right: 25.0, top: 2.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Flexible(
+                                child: TextField(
+                                  decoration: const InputDecoration(
+                                    hintText: "Enter PAN Number",
+                                  ),
+                                  enabled: !_status,
+                                  autofocus: !_status,
+                                ),
+                              ),
+                            ],
+                          )),
+                      Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
@@ -430,49 +469,36 @@ class MapScreenState extends State<ProfilePage>
                               ),
                             ],
                           )),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 25.0, right: 25.0, top: 25.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: <Widget>[
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.min,
-                              children: const <Widget>[
-                                Text(
-                                  'PAN Number',
-                                  style: TextStyle(
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                          padding: const EdgeInsets.only(
-                              left: 25.0, right: 25.0, top: 2.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: <Widget>[
-                              Flexible(
-                                child: TextField(
-                                  decoration: const InputDecoration(
-                                    hintText: "Enter PAN Number",
-                                  ),
-                                  enabled: !_status,
-                                  autofocus: !_status,
-                                ),
-                              ),
-                            ],
-                          )),
                       !_status ? _getActionButtons() : Container(),
                     ],
                   ),
                 ),
-              )
+              ),
+              // Center(
+              //   child: Container(
+              //     width: 150,
+              //     height: 45,
+              //     child: FadeInRight(
+              //       delay: const Duration(milliseconds: 500),
+              //       duration: const Duration(milliseconds: 500),
+              //       child: GFButton(
+              //           color: Colors.blue.shade900,
+              //           padding: const EdgeInsets.all(10),
+              //           shape: GFButtonShape.pills,
+              //           onPressed: () {
+              //             // Navigator.push(
+              //             //     context,
+              //             //     MaterialPageRoute(
+              //             //         builder: (context) =>
+              //             //             ChalaanGenerated()));
+              //           },
+              //           text: "Register"),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 40,
+              // )
             ],
           ),
         ],

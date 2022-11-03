@@ -30,7 +30,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
             padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
             child: Column(
               children: [
-
                 Row(
                   children: [
                     IconButton(
@@ -57,7 +56,7 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -69,7 +68,8 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                 Card(
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 10, left: 10, right: 10),
                     child: Row(
                       children: [
                         Expanded(
@@ -85,7 +85,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXXX XXX XXX",
                                 style: TextStyle(
@@ -107,7 +106,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXXX",
                                 style: TextStyle(
@@ -129,7 +127,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -151,7 +148,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -173,7 +169,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -188,7 +183,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                         ),
                         Expanded(
                           child: Column(
-
                             children: [
                               Stack(fit: StackFit.loose, children: <Widget>[
                                 Row(
@@ -201,7 +195,8 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                            image: ExactAssetImage('assets/images/as.png'),
+                                            image: ExactAssetImage(
+                                                'assets/images/as.png'),
                                             fit: BoxFit.cover,
                                           ),
                                         )),
@@ -243,11 +238,13 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                   ),
                 ),
                 const SizedBox(
-                  height:20,
+                  height: 20,
                 ),
                 Text(
                   'Bank Account Details',
-                  style: heading2.copyWith(color: Colors.purple,),
+                  style: heading2.copyWith(
+                    color: Colors.purple,
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -261,16 +258,13 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                     fontSize: 17.5,
                   ),
                 ),
-              const SizedBox(
-                height:10
-              ),
+                const SizedBox(height: 10),
                 FadeInDown(
                   delay: const Duration(milliseconds: 600),
                   duration: const Duration(milliseconds: 600),
                   child: Form(
                     child: Column(
                       children: [
-
                         Container(
                           decoration: BoxDecoration(
                             color: textWhiteGrey,
@@ -292,14 +286,13 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                             },
                             items: cityList
                                 .map((cityTitle) => DropdownMenuItem(
-                                value: cityTitle, child: Text(cityTitle)))
+                                    value: cityTitle, child: Text(cityTitle)))
                                 .toList(),
                           ),
                         ),
                         const SizedBox(
                           height: 20,
                         ),
-
                         Container(
                           decoration: BoxDecoration(
                             color: textWhiteGrey,
@@ -321,7 +314,7 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                             },
                             items: cityList
                                 .map((cityTitle) => DropdownMenuItem(
-                                value: cityTitle, child: Text(cityTitle)))
+                                    value: cityTitle, child: Text(cityTitle)))
                                 .toList(),
                           ),
                         ),
@@ -349,7 +342,7 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                             },
                             items: cityList
                                 .map((cityTitle) => DropdownMenuItem(
-                                value: cityTitle, child: Text(cityTitle)))
+                                    value: cityTitle, child: Text(cityTitle)))
                                 .toList(),
                           ),
                         ),
@@ -377,7 +370,7 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                             },
                             items: cityList
                                 .map((cityTitle) => DropdownMenuItem(
-                                value: cityTitle, child: Text(cityTitle)))
+                                    value: cityTitle, child: Text(cityTitle)))
                                 .toList(),
                           ),
                         ),
@@ -385,7 +378,6 @@ class _BusinessBankAccountState extends State<BusinessBankAccount> {
                     ),
                   ),
                 ),
-
               ],
             ),
           ),

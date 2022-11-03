@@ -1,4 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/button/gf_button.dart';
+import 'package:getwidget/shape/gf_button_shape.dart';
 import '../Calculator/ifsc_calcii/Theme.dart';
 
 class BusinessProfileUi extends StatefulWidget {
@@ -502,6 +505,31 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                     ),
                   ),
                 ),
+                // Center(
+                //   child: Container(
+                //     width: 150,
+                //     height: 45,
+                //     child: FadeInRight(
+                //       delay: const Duration(milliseconds: 500),
+                //       duration: const Duration(milliseconds: 500),
+                //       child: GFButton(
+                //           color: Colors.blue.shade900,
+                //           padding: const EdgeInsets.all(10),
+                //           shape: GFButtonShape.pills,
+                //           onPressed: () {
+                //             // Navigator.push(
+                //             //     context,
+                //             //     MaterialPageRoute(
+                //             //         builder: (context) =>
+                //             //             ChalaanGenerated()));
+                //           },
+                //           text: "Register"),
+                //     ),
+                //   ),
+                // ),
+                // SizedBox(
+                //   height: 20.0,
+                // )
               ],
             ),
           ),
@@ -578,8 +606,8 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
 
   Widget _getEditIcon() {
     return GestureDetector(
-      child: const CircleAvatar(
-        backgroundColor: Colors.red,
+      child: CircleAvatar(
+        backgroundColor: Colors.blue.shade900,
         radius: 14.0,
         child: Icon(
           Icons.edit,

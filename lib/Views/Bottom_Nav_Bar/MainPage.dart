@@ -4,7 +4,9 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/Views/Invoice-Generator/model/invoice.dart';
 import 'package:gst_app/Views/OCR.dart';
+import 'package:gst_app/Views/on_board_screens/Invoice.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../BalanceSheet.dart';
 import '../EasyGadgets.dart';
@@ -1056,8 +1058,8 @@ class _DetailsScreenState extends State<DetailsScreen>
           onTapDown: _tapDown4,
           onTapUp: _tapUp4,
           onTap: () {
-            // Navigator.push(context,
-            //     MaterialPageRoute(builder: (context) => CashAndBank()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => IBIZ()));
           },
           child: Transform.scale(
             scale: _scale4,
