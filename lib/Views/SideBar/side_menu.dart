@@ -8,6 +8,7 @@ import 'package:gst_app/Views/Calculator/Mis.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/bank-verification.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/ifsc_coder.dart';
 import 'package:gst_app/Views/Calculator/simple_calculators.dart';
+import 'package:gst_app/Views/on_board_screens/ITR%20Files.dart';
 import 'package:material_dialogs/material_dialogs.dart';
 import '../AccountMisuse.dart';
 import '../Bottom_Nav_Bar/services.dart';
@@ -1193,6 +1194,22 @@ class _SideMenuState extends State<SideMenu> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => PincodeInfoUi()));
+                  },
+                ),
+              ),
+            ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
+                  title: "ITR Files",
+                  svgSrc: "assets/icons/ao.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ITRFiles()));
                   },
                 ),
               ),

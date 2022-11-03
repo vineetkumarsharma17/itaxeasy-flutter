@@ -4,6 +4,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/Views/OCR.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../BalanceSheet.dart';
 import '../EasyGadgets.dart';
@@ -1153,7 +1154,8 @@ class _DetailsScreenState extends State<DetailsScreen>
           onTapDown: _tapDown6,
           onTapUp: _tapUp6,
           onTap: () {
-            // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => OCRSystem()));
           },
           child: Transform.scale(
             scale: _scale6,

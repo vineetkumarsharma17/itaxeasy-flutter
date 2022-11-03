@@ -247,46 +247,46 @@ class _DashServiceState extends State<DashService> {
                           ),
                         ),
                       ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        shadowColor: KColors.icon,
-                        elevation: 2,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade800,
-                                  Colors.blue.shade900
-                                ],
-                              )),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.description_outlined,
-                                color: KColors.icon,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "OCR",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.5,
-                                    fontSize: 20.5,
-                                    color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      // Card(
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(30.0),
+                      //   ),
+                      //   shadowColor: KColors.icon,
+                      //   elevation: 2,
+                      //   child: Container(
+                      //     decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(30),
+                      //         gradient: LinearGradient(
+                      //           begin: Alignment.topCenter,
+                      //           end: Alignment.bottomCenter,
+                      //           colors: [
+                      //             Colors.blue.shade800,
+                      //             Colors.blue.shade900
+                      //           ],
+                      //         )),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: const [
+                      //         Icon(
+                      //           Icons.description_outlined,
+                      //           color: KColors.icon,
+                      //         ),
+                      //         SizedBox(
+                      //           width: 10,
+                      //         ),
+                      //         Text(
+                      //           "OCR",
+                      //           style: TextStyle(
+                      //               fontFamily: "Poppins",
+                      //               fontWeight: FontWeight.bold,
+                      //               letterSpacing: 1.5,
+                      //               fontSize: 20.5,
+                      //               color: Colors.white),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ],
@@ -681,143 +681,143 @@ class _DashServiceState extends State<DashService> {
               SizedBox(
                 height: 25,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OCRSystem()));
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.document_scanner_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "OCR",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 25,
-                              letterSpacing: 2,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.headline,
-                            ),
-                          ),
-                          Text(
-                            "OCR(Optical Character Recognition) is a system that can be used to read text from images",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.subtitles,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PincodeInfoUi()));
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.pin_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Info by PINCODE",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 25,
-                              letterSpacing: 2,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.headline,
-                            ),
-                          ),
-                          Text(
-                            "We can get information about any PINCODE from this system",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.subtitles,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(context,
+              //         MaterialPageRoute(builder: (context) => OCRSystem()));
+              //   },
+              //   child: Row(
+              //     children: [
+              //       Container(
+              //         height: 72,
+              //         width: 83,
+              //         decoration: BoxDecoration(
+              //             boxShadow: const [
+              //               BoxShadow(color: Colors.grey, blurRadius: 6),
+              //             ],
+              //             border: Border.all(
+              //               width: 1.5,
+              //               color: const Color(0xffE3E9ED),
+              //             ),
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(15.0)),
+              //         child: Center(
+              //           child: Container(
+              //             height: 45,
+              //             width: 45,
+              //             decoration: BoxDecoration(
+              //               color: const Color(0xffE3E9ED),
+              //               borderRadius: BorderRadius.circular(15.0),
+              //             ),
+              //             child: const Icon(
+              //               Icons.document_scanner_rounded,
+              //               color: KColors.icon,
+              //               size: 30,
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //       SizedBox(
+              //         width: 20,
+              //       ),
+              //       Expanded(
+              //         child: Column(
+              //           mainAxisAlignment: MainAxisAlignment.start,
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             Text(
+              //               "OCR",
+              //               style: GoogleFonts.dmSans(
+              //                 fontSize: 25,
+              //                 letterSpacing: 2,
+              //                 fontWeight: FontWeight.normal,
+              //                 color: KColors.headline,
+              //               ),
+              //             ),
+              //             Text(
+              //               "OCR(Optical Character Recognition) is a system that can be used to read text from images",
+              //               style: GoogleFonts.dmSans(
+              //                 fontSize: 15,
+              //                 fontWeight: FontWeight.normal,
+              //                 color: KColors.subtitles,
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 25,
+              // ),
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(context,
+              //         MaterialPageRoute(builder: (context) => PincodeInfoUi()));
+              //   },
+              //   child: Row(
+              //     children: [
+              //       Container(
+              //         height: 72,
+              //         width: 83,
+              //         decoration: BoxDecoration(
+              //             boxShadow: const [
+              //               BoxShadow(color: Colors.grey, blurRadius: 6),
+              //             ],
+              //             border: Border.all(
+              //               width: 1.5,
+              //               color: const Color(0xffE3E9ED),
+              //             ),
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.circular(15.0)),
+              //         child: Center(
+              //           child: Container(
+              //             height: 45,
+              //             width: 45,
+              //             decoration: BoxDecoration(
+              //               color: const Color(0xffE3E9ED),
+              //               borderRadius: BorderRadius.circular(15.0),
+              //             ),
+              //             child: const Icon(
+              //               Icons.pin_rounded,
+              //               color: KColors.icon,
+              //               size: 30,
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //       SizedBox(
+              //         width: 20,
+              //       ),
+              //       Expanded(
+              //         child: Column(
+              //           mainAxisAlignment: MainAxisAlignment.start,
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             Text(
+              //               "Info by PINCODE",
+              //               style: GoogleFonts.dmSans(
+              //                 fontSize: 25,
+              //                 letterSpacing: 2,
+              //                 fontWeight: FontWeight.normal,
+              //                 color: KColors.headline,
+              //               ),
+              //             ),
+              //             Text(
+              //               "We can get information about any PINCODE from this system",
+              //               style: GoogleFonts.dmSans(
+              //                 fontSize: 15,
+              //                 fontWeight: FontWeight.normal,
+              //                 color: KColors.subtitles,
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
