@@ -44,6 +44,7 @@ class _DetailsScreenState extends State<DetailsScreen>
   double _scale5;
   double _scale6;
   double _scale7;
+
   AnimationController _controller;
   AnimationController _controller1;
   AnimationController _controller2;
@@ -52,6 +53,7 @@ class _DetailsScreenState extends State<DetailsScreen>
   AnimationController _controller5;
   AnimationController _controller6;
   AnimationController _controller7;
+
   FlutterSecureStorage storage = const FlutterSecureStorage();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   String name;
@@ -182,6 +184,7 @@ class _DetailsScreenState extends State<DetailsScreen>
     )..addListener(() {
         setState(() {});
       });
+
     super.initState();
   }
 
@@ -273,57 +276,61 @@ class _DetailsScreenState extends State<DetailsScreen>
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 35, right: 35),
-                      height: 190,
-                      width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.blue.shade900,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Current Balance",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Container(
-                                    height: 30,
-                                    child:
-                                        Image.asset("assets/icons/mcard.png"))
-                              ],
-                            ),
-                            const Text(
-                              "₹5,750,20",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 25),
-                            ),
-                            const SizedBox(
-                              height: 80,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: const [
-                                Text(
-                                  "5282 3456 7890 1289",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Text(
-                                  "09/25",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            )
-                          ],
+                    Center(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 35, right: 35),
+                        height: 190,
+                        width: 280,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Current Balance",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Container(
+                                      height: 30,
+                                      child:
+                                          Image.asset("assets/icons/mcard.png"))
+                                ],
+                              ),
+                              const Text(
+                                "₹5,750,20",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              ),
+                              const SizedBox(
+                                height: 80,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: const [
+                                  Text(
+                                    "5282 3456 7890 1289",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Text(
+                                    "09/25",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -838,6 +845,7 @@ class _DetailsScreenState extends State<DetailsScreen>
     _scale5 = 1 - _controller5.value;
     _scale6 = 1 - _controller6.value;
     _scale7 = 1 - _controller7.value;
+
     return GridView(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -1047,8 +1055,8 @@ class _DetailsScreenState extends State<DetailsScreen>
           onTapDown: _tapDown4,
           onTapUp: _tapUp4,
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CashAndBank()));
+            // Navigator.push(context,
+            //     MaterialPageRoute(builder: (context) => CashAndBank()));
           },
           child: Transform.scale(
             scale: _scale4,
@@ -1080,7 +1088,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     height: 8,
                   ),
                   Text(
-                    "Bank",
+                    "IBIZ",
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
@@ -1168,7 +1176,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     child: const Icon(
-                      Icons.calculate_rounded,
+                      Icons.document_scanner,
                       color: KColors.icon,
                       size: 30,
                     ),
@@ -1177,7 +1185,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     height: 8,
                   ),
                   Text(
-                    "P&L A/C",
+                    "OCR",
                     style: GoogleFonts.dmSans(
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
@@ -1305,6 +1313,22 @@ class _DetailsScreenState extends State<DetailsScreen>
   void _tapUp7(TapUpDetails details) {
     _controller7.reverse();
   }
+
+  // void _tapDown8(TapDownDetails details) {
+  //   _controller8.forward();
+  // }
+
+  // void _tapUp8(TapUpDetails details) {
+  //   _controller8.reverse();
+  // }
+
+  // void _tapDown9(TapDownDetails details) {
+  //   _controller9.forward();
+  // }
+
+  // void _tapUp9(TapUpDetails details) {
+  //   _controller9.reverse();
+  // }
 }
 
 Future openUrl({

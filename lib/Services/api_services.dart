@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
 import 'package:gst_app/Models/bank-verify.dart';
@@ -43,7 +44,6 @@ import '../Models/sip-gain.dart';
 import '../Models/tds.dart';
 import '../Models/track-gst-return.dart';
 
-
 class ApiServices {
   FlutterSecureStorage storage = const FlutterSecureStorage();
   String baseUrl = "https://mom.itaxeasy.com/api";
@@ -69,9 +69,9 @@ class ApiServices {
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(registers);
     final response = await http.post(url, headers: headers, body: jsonBody);
-    print(response.statusCode);
-    print(response.body);
-    print(jsonBody);
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
     if (response.statusCode == 200 || response.statusCode == 201) {
       final jsonData = jsonDecode(response.body);
       return ApiResponse<RegisterUser>(
@@ -81,8 +81,7 @@ class ApiServices {
     final jsonData = jsonDecode(response.body);
     Map<String, dynamic> errorData = jsonData["error"];
     List<dynamic> errorMessage = errorData["email"];
-  await storage.write(key: "emailMessage", value: errorMessage.toString());
-
+    await storage.write(key: "emailMessage", value: errorMessage.toString());
 
     return ApiResponse<RegisterUser>(
         resposeCode: response.statusCode,
@@ -97,9 +96,9 @@ class ApiServices {
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(login);
     final response = await http.post(url, headers: headers, body: jsonBody);
-    print(response.statusCode);
-    print(response.body);
-    print(jsonBody);
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
     if (response.statusCode == 200) {
       final output = jsonDecode(response.body);
       Map<String, dynamic> output1 = output['results'];
@@ -826,12 +825,16 @@ class ApiServices {
     );
     print(response.body);
     print(response.statusCode);
-    if (response.statusCode == 200 ) {
-     final jsonData = jsonDecode(response.body);
-      return ApiResponse<SearchGstByPan>(data: SearchGstByPan.fromJson(jsonData), resposeCode: response.statusCode);
+    if (response.statusCode == 200) {
+      final jsonData = jsonDecode(response.body);
+      return ApiResponse<SearchGstByPan>(
+          data: SearchGstByPan.fromJson(jsonData),
+          resposeCode: response.statusCode);
     }
     return ApiResponse<SearchGstByPan>(
-        error: true, errorMessage: "An error occurred",resposeCode: response.statusCode);
+        error: true,
+        errorMessage: "An error occurred",
+        resposeCode: response.statusCode);
   }
 
   Future<ApiResponse<B2B>> gstr2Ab2b(
@@ -857,7 +860,10 @@ class ApiServices {
       return ApiResponse<B2B>(
           data: B2B.fromJson(jsonData), resposeCode: response.statusCode);
     }
-    return ApiResponse<B2B>(error: true, errorMessage: "An error occurred",resposeCode: response.statusCode);
+    return ApiResponse<B2B>(
+        error: true,
+        errorMessage: "An error occurred",
+        resposeCode: response.statusCode);
   }
 
   Future<ApiResponse<bool>> gstLogin(GstSign login) async {
@@ -1026,22 +1032,18 @@ class ApiServices {
         error: true, errorMessage: "An error occurred");
   }
 
-
-  Future<ApiResponse<bool>> googleLogin()async{
-    final url = Uri.parse(baseUrl+"/auth/google");
+  Future<ApiResponse<bool>> googleLogin() async {
+    final url = Uri.parse(baseUrl + "/auth/google");
     final headers = {
       'Content-Type': 'application/json',
       // 'Authorization': 'Bearer $authToken',
     };
-    final response = await http.get(
-      url,
-      headers: headers
-    );
-    if(response.statusCode == 200){
+    final response = await http.get(url, headers: headers);
+    if (response.statusCode == 200) {
       print(response.statusCode);
 
-      return ApiResponse<bool>(data: true,resposeCode: response.statusCode);
+      return ApiResponse<bool>(data: true, resposeCode: response.statusCode);
     }
-    return ApiResponse<bool>(error: true,resposeCode: response.statusCode);
+    return ApiResponse<bool>(error: true, resposeCode: response.statusCode);
   }
 }

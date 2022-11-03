@@ -304,6 +304,75 @@ class _GstinSearchUiState extends State<GstinSearchUi> {
                   ],
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.push(
+                  //     context, MaterialPageRoute(builder: (context) => GST()));
+                },
+                child: Row(
+                  children: [
+                    Container(
+                      height: 72,
+                      width: 83,
+                      decoration: BoxDecoration(
+                          boxShadow: const [
+                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                          ],
+                          border: Border.all(
+                            width: 1.5,
+                            color: const Color(0xffE3E9ED),
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: Center(
+                        child: Container(
+                          height: 45,
+                          width: 45,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffE3E9ED),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: const Icon(
+                            Icons.search_rounded,
+                            color: KColors.icon,
+                            size: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Compliance",
+                            overflow: TextOverflow.clip,
+                            style: GoogleFonts.dmSans(
+                              fontSize: 25,
+                              letterSpacing: 2,
+                              fontWeight: FontWeight.normal,
+                              color: KColors.headline,
+                            ),
+                          ),
+                          Text(
+                            "Compliance",
+                            overflow: TextOverflow.ellipsis,
+                            style: GoogleFonts.dmSans(
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal,
+                              color: KColors.subtitles,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

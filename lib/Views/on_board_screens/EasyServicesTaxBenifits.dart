@@ -1,20 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gst_app/Views/on_board_screens/EasyServicesBank.dart';
-import 'package:gst_app/Views/on_board_screens/EasyServicesInvestment.dart';
-import 'package:gst_app/Views/on_board_screens/EasyServicesTaxBenifits.dart';
+import 'package:gst_app/Views/Theme/colors.dart';
 
-import 'Theme/colors.dart';
-
-class OtherSections extends StatefulWidget {
-  const OtherSections({Key key}) : super(key: key);
+class EasyServicesBenifits extends StatefulWidget {
+  const EasyServicesBenifits({Key key}) : super(key: key);
 
   @override
-  State<OtherSections> createState() => _OtherSectionsState();
+  State<EasyServicesBenifits> createState() => _EasyServicesBenifitsState();
 }
 
-class _OtherSectionsState extends State<OtherSections>
+class _EasyServicesBenifitsState extends State<EasyServicesBenifits>
     with TickerProviderStateMixin {
   double _scale;
   double _scale1;
@@ -179,7 +175,7 @@ class _OtherSectionsState extends State<OtherSections>
                       Padding(
                         padding: const EdgeInsets.only(top: 10, left: 20),
                         child: Text(
-                          "Easy Services",
+                          "Tax Benifits",
                           style: GoogleFonts.dmSans(
                             fontSize: 25,
                             letterSpacing: 3,
@@ -235,7 +231,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Bank",
+                                "Mutual Funds",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -275,7 +271,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Investments",
+                                "Car/Personal Loan",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -315,7 +311,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Fixed Plan",
+                                "Star Health",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -355,7 +351,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Tax Benifits",
+                                "LIC Policy",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -367,86 +363,6 @@ class _OtherSectionsState extends State<OtherSections>
                           ),
                         ),
                       ),
-                      // Card(
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(30.0),
-                      //   ),
-                      //   shadowColor: KColors.icon,
-                      //   elevation: 2,
-                      //   child: Container(
-                      //     decoration: BoxDecoration(
-                      //         borderRadius: BorderRadius.circular(30),
-                      //         gradient: LinearGradient(
-                      //           begin: Alignment.topCenter,
-                      //           end: Alignment.bottomCenter,
-                      //           colors: [
-                      //             Colors.blue.shade900,
-                      //             Colors.blue.shade800
-                      //           ],
-                      //         )),
-                      //     child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       children: const [
-                      //         Icon(
-                      //           Icons.description_outlined,
-                      //           color: Colors.white,
-                      //         ),
-                      //         SizedBox(
-                      //           width: 10,
-                      //         ),
-                      //         Text(
-                      //           "LIC Policy",
-                      //           style: TextStyle(
-                      //               fontFamily: "Poppins",
-                      //               fontWeight: FontWeight.bold,
-                      //               letterSpacing: 1.5,
-                      //               fontSize: 20.5,
-                      //               color: Colors.white),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
-                      // Card(
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(30.0),
-                      //   ),
-                      //   shadowColor: KColors.icon,
-                      //   elevation: 2,
-                      //   child: Container(
-                      //     decoration: BoxDecoration(
-                      //         borderRadius: BorderRadius.circular(30),
-                      //         gradient: LinearGradient(
-                      //           begin: Alignment.topCenter,
-                      //           end: Alignment.bottomCenter,
-                      //           colors: [
-                      //             Colors.blue.shade900,
-                      //             Colors.blue.shade800
-                      //           ],
-                      //         )),
-                      //     child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       children: const [
-                      //         Icon(
-                      //           Icons.description_outlined,
-                      //           color: Colors.white,
-                      //         ),
-                      //         SizedBox(
-                      //           width: 10,
-                      //         ),
-                      //         Text(
-                      //           "Star Health",
-                      //           style: TextStyle(
-                      //               fontFamily: "Poppins",
-                      //               fontWeight: FontWeight.bold,
-                      //               letterSpacing: 1.5,
-                      //               fontSize: 20.5,
-                      //               color: Colors.white),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ],
@@ -469,9 +385,7 @@ class _OtherSectionsState extends State<OtherSections>
     _scale2 = 1 - _controller2.value;
     _scale3 = 1 - _controller3.value;
     _scale4 = 1 - _controller4.value;
-    // _scale5 = 1 - _controller5.value;
-    // _scale6 = 1 - _controller6.value;
-    // _scale7 = 1 - _controller7.value;
+
     return Expanded(
       child: SizedBox(
         height: size.size.height,
@@ -498,10 +412,7 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesBank()));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>Vouchers()));
                 },
                 child: Transform.scale(
                   scale: _scale,
@@ -524,7 +435,7 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.money_outlined,
+                            Icons.device_thermostat_rounded,
                             // Icons.trending_up_rounded,
                             color: KColors.icon,
                             size: 30,
@@ -534,7 +445,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Bank",
+                          "Mutual Funds",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -557,10 +468,7 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesInvestment()));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=> SaleUi() ));
                 },
                 child: Transform.scale(
                   scale: _scale1,
@@ -583,7 +491,7 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.card_membership_rounded,
+                            Icons.next_plan_sharp,
                             color: KColors.icon,
                             size: 30,
                           ),
@@ -592,7 +500,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Invetsments",
+                          "Car/Personal Loan",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -647,7 +555,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Fixed Plan ",
+                          "Star Health ",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -670,10 +578,7 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesBenifits()));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
                 },
                 child: Transform.scale(
                   scale: _scale3,
@@ -696,7 +601,7 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.all_inclusive_rounded,
+                            Icons.lan_outlined,
                             color: KColors.icon,
                             size: 30,
                           ),
@@ -705,7 +610,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Tax Benifits ",
+                          "LIC Policy ",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -717,172 +622,6 @@ class _OtherSectionsState extends State<OtherSections>
                   ),
                 ),
               ),
-              // GestureDetector(
-              //   onTapDown: _tapDown4,
-              //   onTapUp: _tapUp4,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>CashAndBank()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale4,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.policy_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Lic Policy",
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // GestureDetector(
-              //   onTapDown: _tapDown5,
-              //   onTapUp: _tapUp5,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale5,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.health_and_safety_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Star health insurance",
-              //             textAlign: TextAlign.center,
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // GestureDetector(
-              //   onTapDown: _tapDown6,
-              //   onTapUp: _tapUp6,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale6,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.local_atm_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Personal/Car Loan",
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),

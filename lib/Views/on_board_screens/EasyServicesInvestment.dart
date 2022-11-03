@@ -1,37 +1,36 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:gst_app/Views/on_board_screens/EasyServicesBank.dart';
+import 'package:gst_app/Views/Theme/colors.dart';
 import 'package:gst_app/Views/on_board_screens/EasyServicesInvestment.dart';
-import 'package:gst_app/Views/on_board_screens/EasyServicesTaxBenifits.dart';
 
-import 'Theme/colors.dart';
-
-class OtherSections extends StatefulWidget {
-  const OtherSections({Key key}) : super(key: key);
+class EasyServicesInvestment extends StatefulWidget {
+  const EasyServicesInvestment({Key key}) : super(key: key);
 
   @override
-  State<OtherSections> createState() => _OtherSectionsState();
+  State<EasyServicesInvestment> createState() => _EasyServicesInvestmentState();
 }
 
-class _OtherSectionsState extends State<OtherSections>
+class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
     with TickerProviderStateMixin {
   double _scale;
   double _scale1;
   double _scale2;
   double _scale3;
   double _scale4;
-  // double _scale5;
-  // double _scale6;
-  // double _scale7;
+  double _scale5;
+  double _scale6;
+  double _scale7;
+  double _scale8;
   AnimationController _controller;
   AnimationController _controller1;
   AnimationController _controller2;
   AnimationController _controller3;
   AnimationController _controller4;
-  // AnimationController _controller5;
-  // AnimationController _controller6;
-  // AnimationController _controller7;
+  AnimationController _controller5;
+  AnimationController _controller6;
+  AnimationController _controller7;
+  AnimationController _controller8;
 
   @override
   void initState() {
@@ -90,39 +89,48 @@ class _OtherSectionsState extends State<OtherSections>
         setState(() {});
       });
 
-    // _controller5 = AnimationController(
-    //   vsync: this,
-    //   duration: Duration(
-    //     milliseconds: 500,
-    //   ),
-    //   lowerBound: 0.0,
-    //   upperBound: 0.1,
-    // )..addListener(() {
-    //     setState(() {});
-    //   });
+    _controller5 = AnimationController(
+      vsync: this,
+      duration: Duration(
+        milliseconds: 500,
+      ),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
 
-    // _controller6 = AnimationController(
-    //   vsync: this,
-    //   duration: Duration(
-    //     milliseconds: 500,
-    //   ),
-    //   lowerBound: 0.0,
-    //   upperBound: 0.1,
-    // )..addListener(() {
-    //     setState(() {});
-    //   });
+    _controller6 = AnimationController(
+      vsync: this,
+      duration: Duration(
+        milliseconds: 500,
+      ),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
 
-    // _controller7 = AnimationController(
-    //   vsync: this,
-    //   duration: Duration(
-    //     milliseconds: 500,
-    //   ),
-    //   lowerBound: 0.0,
-    //   upperBound: 0.1,
-    // )..addListener(() {
-    //     setState(() {});
-    //   });
-
+    _controller7 = AnimationController(
+      vsync: this,
+      duration: Duration(
+        milliseconds: 500,
+      ),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+    _controller8 = AnimationController(
+      vsync: this,
+      duration: Duration(
+        milliseconds: 500,
+      ),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
     super.initState();
   }
 
@@ -133,10 +141,11 @@ class _OtherSectionsState extends State<OtherSections>
     _controller1.dispose();
     _controller2.dispose();
     _controller3.dispose();
-    // _controller4.dispose();
-    // _controller5.dispose();
-    // _controller6.dispose();
-    // _controller7.dispose();
+    _controller4.dispose();
+    _controller5.dispose();
+    _controller6.dispose();
+    _controller7.dispose();
+    _controller8.dispose();
   }
 
   MediaQueryData size;
@@ -179,7 +188,7 @@ class _OtherSectionsState extends State<OtherSections>
                       Padding(
                         padding: const EdgeInsets.only(top: 10, left: 20),
                         child: Text(
-                          "Easy Services",
+                          "Investments",
                           style: GoogleFonts.dmSans(
                             fontSize: 25,
                             letterSpacing: 3,
@@ -235,7 +244,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Bank",
+                                "FBF",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -275,7 +284,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Investments",
+                                "NPS",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -315,7 +324,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Fixed Plan",
+                                "Mutual Funds",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -355,7 +364,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Tax Benifits",
+                                "SIP",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -367,86 +376,166 @@ class _OtherSectionsState extends State<OtherSections>
                           ),
                         ),
                       ),
-                      // Card(
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(30.0),
-                      //   ),
-                      //   shadowColor: KColors.icon,
-                      //   elevation: 2,
-                      //   child: Container(
-                      //     decoration: BoxDecoration(
-                      //         borderRadius: BorderRadius.circular(30),
-                      //         gradient: LinearGradient(
-                      //           begin: Alignment.topCenter,
-                      //           end: Alignment.bottomCenter,
-                      //           colors: [
-                      //             Colors.blue.shade900,
-                      //             Colors.blue.shade800
-                      //           ],
-                      //         )),
-                      //     child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       children: const [
-                      //         Icon(
-                      //           Icons.description_outlined,
-                      //           color: Colors.white,
-                      //         ),
-                      //         SizedBox(
-                      //           width: 10,
-                      //         ),
-                      //         Text(
-                      //           "LIC Policy",
-                      //           style: TextStyle(
-                      //               fontFamily: "Poppins",
-                      //               fontWeight: FontWeight.bold,
-                      //               letterSpacing: 1.5,
-                      //               fontSize: 20.5,
-                      //               color: Colors.white),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
-                      // Card(
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(30.0),
-                      //   ),
-                      //   shadowColor: KColors.icon,
-                      //   elevation: 2,
-                      //   child: Container(
-                      //     decoration: BoxDecoration(
-                      //         borderRadius: BorderRadius.circular(30),
-                      //         gradient: LinearGradient(
-                      //           begin: Alignment.topCenter,
-                      //           end: Alignment.bottomCenter,
-                      //           colors: [
-                      //             Colors.blue.shade900,
-                      //             Colors.blue.shade800
-                      //           ],
-                      //         )),
-                      //     child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       children: const [
-                      //         Icon(
-                      //           Icons.description_outlined,
-                      //           color: Colors.white,
-                      //         ),
-                      //         SizedBox(
-                      //           width: 10,
-                      //         ),
-                      //         Text(
-                      //           "Star Health",
-                      //           style: TextStyle(
-                      //               fontFamily: "Poppins",
-                      //               fontWeight: FontWeight.bold,
-                      //               letterSpacing: 1.5,
-                      //               fontSize: 20.5,
-                      //               color: Colors.white),
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        shadowColor: KColors.icon,
+                        elevation: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
+                              )),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.description_outlined,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "LIC Policy",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        shadowColor: KColors.icon,
+                        elevation: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
+                              )),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.description_outlined,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Sale",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        shadowColor: KColors.icon,
+                        elevation: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade800
+                                ],
+                              )),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.description_outlined,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Purchase",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        shadowColor: KColors.icon,
+                        elevation: 2,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.blue.shade900,
+                                  Colors.blue.shade700
+                                ],
+                              )),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.description_outlined,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Capital Gain",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.5,
+                                    fontSize: 20.5,
+                                    color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -469,9 +558,10 @@ class _OtherSectionsState extends State<OtherSections>
     _scale2 = 1 - _controller2.value;
     _scale3 = 1 - _controller3.value;
     _scale4 = 1 - _controller4.value;
-    // _scale5 = 1 - _controller5.value;
-    // _scale6 = 1 - _controller6.value;
-    // _scale7 = 1 - _controller7.value;
+    _scale5 = 1 - _controller5.value;
+    _scale6 = 1 - _controller6.value;
+    _scale7 = 1 - _controller7.value;
+    _scale8 = 1 - _controller8.value;
     return Expanded(
       child: SizedBox(
         height: size.size.height,
@@ -498,10 +588,10 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesBank()));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => EasyServicesInvestment()));
                 },
                 child: Transform.scale(
                   scale: _scale,
@@ -524,8 +614,8 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.money_outlined,
-                            // Icons.trending_up_rounded,
+                            // Icons.money_outlined,
+                            Icons.trending_up_rounded,
                             color: KColors.icon,
                             size: 30,
                           ),
@@ -534,7 +624,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Bank",
+                          "FBF",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -557,10 +647,7 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesInvestment()));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=> SaleUi() ));
                 },
                 child: Transform.scale(
                   scale: _scale1,
@@ -583,7 +670,7 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.card_membership_rounded,
+                            Icons.next_plan_outlined,
                             color: KColors.icon,
                             size: 30,
                           ),
@@ -592,7 +679,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Invetsments",
+                          "NPS",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -638,7 +725,7 @@ class _OtherSectionsState extends State<OtherSections>
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: const Icon(
-                            Icons.account_balance_wallet_rounded,
+                            Icons.functions_rounded,
                             color: KColors.icon,
                             size: 30,
                           ),
@@ -647,7 +734,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Fixed Plan ",
+                          " Something will here",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -670,10 +757,7 @@ class _OtherSectionsState extends State<OtherSections>
                     ),
                     content: Text("Contact our Organization"),
                   ));
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EasyServicesBenifits()));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
                 },
                 child: Transform.scale(
                   scale: _scale3,
@@ -705,7 +789,7 @@ class _OtherSectionsState extends State<OtherSections>
                           height: 8,
                         ),
                         Text(
-                          "Tax Benifits ",
+                          "SIP ",
                           style: GoogleFonts.dmSans(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
@@ -717,172 +801,227 @@ class _OtherSectionsState extends State<OtherSections>
                   ),
                 ),
               ),
-              // GestureDetector(
-              //   onTapDown: _tapDown4,
-              //   onTapUp: _tapUp4,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>CashAndBank()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale4,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.policy_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Lic Policy",
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // GestureDetector(
-              //   onTapDown: _tapDown5,
-              //   onTapUp: _tapUp5,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale5,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.health_and_safety_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Star health insurance",
-              //             textAlign: TextAlign.center,
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // GestureDetector(
-              //   onTapDown: _tapDown6,
-              //   onTapUp: _tapUp6,
-              //   onTap: () {
-              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              //       behavior: SnackBarBehavior.floating,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.all(Radius.circular(20)),
-              //       ),
-              //       content: Text("Contact our Organization"),
-              //     ));
-              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
-              //   },
-              //   child: Transform.scale(
-              //     scale: _scale6,
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           border: Border.all(
-              //             width: 1.5,
-              //             color: const Color(0xffE3E9ED),
-              //           ),
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15.0)),
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: const Color(0xffE3E9ED),
-              //               borderRadius: BorderRadius.circular(15.0),
-              //             ),
-              //             child: const Icon(
-              //               Icons.local_atm_rounded,
-              //               color: KColors.icon,
-              //               size: 30,
-              //             ),
-              //           ),
-              //           const SizedBox(
-              //             height: 8,
-              //           ),
-              //           Text(
-              //             "Personal/Car Loan",
-              //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
-              //               fontWeight: FontWeight.bold,
-              //               color: const Color(0xff57435C),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              GestureDetector(
+                onTapDown: _tapDown4,
+                onTapUp: _tapUp4,
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>CashAndBank()));
+                },
+                child: Transform.scale(
+                  scale: _scale4,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.5,
+                          color: const Color(0xffE3E9ED),
+                        ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffE3E9ED),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: const Icon(
+                            Icons.policy_rounded,
+                            color: KColors.icon,
+                            size: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "here also",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff57435C),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTapDown: _tapDown5,
+                onTapUp: _tapUp5,
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
+                },
+                child: Transform.scale(
+                  scale: _scale5,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.5,
+                          color: const Color(0xffE3E9ED),
+                        ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffE3E9ED),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: const Icon(
+                            Icons.health_and_safety_rounded,
+                            color: KColors.icon,
+                            size: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Sale",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.dmSans(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff57435C),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTapDown: _tapDown6,
+                onTapUp: _tapUp6,
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
+                },
+                child: Transform.scale(
+                  scale: _scale6,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.5,
+                          color: const Color(0xffE3E9ED),
+                        ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffE3E9ED),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: const Icon(
+                            Icons.local_atm_rounded,
+                            color: KColors.icon,
+                            size: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Purchase",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff57435C),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTapDown: _tapDown8,
+                onTapUp: _tapUp8,
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    content: Text("Contact our Organization"),
+                  ));
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
+                },
+                child: Transform.scale(
+                  scale: _scale8,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.5,
+                          color: const Color(0xffE3E9ED),
+                        ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffE3E9ED),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: const Icon(
+                            Icons.no_drinks_sharp,
+                            color: KColors.icon,
+                            size: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Capital Gain",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff57435C),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -930,27 +1069,35 @@ class _OtherSectionsState extends State<OtherSections>
     _controller4.reverse();
   }
 
-  // void _tapDown5(TapDownDetails details) {
-  //   _controller5.forward();
-  // }
+  void _tapDown5(TapDownDetails details) {
+    _controller5.forward();
+  }
 
-  // void _tapUp5(TapUpDetails details) {
-  //   _controller5.reverse();
-  // }
+  void _tapUp5(TapUpDetails details) {
+    _controller5.reverse();
+  }
 
-  // void _tapDown6(TapDownDetails details) {
-  //   _controller6.forward();
-  // }
+  void _tapDown6(TapDownDetails details) {
+    _controller6.forward();
+  }
 
-  // void _tapUp6(TapUpDetails details) {
-  //   _controller6.reverse();
-  // }
+  void _tapUp6(TapUpDetails details) {
+    _controller6.reverse();
+  }
 
-  // void _tapDown7(TapDownDetails details) {
-  //   _controller7.forward();
-  // }
+  void _tapDown7(TapDownDetails details) {
+    _controller7.forward();
+  }
 
-  // void _tapUp7(TapUpDetails details) {
-  //   _controller7.reverse();
-  // }
+  void _tapUp7(TapUpDetails details) {
+    _controller7.reverse();
+  }
+
+  void _tapDown8(TapDownDetails details) {
+    _controller8.forward();
+  }
+
+  void _tapUp8(TapUpDetails details) {
+    _controller8.reverse();
+  }
 }
